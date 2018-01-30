@@ -3,7 +3,7 @@ import {Route, Switch} from 'react-router-dom';
 
 const App = () => (
   <div>
-    // <Route exact path="/" component={}/>
+    HELLO
   </div>
 );
 

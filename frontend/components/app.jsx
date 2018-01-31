@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 
-const App = () => (
+const App = ({children}) => (
   <div>
-    HELLO
+    {children}
   </div>
 );
 

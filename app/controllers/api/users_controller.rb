@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
 
     if @user.save
       login(@user)
-      redirect_to links_url
+      render :show
     else
       flash.now[:errors] = @user.errors.full_messages
       render :new
@@ -32,6 +32,6 @@ class Api::UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:password, :username)
+    params.require(:user).permit(:username, :password, :email, :img_url)
   end
 end

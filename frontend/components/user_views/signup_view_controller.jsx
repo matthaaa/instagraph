@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router';
 import {
   createUser,
   requestUser,
 } from '../../actions/user_actions';
-import LoginView from './login_view';
+import SignupView from './signup_view';
 
 const mapStateToProps = (state, ownProps) => ({
   // TODO: Add Email and Full Name
@@ -14,7 +15,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   requestUser: (user) => dispatch(requestUser(user))
 })
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(LoginView)
+)(SignupView));

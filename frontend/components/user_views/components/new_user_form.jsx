@@ -4,7 +4,7 @@ import {Component} from 'react';
 // Components
 import Button from '../../generic/buttons/Button'
 
-class SessionForm extends Component {
+class NewUserForm extends Component {
 
   // ==================================================
   // Initialize
@@ -21,6 +21,11 @@ class SessionForm extends Component {
   // ==================================================
   // Lifecycle Methods
   // ==================================================
+
+  componentWillMount() {
+    // this.props.requestUser(this.props);
+    // console.log(this.props);
+  }
 
   // ==================================================
   // Callbacks
@@ -63,6 +68,8 @@ class SessionForm extends Component {
   render() {
     const {onSubmit} = this.props;
 
+    console.log(this.props);
+
     return (
       <div>
         <h1>This is the Session Form Component.</h1>
@@ -71,7 +78,7 @@ class SessionForm extends Component {
           <br/>
           {this.renderPasswordInput()}
           <br/>
-          <Button text={"Log In"} onPress={onSubmit} />
+          <Button text={"Sign Up"} onPress={onSubmit} />
         </form>
       </div>
     );
@@ -79,4 +86,4 @@ class SessionForm extends Component {
 
 };
 
-export default SessionForm;
+export default NewUserForm;

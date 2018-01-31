@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-// import NewUserForm from './components/new_user_form';
+import NewUserForm from './components/new_user_form';
 
 class SignupView extends Component {
 
@@ -29,6 +29,10 @@ class SignupView extends Component {
     return (
       <div>
         <h1>This is the sign up view.</h1>
+        <NewUserForm
+          requestUser={this.props.requestUser}
+          onSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

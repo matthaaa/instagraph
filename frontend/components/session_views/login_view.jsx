@@ -2,55 +2,35 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import Button from '../generic/buttons/Button'
+import Button from '../generic/buttons/Button';
+import SessionForm from './components/session_form';
 
 class LoginView extends Component {
 
   // ==================================================
-  // Callbacks
+  // Initialize
   // ==================================================
-
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  // ==================================================
+  // Callbacks
+  // ==================================================
+
   handleSubmit() {
-
   }
-
 
   // ==================================================
   // Render
   // ==================================================
-
-  renderUsernameInput() {
-    return (
-      <label>Username
-        <input type="text"/>
-      </label>
-    );
-  }
-
-  renderPasswordInput() {
-    return (
-      <label>Password
-        <input type="password"/>
-      </label>
-    );
-  }
-
   render() {
+    console.log(this.state);
     return (
       <div>
         <h1>This is the login view.</h1>
-        <form>
-          {this.renderUsernameInput()}
-          <br/>
-          {this.renderPasswordInput()}
-          <br/>
-          <Button text={"Log In"} onPress={this.handleSubmit} />
-        </form>
+        <SessionForm onSubmit={this.handleSubmit} />
       </div>
     );
   }

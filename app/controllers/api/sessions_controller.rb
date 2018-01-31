@@ -10,7 +10,6 @@ class Api::SessionsController < ApplicationController
 
     if user
       login(user)
-      redirect_to links_url
     else
       flash.now[:errors] = [
         'Sorry, your password was incorrect. Please double-check ' +
@@ -21,7 +20,11 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    logout
-    redirect_to new_session_url
+    if user
+      logout
+      render {}
+    else
+      flash.now[:errors] = ['No user to sign out']
+    end
   end
 end

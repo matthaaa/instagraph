@@ -3,7 +3,7 @@ import {
   createUser,
   requestUser,
 } from '../../actions/user_actions';
-import SessionFormView from './session_form';
+import LoginView from './login_view';
 
 const mapStateToProps = (state, ownProps) => ({
   user: state.users[ownProps.match.params.userId],
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(SessionFormView)
+)(LoginView)

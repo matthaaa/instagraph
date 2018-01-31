@@ -7,7 +7,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      sign_in(@user)
+      login(@user)
       redirect_to links_url
     else
       flash.now[:errors] = @user.errors.full_messages

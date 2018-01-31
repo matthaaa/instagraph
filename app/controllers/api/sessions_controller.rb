@@ -5,11 +5,11 @@ class Api::SessionsController < ApplicationController
   def create
     user = User.find_by_creds(
       params[:user][:username],
-      params[:user][:password]
+      params[:user][:password],
     )
 
     if user
-      sign_in(user)
+      login(user)
       redirect_to links_url
     else
       flash.now[:errors] = [
@@ -21,7 +21,7 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    sign_out
+    logout
     redirect_to new_session_url
   end
 end

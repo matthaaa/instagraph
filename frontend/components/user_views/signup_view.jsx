@@ -2,9 +2,9 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import SessionForm from './components/session_form';
+// import NewUserForm from './components/new_user_form';
 
-class LoginView extends Component {
+class SignupView extends Component {
 
   // ==================================================
   // Initialize
@@ -28,12 +28,11 @@ class LoginView extends Component {
   render() {
     return (
       <div>
-        <h1>This is the login view.</h1>
-        <SessionForm onSubmit={this.handleSubmit} />
+        <h1>This is the sign up view.</h1>
       </div>
     );
   }
 
 };
 
-export default LoginView;
+export default SignupView;

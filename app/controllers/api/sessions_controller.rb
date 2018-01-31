@@ -20,11 +20,12 @@ class Api::SessionsController < ApplicationController
   end
 
   def destroy
-    if user
+    if logged_in?
       logout
-      render {}
+      render 'api/users/show'
     else
       flash.now[:errors] = ['No user to sign out']
+      render :new
     end
   end
 end

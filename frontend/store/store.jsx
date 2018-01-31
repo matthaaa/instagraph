@@ -1,7 +1,10 @@
 import {createStore, applyMiddleware} from 'redux';
 
 const configureStore = (preloadedState = {}) => (
-  // TODO
+  createStore(
+    preloadedState,
+    applyMiddleware(thunk)
+  );
 );
 
 export default configureStore;

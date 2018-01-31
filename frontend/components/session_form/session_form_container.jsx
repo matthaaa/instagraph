@@ -6,7 +6,7 @@ import {
 import SessionFormView from './session_form';
 
 const mapStateToProps = (state, ownProps) => ({
-  user: state.users[ownProps.match.params.userId]
+  user: state.users[ownProps.match.params.userId],
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

@@ -5,4 +5,6 @@ class User < ApplicationRecord
   def password=(password)
     @password = BCrypt::Password.create(password)
   end
+
+  def 
 end

@@ -11,27 +11,41 @@ class SignupView extends Component {
   // ==================================================
   constructor(props) {
     super(props);
+    this.state = {
+      username: "",
+      password: "",
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   // ==================================================
   // Callbacks
   // ==================================================
 
-  handleSubmit() {
-    // TODO
+  handleSubmit(e) {
+    e.preventDefault();
+
+  }
+
+  handleUpdate(field) {
+    return (event) => {
+      this.setState({[field]: event.target.value});
+    }
   }
 
   // ==================================================
   // Render
   // ==================================================
   render() {
+    console.log(this.props);
     return (
       <div>
         <h1>This is the sign up view.</h1>
         <NewUserForm
-          requestUser={this.props.requestUser}
-          onSubmit={this.handleSubmit}
+          formUser={this.state}
+          onUpdate={this.handleUpdate}
+          onSubmit={(e) => this.handleSubmit(e)}
         />
       </div>
     );

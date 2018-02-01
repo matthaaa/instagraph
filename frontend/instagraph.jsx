@@ -7,13 +7,20 @@ import configureStore from './store/store';
 import {login, logout, signup} from './util/session_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const root = document.getElementById('root');
+  let store;
+  if (window.currentUser) {
+    const preloadedState = {sessions: {currentUser: window.currentUser}};
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+
+  } else {
+    store = configureStore();
+  }
 
   // Testing
-  const store = configureStore();
+  const root = document.getElementById('root');
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
-  // TODO: Add store as prop to Root.
   ReactDOM.render(<Root store={store}/>, root);
 });

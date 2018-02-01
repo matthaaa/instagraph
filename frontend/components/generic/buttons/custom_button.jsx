@@ -1,16 +1,12 @@
 import React from 'react';
 import {Component} from 'react';
 
-class CustomButton extends Component {
 
-  // ==================================================
-  // Callbacks
-  // ==================================================
+class CustomButton extends Component {
 
   // ==================================================
   // Render
   // ==================================================
-
   render() {
     const {onPress, text} = this.props;
 
@@ -20,5 +16,6 @@ class CustomButton extends Component {
   }
 
 };
+
 
 export default CustomButton;

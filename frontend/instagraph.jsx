@@ -6,6 +6,7 @@ import configureStore from './store/store';
 // Test imoprts
 import {login, logout, signup} from './util/session_api_util';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {

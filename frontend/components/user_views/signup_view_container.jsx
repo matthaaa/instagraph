@@ -7,6 +7,7 @@ import {
 // Components
 import SignupView from './signup_view';
 
+
 const mapStateToProps = (state, ownProps) => ({
   // TODO: Add Full Name
   user: {email: "", username: "", password: ""}
@@ -15,6 +16,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   signup: (user) => dispatch(signup(user))
 })
+
 
 export default withRouter(connect(
   mapStateToProps,

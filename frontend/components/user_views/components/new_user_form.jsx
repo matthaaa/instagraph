@@ -5,6 +5,7 @@ import {Component} from 'react';
 import CustomButton from '../../generic/buttons/custom_button'
 import FormInput from '../../generic/forms/form_input'
 
+
 class NewUserForm extends Component {
 
   // ==================================================
@@ -66,5 +67,6 @@ class NewUserForm extends Component {
   }
 
 };
+
 
 export default NewUserForm;

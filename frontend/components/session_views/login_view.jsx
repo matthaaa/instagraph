@@ -4,6 +4,7 @@ import {Component} from 'react';
 // Components
 import SessionForm from './components/session_form';
 
+
 class LoginView extends Component {
 
   // ==================================================
@@ -58,5 +59,6 @@ class LoginView extends Component {
     );
   }
 };
+
 
 export default LoginView;

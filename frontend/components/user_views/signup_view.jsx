@@ -70,7 +70,7 @@ class SignupView extends Component {
         <div className="logo-container">
           <MainLogo />
         </div>
-        <CustomButton text={"Demo Login"} onPress={this.handleDemo} />
+        <CustomButton text={"Log in as Demo"} onPress={this.handleDemo} />
         {this.renderOrBar()}
         <NewUserForm
           formUser={this.state}
@@ -94,7 +94,7 @@ class SignupView extends Component {
     );
   }
 
-  // Image will go here.
+  // TODO: Image goes here.
   renderLeft() {
     return <div/>;
   }

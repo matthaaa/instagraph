@@ -1,8 +1,10 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 // Components
 import SessionForm from './components/session_form';
+import MainLogo from '..//generic/logos/main_logo';
 
 
 class LoginView extends Component {
@@ -37,9 +39,21 @@ class LoginView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderFormContent() {
+  renderLoginFooter() {
     return (
-      <div className="login-view-content">
+      <div className="toggle-footer">
+        <p>Don't have an account?</p>
+        <Link className="toggle-footer-link" to={"/signup"}>Sign up</Link>
+      </div>
+    );
+  }
+
+  renderMainFormContent() {
+    return (
+      <div className="login-view-main-ontent">
+        <div className="logo-container">
+          <MainLogo />
+        </div>
         <SessionForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
@@ -49,11 +63,26 @@ class LoginView extends Component {
     );
   }
 
+  renderRight() {
+    return (
+      <div className="signup-view-content">
+        {this.renderMainFormContent()}
+        {this.renderLoginFooter()}
+      </div>
+    );
+  }
+
+  // TODO: Image goes here.
+  renderLeft() {
+    return <div/>;
+  }
+
   render() {
     return (
       <main className="logged-out-view">
-        <div className="login-view-container">
-          {this.renderFormContent()}
+        <div className="login-view-content">
+          {this.renderLeft()}
+          {this.renderRight()}
         </div>
       </main>
     );

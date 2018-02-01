@@ -64,22 +64,3 @@ $blue: #3897f0;
 .disclaimer p:last-of-type {
   font-weight: 600;
 }
-
-.signup-view-login-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 400;
-  color: $black;
-  background-color: $white;
-  border: 1px solid $light-gray-2;
-}
-
-.signup-footer-login-link {
-  margin-left: 4px;
-  color: $blue;
-  cursor: pointer;
-}

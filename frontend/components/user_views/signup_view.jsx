@@ -57,9 +57,9 @@ class SignupView extends Component {
 
   renderLoginFooter() {
     return (
-      <div className="signup-view-login-footer">
+      <div className="toggle-footer">
         <p>Have an account?</p>
-        <Link className="signup-footer-login-link" to={"/login"}>Log in</Link>
+        <Link className="toggle-footer-link" to={"/login"}>Log in</Link>
       </div>
     );
   }

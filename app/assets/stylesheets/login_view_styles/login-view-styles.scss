@@ -1,5 +1,9 @@
-$gray: #E6E6E6;
+// Colors
+$white: #FFFFFF;
+$light-gray: #E6E6E6;
+$blue: #3897f0;
 
+// Classes
 .login-view-content {
   display: flex;
 }
@@ -10,6 +14,6 @@ $gray: #E6E6E6;
   justify-content: center;
   width: 350px;
   padding: 10px;
-  border: 1px solid $gray;
+  border: 1px solid $light-gray;
   background-color: #FFFFFF;
 }

@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, body, div, span, h1, h2, h3, h4, h5,
+html, body, div, span, h1, h2, h3, h4, h5, input,
 h6, p, blockquote, pre, b, u, i, ol, ul, li,
 form, label, embed, footer, header, nav, section {
  	margin: 0;

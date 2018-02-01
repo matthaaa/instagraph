@@ -47,7 +47,9 @@ class SessionForm extends Component {
         <form className="login-form">
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
-          <CustomButton text={"Log In"} onPress={onSubmit} />
+          <div className="signup-form-button">
+            <CustomButton text={"Log In"} onPress={onSubmit} />
+          </div>
         </form>
       </div>
     );

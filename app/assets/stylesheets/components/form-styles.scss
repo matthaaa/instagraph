@@ -18,6 +18,7 @@ $blue: #3897f0;
   width: 258px;
   padding: 9px 0 7px 8px;
   font-size: 12px;
+  font-weight: 400;
   line-height: 18px;
   background-color: $off-white;
   border: 1px solid $light-gray-1;
@@ -35,4 +36,8 @@ $blue: #3897f0;
 
 .signup-input:last-of-type, .login-input:last-of-type {
   margin-bottom: 0px;
+}
+
+.signup-form-button, .login-form-button {
+  margin-top: 10px;
 }

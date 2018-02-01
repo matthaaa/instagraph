@@ -4,6 +4,8 @@ $off-white: #FAFAFA;
 $light-gray-1: #EFEFEF;
 $light-gray-2: #E6E6E6;
 $light-gray-3: #DBDBDB;
+$light-gray-4: #C7C7C7;
+$gray: #999999;
 $blue: #3897f0;
 
 // Classes
@@ -17,14 +19,48 @@ $blue: #3897f0;
   align-items: center;
   justify-content: center;
   width: 350px;
-  padding: 10px;
+  padding: 10px 10px 42px;
   border: 1px solid $light-gray-2;
   background-color: #FFFFFF;
 }
 
 .logo-text {
-  margin: 22px auto 12px;
-  font-size: 22px;
+  margin: 22px auto 20px;
+  font-size: 32px;
   font-family: 'Pacifico', cursive;
   text-align: center;
+}
+
+.or-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 18px 40px 18px;
+}
+
+.plain-line {
+  display: flex;
+  height: 1px;
+  width: 106px;
+  background-color: $light-gray-4;
+}
+
+.or-text {
+  margin: 0px 15px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: $gray;
+}
+
+.disclaimer {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: $gray;
+}
+
+.disclaimer p:last-of-type {
+  font-weight: 600;
 }

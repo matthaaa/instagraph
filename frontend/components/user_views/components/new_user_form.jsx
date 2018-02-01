@@ -60,7 +60,9 @@ class NewUserForm extends Component {
           {this.renderEmailInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
-          <CustomButton text={"Sign Up"} onPress={onSubmit} />
+          <div className="signup-form-button">
+            <CustomButton text={"Sign Up"} onPress={onSubmit} />
+          </div>
         </form>
       </div>
     );

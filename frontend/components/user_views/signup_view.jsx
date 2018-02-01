@@ -25,7 +25,7 @@ class SignupView extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.requestUser(this.state);
+    this.props.signup(this.state);
   }
 
   handleUpdate(field) {
@@ -38,7 +38,6 @@ class SignupView extends Component {
   // Render
   // ==================================================
   render() {
-    console.log(this.props);
     return (
       <div>
         <h1>This is the sign up view.</h1>
@@ -52,5 +51,6 @@ class SignupView extends Component {
   }
 
 };
+
 
 export default SignupView;

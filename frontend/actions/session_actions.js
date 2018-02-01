@@ -12,8 +12,6 @@ export const signup = (user) => dispatch => (
 );
 
 export const login = (user) => dispatch => {
-  console.log("called");
-
   return SessionAPIUtil.login(user).then(user => (
     dispatch(receiveUser(user))
   ), err => (
@@ -36,5 +34,3 @@ export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
 });
-
-window.login = login

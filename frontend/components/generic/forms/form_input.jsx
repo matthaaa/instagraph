@@ -25,7 +25,7 @@ class FormInput extends Component {
           value={value}
           onChange={onChange}
         />
-    </div>
+      </div>
     );
   }
 

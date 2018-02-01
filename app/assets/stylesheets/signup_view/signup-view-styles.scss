@@ -6,14 +6,17 @@ $light-gray-2: #E6E6E6;
 $light-gray-3: #DBDBDB;
 $light-gray-4: #C7C7C7;
 $gray: #999999;
+$black: #262626;
+
 $blue: #3897f0;
+
 
 // Classes
 .signup-view-container {
   display: flex;
 }
 
-.signup-view-content {
+.signup-view-main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,4 +66,23 @@ $blue: #3897f0;
 
 .disclaimer p:last-of-type {
   font-weight: 600;
+}
+
+.signup-view-login-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+  border: 1px solid $light-gray-2;
+}
+
+.signup-footer-login-link {
+  margin-left: 4px;
+  color: $blue;
+  cursor: pointer;
 }

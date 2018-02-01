@@ -5,9 +5,9 @@ import {
   logout,
 } from '../../actions/session_actions';
 
-
 // Components
 import LoginView from './login_view';
+
 
 const mapStateToProps = (state, ownProps) => ({
   user: {username: "", password: ""},

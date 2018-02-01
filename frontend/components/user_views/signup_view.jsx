@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 // Components
 import NewUserForm from './components/new_user_form';
@@ -24,7 +25,6 @@ class SignupView extends Component {
   // ==================================================
   // Callbacks
   // ==================================================
-
   handleUpdate(field) {
     return (event) => {
       this.setState({[field]: event.target.value});
@@ -53,9 +53,18 @@ class SignupView extends Component {
     );
   }
 
-  renderFormContent() {
+  renderLoginFooter() {
     return (
-      <div className="signup-view-content">
+      <div className="signup-view-login-footer">
+        <p>Have an account?</p>
+        <Link className="signup-footer-login-link" to={"/login"}>Log in</Link>
+      </div>
+    );
+  }
+
+  renderMainFormContent() {
+    return (
+      <div className="signup-view-main-content">
         <h1 className="logo-text">Instagraph</h1>
         <CustomButton text={"Demo Login"} onPress={this.handleDemo} />
         {this.renderOrBar()}
@@ -72,21 +81,26 @@ class SignupView extends Component {
     );
   }
 
-  renderLoginFooter() {
+  renderRight() {
     return (
-      <div className="signup-view-login-footer">
-        <p>Have an account?</p>
-        <link>Log in</link>
+      <div className="signup-view-content">
+        {this.renderMainFormContent()}
+        {this.renderLoginFooter()}
       </div>
     );
+  }
+
+  // Image will go here.
+  renderLeft() {
+    return <div/>;
   }
 
   render() {
     return (
       <main className="logged-out-view">
         <div className="signup-view-container">
-          {this.renderFormContent()}
-          {this.renderLoginFooter()}
+          {this.renderLeft()}
+          {this.renderRight()}
         </div>
       </main>
     );

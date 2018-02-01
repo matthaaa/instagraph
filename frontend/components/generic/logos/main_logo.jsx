@@ -9,6 +9,7 @@ class MainLogo extends Component {
   // ==================================================
   render() {
     return (
+      <h1 className="logo-text">Instagraph</h1>
     );
   }
 

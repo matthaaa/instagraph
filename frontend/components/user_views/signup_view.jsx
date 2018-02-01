@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 // Components
 import NewUserForm from './components/new_user_form';
 import CustomButton from '..//generic/buttons/custom_button';
+import MainLogo from '..//generic/logos/main_logo';
+
 
 class SignupView extends Component {
 
@@ -65,7 +67,9 @@ class SignupView extends Component {
   renderMainFormContent() {
     return (
       <div className="signup-view-main-content">
-        <h1 className="logo-text">Instagraph</h1>
+        <div className="logo-container">
+          <MainLogo />
+        </div>
         <CustomButton text={"Demo Login"} onPress={this.handleDemo} />
         {this.renderOrBar()}
         <NewUserForm

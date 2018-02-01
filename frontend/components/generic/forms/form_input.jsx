@@ -11,18 +11,21 @@ class FormInput extends Component {
     const {
       type,
       placeholder,
+      contentClassName,
       value,
       onChange,
     } = this.props;
 
     return (
-      <input
-        className="form-input"
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-      />
+      <div className={contentClassName}>
+        <input
+          className="form-input"
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+    </div>
     );
   }
 

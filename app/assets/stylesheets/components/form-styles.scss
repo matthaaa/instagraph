@@ -1,0 +1,27 @@
+// Colors
+$white: #FFFFFF;
+$off-white: #FAFAFA;
+$light-gray-1: #EFEFEF;
+$light-gray-2: #E6E6E6;
+$light-gray-3: #DBDBDB;
+$blue: #3897f0;
+
+// Classes
+.login-form, .signup-form {
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input {
+  width: 268px;
+  padding: 9px 0 7px 8px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $off-white;
+  border: 1px solid $light-gray-1;
+}
+
+.form-input:focus {
+  outline: none;
+  border: 1px solid $light-gray-3;
+}

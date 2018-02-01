@@ -39,7 +39,7 @@ class LoginView extends Component {
   // ==================================================
   renderFormContent() {
     return (
-      <div className="login-view-form-content">
+      <div className="login-view-content">
         <SessionForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
@@ -52,7 +52,7 @@ class LoginView extends Component {
   render() {
     return (
       <main className="logged-out-view">
-        <div className="login-view-content">
+        <div className="login-view-container">
           {this.renderFormContent()}
         </div>
       </main>

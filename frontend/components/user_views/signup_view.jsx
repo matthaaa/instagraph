@@ -38,14 +38,25 @@ class SignupView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  render() {
+  renderFormContent() {
     return (
-      <main className="logged-out-view">
+      <div className="signup-view-form-content">
+        <h1 className="logo-text">Instagraph</h1>
         <NewUserForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
-        />
+          />
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <main className="logged-out-view">
+        <div className="signup-view-form-content">
+          {this.renderFormContent()}
+        </div>
       </main>
     );
   }

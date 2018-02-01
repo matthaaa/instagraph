@@ -53,7 +53,7 @@ class NewUserForm extends Component {
 
     return (
       <div>
-        <form>
+        <form className="signup-form">
           {this.renderEmailInput(formUser, onUpdate)}
           <br/>
           {this.renderUsernameInput(formUser, onUpdate)}

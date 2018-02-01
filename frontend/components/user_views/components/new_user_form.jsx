@@ -9,7 +9,6 @@ class NewUserForm extends Component {
   // ==================================================
   // Render
   // ==================================================
-
   renderEmailInput(formUser, onUpdate) {
     return (
       <label>Email
@@ -55,7 +54,6 @@ class NewUserForm extends Component {
 
     return (
       <div>
-        <h1>This is the Session Form Component.</h1>
         <form>
           {this.renderEmailInput(formUser, onUpdate)}
           <br/>

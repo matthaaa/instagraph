@@ -40,8 +40,7 @@ class SignupView extends Component {
   // ==================================================
   render() {
     return (
-      <div>
-        <h1>This is the sign up view.</h1>
+      <div className="main">
         <NewUserForm
           formUser={this.state}
           onSubmit={this.handleSubmit}

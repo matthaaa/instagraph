@@ -9,11 +9,12 @@ import SignupViewContainer from './user_views/signup_view_container';
 
 const App = ({children}) => (
   <div>
-    <h1>REACT</h1>
-    <Switch>
-      <Route path="/login" component={LoginViewContainer} />
-      <Route path="/signup" component={SignupViewContainer} />
-    </Switch>
+    <section className="main">
+      <Switch>
+        <Route path="/login" component={LoginViewContainer} />
+        <Route path="/signup" component={SignupViewContainer} />
+      </Switch>
+    </section>
   </div>
 );
 

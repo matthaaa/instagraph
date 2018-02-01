@@ -25,7 +25,7 @@ class SignupView extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    this.props.requestUser(this.state);
   }
 
   handleUpdate(field) {

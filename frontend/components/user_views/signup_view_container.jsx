@@ -1,9 +1,10 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import {
-  createUser,
-  requestUser,
-} from '../../actions/user_actions';
+  signup,
+} from '../../actions/session_actions';
+
+// Components
 import SignupView from './signup_view';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -12,7 +13,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  requestUser: (user) => dispatch(requestUser(user))
+  signup: (user) => dispatch(signup(user))
 })
 
 export default withRouter(connect(

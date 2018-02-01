@@ -1,8 +1,17 @@
 $off-white: #FAFAFA;
 
-.main-view {
+html {
   background-color: $off-white;
-  min-height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-view {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .logged-in-view {

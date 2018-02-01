@@ -13,9 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const store = configureStore();
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.login = login;
-  window.logout = logout;
-  window.signup = signup;
 
   // TODO: Add store as prop to Root.
   ReactDOM.render(<Root store={store}/>, root);

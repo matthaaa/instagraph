@@ -3,19 +3,19 @@ class Api::SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_creds(
+    @user = User.find_by_creds(
       params[:user][:username],
       params[:user][:password],
     )
 
-    if user
-      login(user)
+    if @user
+      login(@user)
+      render 'api/users/show'
     else
-      flash.now[:errors] = [
+      render json: [
         'Sorry, your password was incorrect. Please double-check ' +
         'your password.'
       ]
-      render :new
     end
   end
 
@@ -24,8 +24,7 @@ class Api::SessionsController < ApplicationController
       logout
       render 'api/users/show'
     else
-      flash.now[:errors] = ['No user to sign out']
-      render :new
+      render json: ['No user to sign out']
     end
   end
 end

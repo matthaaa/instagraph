@@ -10,8 +10,7 @@ class Api::UsersController < ApplicationController
       login(@user)
       render :show
     else
-      flash.now[:errors] = @user.errors.full_messages
-      render :new
+      render json: @user.errors.full_messages, status: 400
     end
   end
 

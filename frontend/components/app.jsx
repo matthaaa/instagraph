@@ -1,5 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
+// import {AuthRoute} from '../util/route_util';
 
 // Components
 import LoginView from './session_views/login_view';

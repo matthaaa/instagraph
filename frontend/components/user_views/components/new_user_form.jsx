@@ -10,6 +10,18 @@ class NewUserForm extends Component {
   // Render
   // ==================================================
 
+  renderEmailInput(formUser, onUpdate) {
+    return (
+      <label>Email
+        <input
+          type="text"
+          value={formUser.email}
+          onChange={onUpdate('email')}
+        />
+      </label>
+    );
+  }
+
   renderUsernameInput(formUser, onUpdate) {
     return (
       <label>Username
@@ -45,6 +57,8 @@ class NewUserForm extends Component {
       <div>
         <h1>This is the Session Form Component.</h1>
         <form>
+          {this.renderEmailInput(formUser, onUpdate)}
+          <br/>
           {this.renderUsernameInput(formUser, onUpdate)}
           <br/>
           {this.renderPasswordInput(formUser, onUpdate)}

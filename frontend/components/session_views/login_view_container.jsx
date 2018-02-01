@@ -9,7 +9,7 @@ import {
 import LoginView from './login_view';
 
 const mapStateToProps = (state, ownProps) => ({
-  user: state.users[ownProps.match.params.userId],
+  user: {username: "", password: ""}
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

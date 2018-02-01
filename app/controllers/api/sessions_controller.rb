@@ -22,7 +22,7 @@ class Api::SessionsController < ApplicationController
   def destroy
     if logged_in?
       logout
-      render 'api/users/show'
+      render 'api/users'
     else
       render json: ['No user to sign out']
     end

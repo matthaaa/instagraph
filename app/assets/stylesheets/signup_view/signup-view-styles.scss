@@ -6,6 +6,25 @@ $light-gray-2: #E6E6E6;
 $light-gray-3: #DBDBDB;
 $blue: #3897f0;
 
+// Classes
+.signup-view-container {
+  display: flex;
+}
+
+.signup-view-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid $light-gray-2;
+  background-color: #FFFFFF;
+}
+
 .logo-text {
+  margin: 22px auto 12px;
+  font-size: 22px;
   font-family: 'Pacifico', cursive;
+  text-align: center;
 }

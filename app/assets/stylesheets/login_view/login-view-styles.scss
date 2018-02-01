@@ -1,6 +1,9 @@
 // Colors
 $white: #FFFFFF;
-$light-gray: #E6E6E6;
+$off-white: #FAFAFA;
+$light-gray-1: #EFEFEF;
+$light-gray-2: #E6E6E6;
+$light-gray-3: #DBDBDB;
 $blue: #3897f0;
 
 // Classes
@@ -14,6 +17,6 @@ $blue: #3897f0;
   justify-content: center;
   width: 350px;
   padding: 10px;
-  border: 1px solid $light-gray;
+  border: 1px solid $light-gray-2;
   background-color: #FFFFFF;
 }

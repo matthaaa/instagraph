@@ -15,6 +15,7 @@ class NewUserForm extends Component {
     return (
       <FormInput
         type="text"
+        contentClassName={"signup-input"}
         placeholder={"Email"}
         value={formUser.email}
         onChange={onUpdate('email')}
@@ -26,6 +27,7 @@ class NewUserForm extends Component {
     return (
       <FormInput
         type="text"
+        contentClassName={"signup-input"}
         placeholder={"Username"}
         value={formUser.username}
         onChange={onUpdate('username')}
@@ -37,6 +39,7 @@ class NewUserForm extends Component {
     return (
       <FormInput
         type="password"
+        contentClassName={"signup-input"}
         placeholder={"Password"}
         value={formUser.password}
         onChange={onUpdate('password')}
@@ -55,11 +58,8 @@ class NewUserForm extends Component {
       <div>
         <form className="signup-form">
           {this.renderEmailInput(formUser, onUpdate)}
-          <br/>
           {this.renderUsernameInput(formUser, onUpdate)}
-          <br/>
           {this.renderPasswordInput(formUser, onUpdate)}
-          <br/>
           <CustomButton text={"Sign Up"} onPress={onSubmit} />
         </form>
       </div>

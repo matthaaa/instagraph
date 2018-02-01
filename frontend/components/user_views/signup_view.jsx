@@ -40,7 +40,7 @@ class SignupView extends Component {
   // ==================================================
   renderFormContent() {
     return (
-      <div className="signup-view-form-content">
+      <div className="signup-view-content">
         <h1 className="logo-text">Instagraph</h1>
         <NewUserForm
           formUser={this.state}
@@ -54,7 +54,7 @@ class SignupView extends Component {
   render() {
     return (
       <main className="logged-out-view">
-        <div className="signup-view-form-content">
+        <div className="signup-view-container">
           {this.renderFormContent()}
         </div>
       </main>

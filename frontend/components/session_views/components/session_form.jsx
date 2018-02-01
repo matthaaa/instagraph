@@ -7,69 +7,47 @@ import Button from '../../generic/buttons/Button'
 class SessionForm extends Component {
 
   // ==================================================
-  // Initialize
-  // ==================================================
-  constructor(props) {
-    super(props);
-    this.state = {
-      username: "",
-      password: "",
-    };
-    this.handleUpdate = this.handleUpdate.bind(this);
-  }
-
-  // ==================================================
-  // Lifecycle Methods
-  // ==================================================
-
-  // ==================================================
-  // Callbacks
-  // ==================================================
-
-  handleUpdate(field) {
-    return (event) => {
-      this.setState({[field]: event.target.value});
-    }
-  }
-
-  // ==================================================
   // Render
   // ==================================================
 
-  renderUsernameInput() {
+  renderUsernameInput(formUser, onUpdate) {
     return (
       <label>Username
         <input
           type="text"
-          value={this.state.username}
-          onChange={this.handleUpdate('username')}
+          value={formUser.username}
+          onChange={onUpdate('username')}
         />
       </label>
     );
   }
 
-  renderPasswordInput() {
+  renderPasswordInput(formUser, onUpdate) {
     return (
       <label>Password
         <input
           type="password"
-          value={this.state.password}
-          onChange={this.handleUpdate('password')}
+          value={formUser.password}
+          onChange={onUpdate('password')}
         />
       </label>
     );
   }
 
   render() {
-    const {onSubmit} = this.props;
+    const {
+      formUser,
+      onUpdate,
+      onSubmit,
+    } = this.props;
 
     return (
       <div>
         <h1>This is the Session Form Component.</h1>
         <form>
-          {this.renderUsernameInput()}
+          {this.renderUsernameInput(formUser, onUpdate)}
           <br/>
-          {this.renderPasswordInput()}
+          {this.renderPasswordInput(formUser, onUpdate)}
           <br/>
           <Button text={"Log In"} onPress={onSubmit} />
         </form>

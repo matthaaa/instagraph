@@ -23,6 +23,12 @@ class LoginView extends Component {
   // Callbacks
   // ==================================================
 
+  handleUpdate(field) {
+    return (event) => {
+      this.setState({[field]: event.target.value});
+    }
+  }
+
   handleSubmit() {
     e.preventDefault();
     this.props.login(this.state);
@@ -36,7 +42,9 @@ class LoginView extends Component {
       <div>
         <h1>This is the login view.</h1>
         <SessionForm
+          formUser={this.state}
           onSubmit={this.handleSubmit}
+          onUpdate={this.handleUpdate}
         />
       </div>
     );

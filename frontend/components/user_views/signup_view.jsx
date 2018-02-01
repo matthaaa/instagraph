@@ -24,15 +24,15 @@ class SignupView extends Component {
   // Callbacks
   // ==================================================
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.signup(this.state);
-  }
-
   handleUpdate(field) {
     return (event) => {
       this.setState({[field]: event.target.value});
     }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.signup(this.state);
   }
 
   // ==================================================
@@ -44,8 +44,8 @@ class SignupView extends Component {
         <h1>This is the sign up view.</h1>
         <NewUserForm
           formUser={this.state}
-          onUpdate={this.handleUpdate}
           onSubmit={this.handleSubmit}
+          onUpdate={this.handleUpdate}
         />
       </div>
     );

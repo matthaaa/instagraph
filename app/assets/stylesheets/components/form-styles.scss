@@ -21,6 +21,7 @@ $blue: #3897f0;
   line-height: 18px;
   background-color: $off-white;
   border: 1px solid $light-gray-1;
+  border-radius: 3px;
 }
 
 .form-input:focus {
@@ -28,7 +29,10 @@ $blue: #3897f0;
   border: 1px solid $light-gray-3;
 }
 
-.signup-input {
-  padding: 0;
+.signup-input, .login-input {
+  margin-bottom: 6px;
+}
+
+.signup-input:last-of-type, .login-input:last-of-type {
   margin-bottom: 0px;
 }

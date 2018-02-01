@@ -11,7 +11,12 @@ class LoginView extends Component {
   // ==================================================
   constructor(props) {
     super(props);
+    this.state = {
+      username: "",
+      password: "",
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   // ==================================================
@@ -19,7 +24,8 @@ class LoginView extends Component {
   // ==================================================
 
   handleSubmit() {
-    // TODO
+    e.preventDefault();
+    this.props.login(this.state);
   }
 
   // ==================================================
@@ -29,7 +35,9 @@ class LoginView extends Component {
     return (
       <div>
         <h1>This is the login view.</h1>
-        <SessionForm onSubmit={this.handleSubmit} />
+        <SessionForm
+          onSubmit={this.handleSubmit}
+        />
       </div>
     );
   }

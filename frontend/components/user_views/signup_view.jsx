@@ -45,7 +45,7 @@ class SignupView extends Component {
         <NewUserForm
           formUser={this.state}
           onUpdate={this.handleUpdate}
-          onSubmit={(e) => this.handleSubmit(e)}
+          onSubmit={this.handleSubmit}
         />
       </div>
     );

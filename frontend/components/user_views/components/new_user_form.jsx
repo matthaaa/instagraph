@@ -3,6 +3,7 @@ import {Component} from 'react';
 
 // Components
 import CustomButton from '../../generic/buttons/custom_button'
+import FormInput from '../../generic/forms/form_input'
 
 class NewUserForm extends Component {
 
@@ -11,37 +12,34 @@ class NewUserForm extends Component {
   // ==================================================
   renderEmailInput(formUser, onUpdate) {
     return (
-      <label>Email
-        <input
-          type="text"
-          value={formUser.email}
-          onChange={onUpdate('email')}
-        />
-      </label>
+      <FormInput
+        type="text"
+        placeholder={"Email"}
+        value={formUser.email}
+        onChange={onUpdate('email')}
+      />
     );
   }
 
   renderUsernameInput(formUser, onUpdate) {
     return (
-      <label>Username
-        <input
-          type="text"
-          value={formUser.username}
-          onChange={onUpdate('username')}
-        />
-      </label>
+      <FormInput
+        type="text"
+        placeholder={"Username"}
+        value={formUser.username}
+        onChange={onUpdate('username')}
+      />
     );
   }
 
   renderPasswordInput(formUser, onUpdate) {
     return (
-      <label>Password
-        <input
-          type="password"
-          value={formUser.password}
-          onChange={onUpdate('password')}
-        />
-      </label>
+      <FormInput
+        type="password"
+        placeholder={"Password"}
+        value={formUser.password}
+        onChange={onUpdate('password')}
+      />
     );
   }
 

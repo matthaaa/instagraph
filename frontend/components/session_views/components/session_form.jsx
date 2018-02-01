@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import Button from '../../generic/buttons/Button'
+import CustomButton from '../../generic/buttons/custom_button'
 
 class SessionForm extends Component {
 
@@ -46,7 +46,7 @@ class SessionForm extends Component {
           <br/>
           {this.renderPasswordInput(formUser, onUpdate)}
           <br/>
-          <Button text={"Log In"} onPress={onSubmit} />
+          <CustomButton text={"Log In"} onPress={onSubmit} />
         </form>
       </div>
     );

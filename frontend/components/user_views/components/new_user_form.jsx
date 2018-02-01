@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import Button from '../../generic/buttons/Button'
+import CustomButton from '../../generic/buttons/custom_button'
 
 class NewUserForm extends Component {
 
@@ -61,7 +61,7 @@ class NewUserForm extends Component {
           <br/>
           {this.renderPasswordInput(formUser, onUpdate)}
           <br/>
-          <Button text={"Sign Up"} onPress={onSubmit} />
+          <CustomButton text={"Sign Up"} onPress={onSubmit} />
         </form>
       </div>
     );

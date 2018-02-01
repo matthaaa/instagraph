@@ -50,7 +50,7 @@ class LoginView extends Component {
 
   renderMainFormContent() {
     return (
-      <div className="login-view-main-ontent">
+      <div className="login-view-main-content">
         <div className="logo-container">
           <MainLogo />
         </div>
@@ -59,13 +59,19 @@ class LoginView extends Component {
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
+      <a
+        className="instagram-link"
+        href="http://instagram.com"
+      >
+        {'Looking for Instagram?'}
+      </a>
       </div>
     );
   }
 
   renderRight() {
     return (
-      <div className="signup-view-content">
+      <div className="login-view-content">
         {this.renderMainFormContent()}
         {this.renderLoginFooter()}
       </div>
@@ -80,7 +86,7 @@ class LoginView extends Component {
   render() {
     return (
       <main className="logged-out-view">
-        <div className="login-view-content">
+        <div className="login-view-container">
           {this.renderLeft()}
           {this.renderRight()}
         </div>

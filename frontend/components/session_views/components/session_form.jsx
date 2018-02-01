@@ -16,7 +16,7 @@ class SessionForm extends Component {
       <FormInput
         type="text"
         placeholder={"Username"}
-        contentClassName={"login-form-input"}
+        contentClassName={"login-input"}
         value={formUser.username}
         onChange={onUpdate('username')}
       />
@@ -28,7 +28,7 @@ class SessionForm extends Component {
       <FormInput
         type="password"
         placeholder={"Password"}
-        contentClassName={"login-form-input"}
+        contentClassName={"login-input"}
         value={formUser.password}
         onChange={onUpdate('password')}
       />

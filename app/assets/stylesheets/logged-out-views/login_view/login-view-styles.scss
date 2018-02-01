@@ -4,19 +4,34 @@ $off-white: #FAFAFA;
 $light-gray-1: #EFEFEF;
 $light-gray-2: #E6E6E6;
 $light-gray-3: #DBDBDB;
+$black1: #262626;
+$black2: #003569;
+
 $blue: #3897f0;
 
+
 // Classes
-.login-view-content {
+.login-view-container {
   display: flex;
 }
 
 .login-view-main-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
-  padding: 10px;
+  width: 348px;
+  padding: 10px 0 20px;
   border: 1px solid $light-gray-2;
   background-color: #FFFFFF;
+}
+
+.instagram-link {
+  margin-top: 20px;
+  font-size: 12px;
+  font-weight: 450;
+  line-height: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: $black2;
 }

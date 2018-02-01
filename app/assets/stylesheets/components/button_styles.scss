@@ -5,17 +5,22 @@ $blue: #3897f0;
 
 // Classes
 .button {
-  padding: 0 8px;
-  font-family: 'Quicksand', sans-serif;
-  background-color: $blue;
-  color: #FFFFFF;
+  outline: none;
+  cursor: pointer;
+
   height: 28px;
   width: 268px;
-  border: 0px;
+
+  padding: 0 8px;
+
+  font-family: 'Quicksand', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 26px;
+  color: #FFFFFF;
+
+  background-color: $blue;
+
+  border: 1px solid $blue;
   border-radius: 3px;
-  outline: none;
-  cursor: pointer;
 }

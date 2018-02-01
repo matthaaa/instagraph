@@ -22,6 +22,7 @@ form, label, embed, footer, header, nav, section {
  	border: 0;
  	font: inherit;
  	vertical-align: baseline;
+  font-family: 'Quicksand', sans-serif;
  }
 
 footer, header, menu, nav, section {

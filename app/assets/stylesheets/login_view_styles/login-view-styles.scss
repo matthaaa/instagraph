@@ -1,0 +1,15 @@
+$gray: #E6E6E6;
+
+.login-view-content {
+  display: flex;
+}
+
+.login-view-form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding: 10px;
+  border: 1px solid $gray;
+  background-color: #FFFFFF;
+}

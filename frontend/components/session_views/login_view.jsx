@@ -36,18 +36,27 @@ class LoginView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  render() {
+  renderFormContent() {
     return (
-      <main className="logged-out-view">
+      <div className="login-view-form-content">
         <SessionForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
-      </main>
+      </div>
     );
   }
 
+  render() {
+    return (
+      <main className="logged-out-view">
+        <div className="login-view-content">
+          {this.renderFormContent()}
+        </div>
+      </main>
+    );
+  }
 };
 
 export default LoginView;

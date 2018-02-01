@@ -9,10 +9,12 @@ import SignupViewContainer from './user_views/signup_view_container';
 
 const App = ({children}) => (
   <div>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Pacifico|Quicksand:300,400,500,700" rel="stylesheet"/>
     <section className="main-view">
       <Switch>
-        <Route path="/login" component={LoginViewContainer} />
+        <Route path="/" component={SignupViewContainer} />
         <Route path="/signup" component={SignupViewContainer} />
+        <Route path="/login" component={LoginViewContainer} />
       </Switch>
     </section>
   </div>

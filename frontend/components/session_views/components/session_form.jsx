@@ -12,25 +12,23 @@ class SessionForm extends Component {
 
   renderUsernameInput(formUser, onUpdate) {
     return (
-      <label>Username
-        <input
-          type="text"
-          value={formUser.username}
-          onChange={onUpdate('username')}
-        />
-      </label>
+      <input
+        type="text"
+        placeholder={"Username"}
+        value={formUser.username}
+        onChange={onUpdate('username')}
+      />
     );
   }
 
   renderPasswordInput(formUser, onUpdate) {
     return (
-      <label>Password
-        <input
-          type="password"
-          value={formUser.password}
-          onChange={onUpdate('password')}
-        />
-      </label>
+      <input
+        type="password"
+        placeholder={"Password"}
+        value={formUser.password}
+        onChange={onUpdate('password')}
+      />
     );
   }
 
@@ -43,7 +41,6 @@ class SessionForm extends Component {
 
     return (
       <div>
-        <h1>This is the Session Form Component.</h1>
         <form>
           {this.renderUsernameInput(formUser, onUpdate)}
           <br/>

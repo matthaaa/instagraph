@@ -15,7 +15,7 @@ class CustomButton extends Component {
     const {onPress, text} = this.props;
 
     return (
-      <button onClick={onPress}>{text}</button>
+      <button className="button" onClick={onPress}>{text}</button>
     );
   }
 

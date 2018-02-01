@@ -4,6 +4,8 @@ import {Component} from 'react';
 // Components
 import CustomButton from '../../generic/buttons/custom_button'
 
+import FormInput from '../../generic/forms/form-input'
+
 class SessionForm extends Component {
 
   // ==================================================
@@ -12,7 +14,7 @@ class SessionForm extends Component {
 
   renderUsernameInput(formUser, onUpdate) {
     return (
-      <input
+      <FormInput
         type="text"
         placeholder={"Username"}
         value={formUser.username}
@@ -23,7 +25,7 @@ class SessionForm extends Component {
 
   renderPasswordInput(formUser, onUpdate) {
     return (
-      <input
+      <FormInput
         type="password"
         placeholder={"Password"}
         value={formUser.password}

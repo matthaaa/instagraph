@@ -25,6 +25,7 @@ class FormInput extends Component {
 
     return (
       <input
+        className="form-input"
         type={type}
         placeholder={placeholder}
         value={value}

@@ -12,7 +12,6 @@ const App = ({children}) => (
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Pacifico|Quicksand:300,400,500,700" rel="stylesheet"/>
     <section className="main-view">
       <Switch>
-        <Route path="/" component={SignupViewContainer} />
         <Route path="/signup" component={SignupViewContainer} />
         <Route path="/login" component={LoginViewContainer} />
       </Switch>

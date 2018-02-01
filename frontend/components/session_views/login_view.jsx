@@ -38,13 +38,13 @@ class LoginView extends Component {
   // ==================================================
   render() {
     return (
-      <div className="main">
+      <main className="logged-out-view">
         <SessionForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
-      </div>
+      </main>
     );
   }
 

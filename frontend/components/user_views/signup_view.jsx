@@ -40,13 +40,13 @@ class SignupView extends Component {
   // ==================================================
   render() {
     return (
-      <div className="main">
+      <main className="logged-out-view">
         <NewUserForm
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
-      </div>
+      </main>
     );
   }
 

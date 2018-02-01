@@ -1,10 +1,23 @@
 $off-white: #FAFAFA;
 
-.main {
-  min-height: 100%;
-
-  padding-top: 60px;
-  
-
+.main-view {
   background-color: $off-white;
+  min-height: 100%;
+}
+
+.logged-in-view {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 935px;
+  padding-top: 60px;
+}
+
+.logged-out-view {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  max-width: 935px;
+  width: 100%;
+  margin: 30px;
 }

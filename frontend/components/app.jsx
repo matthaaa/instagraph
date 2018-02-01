@@ -9,7 +9,7 @@ import SignupViewContainer from './user_views/signup_view_container';
 
 const App = ({children}) => (
   <div>
-    <section className="main">
+    <section className="main-view">
       <Switch>
         <Route path="/login" component={LoginViewContainer} />
         <Route path="/signup" component={SignupViewContainer} />

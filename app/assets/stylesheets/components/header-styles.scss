@@ -1,0 +1,24 @@
+// Colors
+$white: #FFFFFF;
+$off-white: #FAFAFA;
+$light-gray-1: #EFEFEF;
+$light-gray-2: #E6E6E6;
+$light-gray-3: #DBDBDB;
+$light-gray-4: #C7C7C7;
+$black1: #262626;
+$black2: #003569;
+
+$blue: #3897f0;
+
+.main-header-container {
+  background-color: $white;
+}
+
+.main-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 26px 40px;
+  max-width: 1010px;
+}

@@ -9,5 +9,5 @@ export const requestPosts = () => (
 
 const receivePosts = (posts) => ({
   type: RECEIVE_POSTS,
-  users,
+  posts,
 })

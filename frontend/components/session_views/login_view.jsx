@@ -23,7 +23,43 @@ class LoginView extends Component {
   }
 
   // ==================================================
+  // Lifecycle
+  // ==================================================
+  componentDidMount() {
+    if (this.props.isDemo) {
+      this.handleDemo();
+    }
+  }
+
+  // ==================================================
   // Callbacks
+  // ==================================================
+  populateStateField(field, value) {
+    const letters = ("" + value).split("");
+    let resultInput = "";
+
+    const timer = setInterval(() => {
+      resultInput += letters.shift();
+      if (letters.length === 0) {
+        clearInterval(timer, 0);
+        return this.setState({[field]: resultInput});
+      }
+      this.setState({[field]: resultInput});
+    }, 120);
+  }
+
+  populateFields(username, password) {
+    this.populateStateField("username", username);
+
+    // Ensures password begins typing after username since
+    // these methods are asynchronous.
+    setTimeout(() => {
+      this.populateStateField("password", password);
+    }, 1500);
+  }
+
+  // ==================================================
+  // Event Handlers
   // ==================================================
   handleUpdate(field) {
     return (event) => {
@@ -34,6 +70,10 @@ class LoginView extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.login(this.state);
+  }
+
+  handleDemo() {
+    this.populateFields("demo_lovati", "password");
   }
 
   // ==================================================

@@ -10,12 +10,6 @@ import {logout} from './actions/session_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-
-  // Test
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  // window.fetchPosts = fetchPosts;
-  // window.logout = logout;
   const root = document.getElementById('root');
 
   let store = {};
@@ -26,6 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
+
+  // Test
+  // window.fetchPosts = fetchPosts;
+  window.getState = store.getState;
+  window.logout = logout;
+  window.dispatch = store.dispatch;
 
   ReactDOM.render(<Root store={store}/>, root);
 });

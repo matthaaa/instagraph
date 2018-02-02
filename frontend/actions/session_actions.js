@@ -21,7 +21,7 @@ export const login = (formUser) => dispatch => {
 
 export const logout = () => dispatch => (
   SessionAPIUtil.logout().then(user => (
-    dispatch(receiveUser(null))
+    dispatch(receiveCurrentUser(null))
   ))
 );
 

@@ -10,7 +10,7 @@ import SignupView from './signup_view';
 
 const mapStateToProps = (state, ownProps) => ({
   // TODO: Add Full Name
-  user: {email: "", username: "", password: ""}
+  user: {email: "", full_name: "", username: "", password: ""}
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

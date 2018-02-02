@@ -17,6 +17,7 @@ class SignupView extends Component {
     super(props);
     this.state = {
       email: "",
+      full_name: "",
       username: "",
       password: "",
     };

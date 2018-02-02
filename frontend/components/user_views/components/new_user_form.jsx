@@ -23,6 +23,18 @@ class NewUserForm extends Component {
     );
   }
 
+  renderNameInput(formUser, onUpdate) {
+    return (
+      <FormInput
+        type="text"
+        contentClassName={"signup-input"}
+        placeholder={"Full Name"}
+        value={formUser.full_name}
+        onChange={onUpdate('full_name')}
+      />
+    );
+  }
+
   renderUsernameInput(formUser, onUpdate) {
     return (
       <FormInput
@@ -58,6 +70,7 @@ class NewUserForm extends Component {
       <div>
         <form className="signup-form">
           {this.renderEmailInput(formUser, onUpdate)}
+          {this.renderNameInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
           <div className="signup-form-button">

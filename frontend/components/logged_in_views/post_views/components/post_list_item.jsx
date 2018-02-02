@@ -15,13 +15,43 @@ class PostListItem extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderHeader() {
+    return(
+
+    );
+  }
+
+  renderPhoto() {
+    return(
+
+    );
+  }
+
+  renderActionBar() {
+    return(
+
+    );
+  }
+
+  renderDescription() {
+    return(
+
+    );
+  }
+
+  renderCommentForm() {
+    return(
+
+    );
+  }
+
   render() {
     const {
       post,
     } = this.props
 
     return (
-      <div />
+      <div className="post-list-item"/>
     );
   }
 

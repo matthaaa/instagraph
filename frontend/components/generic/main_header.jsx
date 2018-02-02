@@ -21,7 +21,7 @@ class MainHeader extends Component {
   renderLogo() {
     return (
       <div className="header-logo-section">
-        <MainLogo />
+        <MainLogo type="header" />
       </div>
     );
   }

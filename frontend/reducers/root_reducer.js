@@ -6,10 +6,10 @@ import PostReducer from './post_reducer';
 
 
 const RootReducer = combineReducers({
-  posts: PostReducer,
+  errors: ErrorReducer,
   session: SessionReducer,
   users: UserReducer,
-  errors: ErrorReducer,
+  posts: PostReducer,
 });
 
 

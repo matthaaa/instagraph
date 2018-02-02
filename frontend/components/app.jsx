@@ -16,6 +16,11 @@ const App = ({children}) => (
         <ProtectedRoute exact path="/" component={HomeFeedContainer} />
         <AuthRoute exact path="/signup" component={SignupViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
+        <AuthRoute
+          exact
+          path="/login/:demo"
+          component={LoginViewContainer}
+        />
       </Switch>
     </section>
   </div>

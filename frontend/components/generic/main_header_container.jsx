@@ -6,11 +6,8 @@ import MainHeader from './main_header';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state);
-  console.log(ownProps);
   return ({
-  // TODO: Add user prop to MainHeader.
-  // user: state.users[ownProps.match.params.id],
+  user: state.users[ownProps.match.params.id],
 })}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

@@ -27,10 +27,10 @@ export const logout = () => dispatch => (
 
 export const receiveUser = user => ({
   type: RECEIVE_USER,
-  user
+  user,
 });
 
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
-  errors
+  errors,
 });

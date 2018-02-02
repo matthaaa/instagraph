@@ -5,6 +5,7 @@ import configureStore from './store/store';
 
 // Test imoprts
 import {login, signup} from './util/session_api_util';
+import {fetchPosts} from './util/post_api_util';
 import {logout} from './actions/session_actions';
 
 
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchPosts = fetchPosts;
   window.logout = logout;
 
   ReactDOM.render(<Root store={store}/>, root);

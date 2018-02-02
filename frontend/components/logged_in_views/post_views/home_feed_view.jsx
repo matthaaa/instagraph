@@ -16,8 +16,12 @@ class HomeFeedView extends Component {
   // Render
   // ==================================================
   render() {
+    const {currentUser} = this.props;
+    console.log(currentUser);
+
     return (
       <div>
+        <h1>{currentUser.full_name}</h1>
         <h1>Main Feed Goes Here!</h1>
         <br/>
         <h1>Pretend a picture is here.</h1>

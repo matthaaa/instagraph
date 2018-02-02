@@ -6,9 +6,11 @@ import HomeFeedView from './home_feed_view';
 
 
 const mapStateToProps = (state, ownProps) => ({
+  currentUser: state.sessions.currentUser,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+
 })
 
 

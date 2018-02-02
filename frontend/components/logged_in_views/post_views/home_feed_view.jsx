@@ -28,7 +28,7 @@ class HomeFeedView extends Component {
         <br/>
         <h1>And here.</h1>
         <br/>
-        <h1>And here.</h1>
+        <img className="post-photo-grid-item" src="https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg"/>
         <br/>
         <h1>And here.</h1>
         <br/>

@@ -1,6 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 
+// Components
+import MainHeader from '../../generic/main_header';
+
 
 class HomeFeedView extends Component {
 
@@ -28,6 +31,7 @@ class HomeFeedView extends Component {
 
     return (
       <div>
+        <MainHeader user={currentUser} />
         <h1>{currentUser.full_name}</h1>
         <h1>Main Feed Goes Here!</h1>
         <br/>

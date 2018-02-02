@@ -1,6 +1,6 @@
 import {merge} from 'lodash';
 
-import {RECEIVE_USERS} from '../actions/user_actions';
+import {RECEIVE_USER, RECEIVE_USERS} from '../actions/user_actions';
 
 const userReducer = (oldState = {}, action) => {
   Object.freeze(oldState);

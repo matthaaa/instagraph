@@ -7,6 +7,8 @@ import MainHeader from './main_header';
 
 
 const mapStateToProps = (state, ownProps) => {
+  console.log(state);
+  console.log(ownProps);
   return ({
   user: state.users[ownProps.match.params.id],
 })}

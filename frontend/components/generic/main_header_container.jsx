@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
+import {requestUser} from '../../actions/user_actions';
 
 // Components
 import MainHeader from './main_header';
@@ -11,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 })}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  // TODO: Fetch user information.
+  requestUser: (user) => dispatch(requestUser(user))
 })
 
 

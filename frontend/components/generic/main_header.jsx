@@ -8,8 +8,11 @@ import MainLogo from './logos/main_logo';
 class MainHeader extends Component {
 
   // ==================================================
-  // Initialize
+  // Lifecycle
   // ==================================================
+  componentDidMount() {
+    this.props.requestUser();
+  }
 
   // ==================================================
   // Callbacks
@@ -51,7 +54,7 @@ class MainHeader extends Component {
   }
 
   render() {
-    // TODO: Add logic to show renderHeader when user is logged in. 
+    // TODO: Add logic to show renderHeader when user is logged in.
     return <div/>;
   }
 

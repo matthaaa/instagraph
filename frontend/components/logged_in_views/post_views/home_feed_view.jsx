@@ -19,61 +19,97 @@ class HomeFeedView extends Component {
     return (
       <div>
         <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
-        <h1>Main Feed Goes Here!</h1>
+        <br/>
+        <h1>Pretend a picture is here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
+        <h1>And here.</h1>
+        <br/>
       </div>
     );
   }

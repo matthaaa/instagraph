@@ -11,6 +11,11 @@ $black2: #003569;
 $blue: #3897f0;
 
 .main-header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  height: 77px;
   background-color: $white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }

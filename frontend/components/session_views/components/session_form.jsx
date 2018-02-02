@@ -24,10 +24,6 @@ class SessionForm extends Component {
   }
 
   renderPasswordInput(formUser, onUpdate) {
-    const className = (formUser.password === "") ?
-                                   "login-input" :
-                    "login-input filled-password";
-
     return (
       <FormInput
         type="password"

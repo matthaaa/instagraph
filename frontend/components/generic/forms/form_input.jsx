@@ -16,10 +16,16 @@ class FormInput extends Component {
       onChange,
     } = this.props;
 
+    const isEmpty = value === "";
+    const isPassword = type === "password";
+    const className = !isEmpty && isPassword ? "form-input filled-password"
+                                             : "form-input";
+
     return (
+
       <div className={contentClassName}>
         <input
-          className="form-input"
+          className={className}
           type={type}
           placeholder={placeholder}
           value={value}

@@ -5,6 +5,7 @@ import {Route, Switch} from 'react-router-dom';
 // Components
 import LoginViewContainer from './session_views/login_view_container';
 import SignupViewContainer from './user_views/signup_view_container';
+import HomeFeedContainer from './logged_in_views/post_views/home_feed_container';
 
 
 const App = ({children}) => (
@@ -14,6 +15,7 @@ const App = ({children}) => (
       <Switch>
         <Route path="/signup" component={SignupViewContainer} />
         <Route path="/login" component={LoginViewContainer} />
+        <Route path="/" component={HomeFeedContainer} />
       </Switch>
     </section>
   </div>

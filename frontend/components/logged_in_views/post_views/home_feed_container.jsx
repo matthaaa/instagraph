@@ -7,7 +7,7 @@ import HomeFeedView from './home_feed_view';
 
 
 const mapStateToProps = (state, ownProps) => ({
-  currentUser: state.sessions.currentUser,
+  currentUser: state.session.currentUser,
   users: Object.values(state.users),
 })
 

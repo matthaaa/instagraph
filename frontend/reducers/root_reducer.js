@@ -8,7 +8,7 @@ import PostReducer from './post_reducer';
 const RootReducer = combineReducers({
   users: UserReducer,
   posts: PostReducer,
-  sessions: SessionReducer,
+  session: SessionReducer,
   errors: ErrorReducer,
 });
 

@@ -18,9 +18,17 @@ $blue: #3897f0;
   font-weight: 600;
   line-height: 26px;
   color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
 
   background-color: $blue;
 
   border: 1px solid $blue;
   border-radius: 3px;
 }
+
+.button.link {
+  // Adjusts for styles on react-router-dom Link compoonent
+  padding: 0;
+  border: 0;
+};

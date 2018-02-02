@@ -39,10 +39,6 @@ class SignupView extends Component {
     this.props.signup(this.state);
   }
 
-  handleDemo() {
-    // TODO: Implement Demo login.
-  }
-
   // ==================================================
   // Render
   // ==================================================
@@ -71,7 +67,11 @@ class SignupView extends Component {
         <div className="logo-container">
           <MainLogo />
         </div>
-        <CustomButton text={"Log in as Demo"} onPress={this.handleDemo} />
+        <CustomButton
+          isLink
+          text={"Log in as Demo"}
+          onPress={this.handleDemo}
+        />
         {this.renderOrBar()}
         <NewUserForm
           formUser={this.state}

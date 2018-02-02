@@ -40,11 +40,15 @@ class LoginView extends Component {
 
     const timer = setInterval(() => {
       resultInput += letters.shift();
+
+      this.setState({[field]: resultInput});
+
       if (letters.length === 0) {
+        console.log("state", this.state);
         clearInterval(timer, 0);
+
         return this.setState({[field]: resultInput});
       }
-      this.setState({[field]: resultInput});
     }, 120);
   }
 

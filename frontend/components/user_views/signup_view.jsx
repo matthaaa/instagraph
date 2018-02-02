@@ -39,10 +39,6 @@ class SignupView extends Component {
     this.props.signup(this.state);
   }
 
-  handleDemo(e) {
-    this.setState({})
-  }
-
   // ==================================================
   // Render
   // ==================================================
@@ -75,7 +71,6 @@ class SignupView extends Component {
           isLink
           path={"/login/demo"}
           text={"Log in as Demo"}
-          onPress={this.handleDemo}
         />
         {this.renderOrBar()}
         <NewUserForm

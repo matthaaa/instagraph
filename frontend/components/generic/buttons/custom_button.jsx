@@ -13,7 +13,7 @@ class CustomButton extends Component {
       <Link
         className="button link"
         to={path}
-        onClick={onPress}>
+        onClick={onPress ? onPress : null}>
         {text}
       </Link>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-// import {AuthRoute} from '../util/route_util';
+import {AuthRoute, ProtectedRoute} from '../util/route_util';
 
 // Components
 import MainHeader from './generic/main_header';
@@ -15,9 +15,9 @@ const App = ({children}) => (
     <MainHeader/>
     <section className="main-view">
       <Switch>
-        <Route path="/signup" component={SignupViewContainer} />
-        <Route path="/login" component={LoginViewContainer} />
-        <Route path="/" component={HomeFeedContainer} />
+        <ProtectedRoute exact path="/" component={HomeFeedContainer} />
+        <AuthRoute exact path="/signup" component={SignupViewContainer} />
+        <AuthRoute exact path="/login" component={LoginViewContainer} />
       </Switch>
     </section>
   </div>

@@ -4,22 +4,15 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 // Test imoprts
-import {login, logout, signup} from './util/session_api_util';
+import {login, signup} from './util/session_api_util';
+import {logout} from './actions/session_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  let store;
-  if (window.currentUser) {
-    const preloadedState = {sessions: {currentUser: window.currentUser}};
-    store = configureStore(preloadedState);
-    delete window.currentUser;
-
-  } else {
-    store = configureStore();
-  }
-
-  // Testing
+  const store = configureStore();
   const root = document.getElementById('root');
+
+  // Test
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.logout = logout;

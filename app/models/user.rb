@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :password_digest, :session_token, presence: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
-  after_initialize :ensure_token, :initialize_img_url
+  after_initialize :ensure_token, :initialize_img_url, :full_name
 
   attr_reader :password
 
@@ -31,6 +31,10 @@ class User < ApplicationRecord
   private
   def ensure_token
     self.session_token ||= SecureRandom.urlsafe_base64
+  end
+
+  def initialize_name
+    self.full_name ||= ""
   end
 
   def initialize_img_url

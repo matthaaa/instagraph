@@ -17,7 +17,7 @@ const receiveUsers = (users) => ({
   users,
 })
 
-export const receiveUser = user => ({
+const receiveUser = user => ({
   type: RECEIVE_USER,
   user,
 })

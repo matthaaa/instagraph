@@ -11,6 +11,7 @@ import LoginView from './login_view';
 
 const mapStateToProps = (state, ownProps) => ({
   user: {username: "", password: ""},
+  errors: state.errors.session,
   isDemo: (ownProps.match.params.demo === "demo"),
 })
 

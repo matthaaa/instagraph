@@ -12,11 +12,10 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render 'api/users/show'
     else
-      # render 'api/session/create'
       render json: [
         'Sorry, your password was incorrect. Please double-check ' +
         'your password.'
-      ]
+      ], status: 404
     end
   end
 
@@ -25,7 +24,7 @@ class Api::SessionsController < ApplicationController
       logout
       render json: {}
     else
-      render json: ['No user to sign out']
+      render json: ['No user to sign out'], status: 400
     end
   end
 end

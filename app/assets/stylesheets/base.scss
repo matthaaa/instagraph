@@ -10,6 +10,9 @@ $off-white: #FAFAFA;
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
+
+  // Add conditions for logged in/logged out states or add to components
+  padding: 80px;
 }
 
 .logged-in-view {

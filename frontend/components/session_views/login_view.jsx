@@ -44,22 +44,28 @@ class LoginView extends Component {
       this.setState({[field]: resultInput});
 
       if (letters.length === 0) {
-        console.log("state", this.state);
         clearInterval(timer, 0);
-
-        return this.setState({[field]: resultInput});
       }
     }, 120);
   }
 
-  populateFields(username, password) {
+  populateFieldAndLogin(username, password) {
+    const usernameDuration = 120 * username.length + 50;
+    const passwordDuration = 120 * password.length + 50;
+    const totalDuration = usernameDuration + passwordDuration;
+
     this.populateStateField("username", username);
 
     // Ensures password begins typing after username since
     // these methods are asynchronous.
     setTimeout(() => {
       this.populateStateField("password", password);
-    }, 1500);
+    }, (usernameDuration));
+
+    // Ensures login happens after demo has updated the state.
+    setTimeout(() => {
+      this.handleDemoLogin();
+    }, (totalDuration));
   }
 
   // ==================================================
@@ -77,7 +83,11 @@ class LoginView extends Component {
   }
 
   handleDemo() {
-    this.populateFields("demo_lovati", "password");
+    this.populateFieldAndLogin("demo_lovati", "password");
+  }
+
+  handleDemoLogin() {
+    this.props.login(this.state);
   }
 
   // ==================================================

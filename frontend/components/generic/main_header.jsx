@@ -38,7 +38,7 @@ class MainHeader extends Component {
     );
   }
 
-  render() {
+  renderHeader() {
     return (
       <header className="main-header-container">
         <div className="main-header-content">
@@ -48,6 +48,11 @@ class MainHeader extends Component {
         </div>
       </header>
     );
+  }
+
+  render() {
+    // TODO: Add logic to show renderHeader when user is logged in. 
+    return <div/>;
   }
 
 };

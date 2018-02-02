@@ -19,7 +19,7 @@ class CustomButton extends Component {
     );
   }
 
-  renderButton(onPress, path, text) {
+  renderButton(onPress, text) {
     return (
       <button className="button" onClick={onPress}>{text}</button>
     );

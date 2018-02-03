@@ -1,3 +1,3 @@
 # README
 
-[Live link:]!(https://progress.appacademy.io/me/final_projects/new)
+Live Link: https://instagraph-aa.herokuapp.com/#/

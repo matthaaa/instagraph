@@ -61,7 +61,7 @@ class SignupView extends Component {
 
   renderLoginFooter() {
     return (
-      <div className="toggle-footer">
+      <div className="toggle-footer fadeIn">
         <p>Have an account?</p>
         <Link className="toggle-footer-link" to={"/login"}>Log in</Link>
       </div>
@@ -70,7 +70,7 @@ class SignupView extends Component {
 
   renderMainFormContent() {
     return (
-      <div className="signup-view-main-content">
+      <div className="signup-view-main-content fadeIn">
         <div className="logo-container">
           <MainLogo />
         </div>

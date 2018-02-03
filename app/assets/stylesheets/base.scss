@@ -3,15 +3,13 @@ $off-white: #FAFAFA;
 .main-view {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   background: $off-white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 100%;
-
-  // Add conditions for logged in/logged out states or add to components
-  padding: 80px 0px;
 }
 
 .logged-in-view {
@@ -28,5 +26,4 @@ $off-white: #FAFAFA;
   justify-content: center;
   max-width: 935px;
   width: 100%;
-  padding: 30px;
 }

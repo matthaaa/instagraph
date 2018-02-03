@@ -25,6 +25,10 @@ export const logout = () => dispatch => (
   ))
 );
 
+export const clearErrors = () => dispatch => (
+  dispatch(receiveErrors([]))
+);
+
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
   currentUser,

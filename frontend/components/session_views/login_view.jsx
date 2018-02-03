@@ -29,6 +29,7 @@ class LoginView extends Component {
     if (this.props.isDemo) {
       this.handleDemo();
     }
+    this.props.clearErrors();
   }
 
   // ==================================================

@@ -52,7 +52,7 @@ class SessionForm extends Component {
           <div className="signup-form-button">
             <CustomButton text={"Log In"} onPress={onSubmit} />
           </div>
-          <FormErrors type={"login"} errors={errors} />
+          <FormErrors errors={errors} />
         </form>
       </div>
     );

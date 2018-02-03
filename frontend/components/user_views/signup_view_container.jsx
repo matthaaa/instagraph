@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import {
   signup,
+  clearErrors,
 } from '../../actions/session_actions';
 
 // Components
@@ -14,7 +15,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  signup: (user) => dispatch(signup(user))
+  signup: (user) => dispatch(signup(user)),
+  clearErrors: () => dispatch(clearErrors()),
 })
 
 

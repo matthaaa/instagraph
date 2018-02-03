@@ -29,31 +29,12 @@ class FormErrors extends Component {
     ));
   }
 
-  renderLoginErrors(errors) {
-    if (errors.length === 2) {
-      // Prompts for only a username if both fields are blank.
-      return this.renderError(errors[1])
-    } else {
-      return this.renderError(errors[0])
-    }
-  }
-
   render() {
-    const {type, errors} = this.props;
-
-    console.log(this.props);
-
-    console.log(type === "login");
-    console.log(!!type);
-    console.log(type);
-
-    const errorList = !!type && (type === "login") ?
-                this.renderLoginErrors(errors) :
-                this.renderErrorList(errors);
+    const {errors} = this.props;
 
     return (
       <div className="error-messages-list">
-        {errorList}
+        {this.renderErrorList(errors)}
       </div>
     );
   }

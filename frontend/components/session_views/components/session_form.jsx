@@ -15,6 +15,7 @@ class SessionForm extends Component {
   renderUsernameInput(formUser, onUpdate) {
     return (
       <FormInput
+        autoFocus
         type="text"
         placeholder={"Username"}
         contentClassName={"login-input"}

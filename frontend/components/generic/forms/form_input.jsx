@@ -9,6 +9,7 @@ class FormInput extends Component {
   // ==================================================
   render() {
     const {
+      autoFocus,
       type,
       placeholder,
       contentClassName,
@@ -25,6 +26,7 @@ class FormInput extends Component {
 
       <div className={contentClassName}>
         <input
+          autoFocus={autoFocus}
           className={className}
           type={type}
           placeholder={placeholder}

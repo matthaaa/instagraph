@@ -1,5 +1,6 @@
 class Api::PostsController < ApplicationController
-  def add
+  def new
+    @post = Post.new
   end
 
   def create
@@ -12,22 +13,20 @@ class Api::PostsController < ApplicationController
     end
   end
 
-  def index
-    @posts = Post.all
-    render :index
-  end
-
-  def show
-    render :show
-  end
-
-  def destroy
-  end
-
   def edit
   end
 
   def update
+  end
+
+  def index
+    @posts = Post.all
+  end
+
+  def show
+  end
+
+  def destroy
   end
 
   private

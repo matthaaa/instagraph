@@ -7,7 +7,10 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :posts
+  has_many :posts,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Post
 
   def password=(password)
     @password = password

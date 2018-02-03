@@ -48,8 +48,9 @@ class PostListItem extends Component {
     const description = post.description;
 
     return(
-      <div className="post-description" >
-        {description}
+      <div className="post-description-container" >
+        <p className="post-header-author-text">Oski</p>
+        <p className="post-description-text">{description}</p>
       </div>
     );
   }

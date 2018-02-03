@@ -33,6 +33,16 @@ class HomeFeedView extends Component {
         <PostListItem />
         <br/>
         <PostListItem />
+        <br/>
+        <PostListItem />
+        <br/>
+        <PostListItem />
+        <br/>
+        <PostListItem />
+        <br/>
+        <PostListItem />
+        <br/>
+        <PostListItem />
       </div>
     );
   }

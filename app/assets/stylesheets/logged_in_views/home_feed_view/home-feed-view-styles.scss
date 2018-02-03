@@ -36,6 +36,9 @@ $blue: #3897f0;
 
 .post-header-author-text {
   font-weight: 600;
+  font-size: 15px;
+  margin-right: 5px;
+  display: inline;
 }
 
 .post-photo {
@@ -46,8 +49,15 @@ $blue: #3897f0;
 
 .post-body {
   padding: 0 16px;
-  background-color: $light-gray-1;
+  background-color: $white;
 }
 
-.post-description {
+.post-description-container {
+  padding: 6px 0;
+}
+
+.post-description-text {
+  font-weight: 400;
+  font-size: 15px;
+  display: inline;
 }

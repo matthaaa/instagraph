@@ -11,7 +11,18 @@ $black: #262626;
 $blue: #3897f0;
 
 // Classes
-.post-photo-grid-item {
-  width: 120px;
-  height: 120px;
+.post-list-item {
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  height: auto;
+  background-color: #EFEFEF;
+}
+
+.post-author-header {
+  height: 60px;
+}
+
+.post-photo {
+  max-height: 600px;
 }

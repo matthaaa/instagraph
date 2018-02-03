@@ -17,32 +17,42 @@ class PostListItem extends Component {
   // ==================================================
   renderHeader() {
     return(
-
+      <div className="post-author-header" ></div>
     );
   }
 
   renderPhoto() {
     return(
-
+      <div className="post-photo" ></div>
     );
   }
 
   renderActionBar() {
     return(
-
+      <div className="post-action-bar" ></div>
     );
   }
 
   renderDescription() {
     return(
-
+      <div className="post-description" ></div>
     );
   }
 
   renderCommentForm() {
     return(
-
+      <div className="comment-form" ></div>
     );
+  }
+
+  renderPostBody() {
+    return (
+      <div className="post-body">
+        {this.renderActionBar()}
+        {this.renderDescription()}
+        {this.renderCommentForm()}
+      </div>
+    )
   }
 
   render() {
@@ -51,7 +61,11 @@ class PostListItem extends Component {
     } = this.props
 
     return (
-      <div className="post-list-item"/>
+      <div className="post-list-item">
+        {this.renderHeader()}
+        {this.renderPhoto()}
+        {this.renderPostBody()}
+      </div>
     );
   }
 

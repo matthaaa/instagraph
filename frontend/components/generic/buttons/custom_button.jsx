@@ -8,10 +8,10 @@ class CustomButton extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderLink(onPress, path, text) {
+  renderLink(onPress, className, path, text) {
     return (
       <Link
-        className="button link"
+        className={"button link" + ` ${className}`}
         to={path}
         onClick={onPress ? onPress : null}>
         {text}
@@ -19,17 +19,17 @@ class CustomButton extends Component {
     );
   }
 
-  renderButton(onPress, text) {
+  renderButton(onPress, className, text) {
     return (
-      <button className="button" onClick={onPress}>{text}</button>
+      <button className={"button" + ` ${className}`} onClick={onPress}>{text}</button>
     );
   }
 
   render() {
-    const {isLink, onPress, path, text} = this.props;
+    const {isLink, className, onPress, path, text} = this.props;
 
-    return isLink ? this.renderLink(onPress, path, text)
-                  : this.renderButton(onPress, text);
+    return isLink ? this.renderLink(onPress, className, path, text)
+                  : this.renderButton(onPress, className, text);
   }
 
 };

@@ -9,12 +9,20 @@ import MainLogo from './logos/main_logo';
 class MainHeader extends Component {
 
   // ==================================================
+  // Initialize
+  // ==================================================
+  constructor(props) {
+    super(props);
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  // ==================================================
   // Callbacks
   // ==================================================
 
   // TODO: Temporary Handler: remove after implementing menu bar.
   handleLogout() {
-
+    this.props.logout();
   }
 
   // ==================================================
@@ -41,7 +49,11 @@ class MainHeader extends Component {
   renderMenu() {
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
-      <CustomButton />
+      <CustomButton
+        className={"temporary-logout-button"}
+        text={"Log out"}
+        onPress={this.handleLogout}
+      />
     );
   }
 

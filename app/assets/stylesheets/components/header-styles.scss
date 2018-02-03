@@ -47,3 +47,8 @@ $blue: #3897f0;
   font-size: 14px;
   color: $gray;
 }
+
+// TODO: Remove once logout button is no longer needed.
+.temporary-logout-button {
+  width: 150px;
+}

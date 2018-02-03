@@ -1,6 +1,5 @@
 import React from 'react';
 import {Component} from 'react';
-import Image from 'react-image-resizer';
 
 
 class PostListItem extends Component {
@@ -29,10 +28,10 @@ class PostListItem extends Component {
 
     return(
       <div className="post-photo" >
-        <Image
+        <img
           src={url}
-          height={400}
           width={600}
+          align="middle"
         />
       </div>
     );

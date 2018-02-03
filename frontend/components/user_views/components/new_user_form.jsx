@@ -2,8 +2,9 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import CustomButton from '../../generic/buttons/custom_button'
-import FormInput from '../../generic/forms/form_input'
+import CustomButton from '../../generic/buttons/custom_button';
+import FormInput from '../../generic/forms/form_input';
+import ErrorText from '../../generic/forms/error_text';
 
 
 class NewUserForm extends Component {
@@ -73,6 +74,9 @@ class NewUserForm extends Component {
           {this.renderNameInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
+          <div className="error-messages">
+
+          </div>
           <div className="signup-form-button">
             <CustomButton text={"Sign Up"} onPress={onSubmit} />
           </div>

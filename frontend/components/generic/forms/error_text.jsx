@@ -16,6 +16,8 @@ class ErrorText extends Component {
   // Render
   // ==================================================
   render() {
+    const {text} = this.props;
+
     return (
       <p className="error-message-text">{text}</p>
     );

@@ -51,6 +51,18 @@ $red: #ED4956;
   font-size: 16px;
 }
 
+.error-message-container {
+  margin-bottom: 5px;
+}
+
+.error-message-container:last-of-type {
+  margin-bottom: 0px;
+}
+
+.error-messages-list {
+  margin: 10px 40px;
+}
+
 .error-message-text {
   color: $red;
   font-size: 14px;

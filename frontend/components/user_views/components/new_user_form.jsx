@@ -60,8 +60,17 @@ class NewUserForm extends Component {
     );
   }
 
+  renderErrors(errors) {
+    return errors.session.map((sessionError) => (
+      <div className="error-message-container">
+        <ErrorText text={sessionError}/>
+      </div>
+    ));
+  }
+
   render() {
     const {
+      errors,
       formUser,
       onUpdate,
       onSubmit,
@@ -74,8 +83,8 @@ class NewUserForm extends Component {
           {this.renderNameInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
-          <div className="error-messages">
-
+          <div className="error-messages-list">
+            {this.renderErrors(errors)}
           </div>
           <div className="signup-form-button">
             <CustomButton text={"Sign Up"} onPress={onSubmit} />

@@ -74,6 +74,7 @@ class SignupView extends Component {
         />
         {this.renderOrBar()}
         <NewUserForm
+          errors={this.props.errors}
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}

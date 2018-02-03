@@ -14,7 +14,9 @@ class Api::SessionsController < ApplicationController
     else
       render json: [
         'Sorry, your password was incorrect. Please double-check ' +
-        'your password.'
+        'your password.',
+        'The username you entered doesn\'t belong to an account. ' +
+        'Please check your username and try again.'
       ], status: 404
     end
   end

@@ -46,5 +46,8 @@
   "bugs": {
     "url": "https://github.com/matthaaa/instagraph/issues"
   },
-  "homepage": "https://github.com/matthaaa/instagraph#readme"
+  "homepage": "https://github.com/matthaaa/instagraph#readme",
+  "devDependencies": {
+    "react-image-resizer": "^1.2.0"
+  }
 }

@@ -11,18 +11,43 @@ $black: #262626;
 $blue: #3897f0;
 
 // Classes
+.feed-content {
+  max-width: 600px;
+}
+
 .post-list-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 600px;
   height: auto;
-  background-color: #EFEFEF;
+  background-color: $white;
+  border: 1px solid $light-gray-2;
+  border-radius: 3px;
 }
 
 .post-author-header {
+  display: flex;
+  align-items: center;
   height: 60px;
+  padding: 16px;
+  border-bottom: 1px solid $light-gray-1;
+  -webkit-box-sizing: border-box;
+}
+
+.post-header-author-text {
+  font-weight: 600;
 }
 
 .post-photo {
+  max-width: 600px;
   max-height: 600px;
+  overflow: hidden;
+}
+
+.post-body {
+  padding: 0 16px;
+  background-color: $light-gray-1;
+}
+
+.post-description {
 }

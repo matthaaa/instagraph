@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import Image from 'react-image-resizer';
 
 
 class PostListItem extends Component {
@@ -17,13 +18,23 @@ class PostListItem extends Component {
   // ==================================================
   renderHeader() {
     return(
-      <div className="post-author-header" ></div>
+      <div className="post-author-header" >
+        <p className="post-header-author-text">Oski</p>
+      </div>
     );
   }
 
-  renderPhoto() {
+  renderPhoto(post) {
+    const url = post.img_url;
+
     return(
-      <div className="post-photo" ></div>
+      <div className="post-photo" >
+        <Image
+          src={url}
+          height={400}
+          width={600}
+        />
+      </div>
     );
   }
 
@@ -33,9 +44,13 @@ class PostListItem extends Component {
     );
   }
 
-  renderDescription() {
+  renderDescription(post) {
+    const description = post.description;
+
     return(
-      <div className="post-description" ></div>
+      <div className="post-description" >
+        {description}
+      </div>
     );
   }
 
@@ -45,26 +60,30 @@ class PostListItem extends Component {
     );
   }
 
-  renderPostBody() {
+  renderPostBody(post) {
     return (
       <div className="post-body">
         {this.renderActionBar()}
-        {this.renderDescription()}
+        {this.renderDescription(post)}
         {this.renderCommentForm()}
       </div>
     )
   }
 
   render() {
-    const {
-      post,
-    } = this.props
+    // TODO: Test Post.
+    const post = {
+      id: 1,
+      description: "Miss this place.",
+      author_id: 2,
+      img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
+    };
 
     return (
       <div className="post-list-item">
         {this.renderHeader()}
-        {this.renderPhoto()}
-        {this.renderPostBody()}
+        {this.renderPhoto(post)}
+        {this.renderPostBody(post)}
       </div>
     );
   }

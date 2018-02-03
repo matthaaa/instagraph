@@ -27,6 +27,7 @@ class FormInput extends Component {
       <div className={contentClassName}>
         <input
           autoFocus={autoFocus}
+          spellCheck={false}
           className={className}
           type={type}
           placeholder={placeholder}

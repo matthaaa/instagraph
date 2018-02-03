@@ -4,6 +4,7 @@ import {Component} from 'react';
 // Components
 import CustomButton from '../../generic/buttons/custom_button'
 import FormInput from '../../generic/forms/form_input'
+import FormErrors from '../../generic/forms/form_errors';
 
 
 class SessionForm extends Component {
@@ -37,6 +38,7 @@ class SessionForm extends Component {
 
   render() {
     const {
+      errors,
       formUser,
       onUpdate,
       onSubmit,
@@ -50,6 +52,7 @@ class SessionForm extends Component {
           <div className="signup-form-button">
             <CustomButton text={"Log In"} onPress={onSubmit} />
           </div>
+          <FormErrors type={"login"} errors={errors} />
         </form>
       </div>
     );

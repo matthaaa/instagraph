@@ -110,6 +110,7 @@ class LoginView extends Component {
           <MainLogo />
         </div>
         <SessionForm
+          errors={this.props.errors}
           formUser={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}

@@ -2,7 +2,11 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
+import CustomButton from './buttons/custom_button';
 import MainLogo from './logos/main_logo';
+
+// Temporary Test Import
+import {logout} from '../../../actions/session_actions';
 
 
 class MainHeader extends Component {
@@ -10,6 +14,11 @@ class MainHeader extends Component {
   // ==================================================
   // Callbacks
   // ==================================================
+
+  // TODO: Temporary Handler: remove after implementing menu bar.
+  handleLogout() {
+
+  }
 
   // ==================================================
   // Render
@@ -23,14 +32,19 @@ class MainHeader extends Component {
   }
 
   renderSearch() {
+    // TODO: Tnis is a placeholder; add input here when
+    //       implementing search.
     return (
-      <h1>We finna put a search bar here</h1>
+      <div className="header-search-bar">
+        <h2 className="search-placeholder">Search</h2>
+      </div>
     );
   }
 
   renderMenu() {
+    // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
-      <h1>And the menu go here tho</h1>
+      <CustomButton />
     );
   }
 

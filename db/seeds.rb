@@ -38,11 +38,9 @@ users = User.create([
   }
 ])
 
-posts = Post.create([
-  {
+posts = Post.create(
     id: 1,
     description: "Miss this place.",
-    author_id: 2,
+    author_id: users[1].id,
     img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
-  }
-])
+  )

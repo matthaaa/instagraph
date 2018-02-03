@@ -3,7 +3,7 @@ $off-white: #FAFAFA;
 .main-view {
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  justify-content: stretch;
   background: $off-white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -24,6 +24,7 @@ $off-white: #FAFAFA;
   display: flex;
   align-items: stretch;
   justify-content: center;
+  margin: 0 auto;
   max-width: 935px;
   width: 100%;
 }

@@ -26,6 +26,11 @@ $blue: #3897f0;
   color: $black;
   background-color: $white;
   border: 1px solid $light-gray-2;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .toggle-footer-link {
@@ -33,4 +38,20 @@ $blue: #3897f0;
   color: $blue;
   cursor: pointer;
   text-decoration: none;
+}
+
+// Animation
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

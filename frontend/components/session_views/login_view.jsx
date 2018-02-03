@@ -97,7 +97,7 @@ class LoginView extends Component {
   // ==================================================
   renderLoginFooter() {
     return (
-      <div className="toggle-footer">
+      <div className="toggle-footer fadeIn">
         <p>Don't have an account?</p>
         <Link className="toggle-footer-link" to={"/signup"}>Sign up</Link>
       </div>
@@ -106,7 +106,7 @@ class LoginView extends Component {
 
   renderMainFormContent() {
     return (
-      <div className="login-view-main-content">
+      <div className="login-view-main-content fadeIn">
         <div className="logo-container">
           <MainLogo />
         </div>

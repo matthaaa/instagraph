@@ -28,6 +28,11 @@ $blue: #3897f0;
   padding: 10px 0 42px;
   border: 1px solid $light-gray-2;
   background-color: #FFFFFF;
+
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .or-bar {
@@ -62,4 +67,20 @@ $blue: #3897f0;
 
 .disclaimer p:last-of-type {
   font-weight: 600;
+}
+
+// Animation
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }

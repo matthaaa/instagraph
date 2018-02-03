@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import MainHeader from '../../generic/main_header';
+import MainHeaderComponent from '../../generic/main_header_component';
 import PostListItem from './components/post_list_item';
 
 
@@ -52,7 +52,7 @@ class HomeFeedView extends Component {
 
     return (
       <div className="logged-in-view">
-        <MainHeader user={currentUser} />
+        <MainHeaderComponent user={currentUser} />
         {this.renderFeedContent()}
       </div>
     );

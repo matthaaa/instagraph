@@ -5,9 +5,6 @@ import {Component} from 'react';
 import CustomButton from './buttons/custom_button';
 import MainLogo from './logos/main_logo';
 
-// Temporary Test Import
-import {logout} from '../../../actions/session_actions';
-
 
 class MainHeader extends Component {
 

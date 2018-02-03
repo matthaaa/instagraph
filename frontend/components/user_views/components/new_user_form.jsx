@@ -4,7 +4,7 @@ import {Component} from 'react';
 // Components
 import CustomButton from '../../generic/buttons/custom_button';
 import FormInput from '../../generic/forms/form_input';
-import ErrorText from '../../generic/forms/error_text';
+import FormErrors from '../../generic/forms/form_errors';
 
 
 class NewUserForm extends Component {
@@ -60,14 +60,6 @@ class NewUserForm extends Component {
     );
   }
 
-  renderErrors(errors) {
-    return errors.session.map((sessionError) => (
-      <div className="error-message-container">
-        <ErrorText text={sessionError}/>
-      </div>
-    ));
-  }
-
   render() {
     const {
       errors,
@@ -83,9 +75,7 @@ class NewUserForm extends Component {
           {this.renderNameInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
-          <div className="error-messages-list">
-            {this.renderErrors(errors)}
-          </div>
+          <FormErrors errors={errors} />
           <div className="signup-form-button">
             <CustomButton text={"Sign Up"} onPress={onSubmit} />
           </div>

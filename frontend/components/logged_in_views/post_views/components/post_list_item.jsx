@@ -77,7 +77,7 @@ class PostListItem extends Component {
       description: "Miss this place.",
       author_id: 2,
       img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
-    };
+    }
 
     return (
       <div className="post-list-item">

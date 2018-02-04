@@ -26,34 +26,47 @@ class HomeFeedView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderFeedContent() {
-    // TODO: List of posts goes here.
+  renderPostListItem(post) {
+    // TODO: List of posts goes here. Currently testing single post
     return (
       <div>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
         <br/>
-        <PostListItem />
+        <PostListItem post={post} />
+        <br/>
+        <PostListItem post={post} />
+        <br/>
+        <PostListItem post={post} />
+        <br/>
+        <PostListItem post={post} />
+        <br/>
       </div>
     );
   }
 
+  renderPostFeed(posts) {
+    return posts.map((post) => (
+      this.renderPostListItem(post)
+    ))
+  }
+
   render() {
-    const {currentUser} = this.props;
+    const {currentUser, posts} = this.props;
 
     return (
       <div className="logged-in-view">
         <MainHeaderComponent user={currentUser} />
-        {this.renderFeedContent()}
+        {this.renderPostFeed(posts)}
       </div>
     );
   }

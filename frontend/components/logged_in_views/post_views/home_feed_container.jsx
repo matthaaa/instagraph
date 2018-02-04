@@ -6,14 +6,22 @@ import {requestUsers} from '../../../actions/user_actions';
 import HomeFeedView from './home_feed_view';
 
 
-const mapStateToProps = (state, ownProps) => ({
-  currentUser: state.session.currentUser,
-  posts: Object.values(state.posts),
-  users: Object.values(state.users),
-})
+const mapStateToProps = (state, ownProps) => {
+  const users = Object.values(state.users);
+  const posts = users.map(user => user.posts);
+
+  console.log(posts);
+
+  return ({
+    currentUser: state.session.currentUser,
+    users,
+    posts,
+  });
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  requestUsers: () => dispatch(requestUsers),
+  requestUsers: () => dispatch(requestUsers()),
+  requestPosts: () => dispatch(requestPosts()),
 })
 
 

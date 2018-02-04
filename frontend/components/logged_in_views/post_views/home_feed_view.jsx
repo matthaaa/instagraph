@@ -32,24 +32,6 @@ class HomeFeedView extends Component {
       <div>
         <PostListItem post={post} />
         <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
-        <PostListItem post={post} />
-        <br/>
       </div>
     );
   }
@@ -62,7 +44,6 @@ class HomeFeedView extends Component {
 
   render() {
     const {currentUser, posts} = this.props;
-
     return (
       <div className="logged-in-view">
         <MainHeaderComponent user={currentUser} />

@@ -3,7 +3,7 @@ import {Component} from 'react';
 
 // Components
 import MainHeaderComponent from '../../generic/main_header_component';
-import PostListItem from './components/post_list_item';
+import PostListItem from './components/post_list_item/post_list_item';
 
 
 class HomeFeedView extends Component {

@@ -38,8 +38,12 @@ class PostListItem extends Component {
   }
 
   renderActionBar() {
+    // TODO: Add icons to buttons.
     return(
-      <div className="post-action-bar" ></div>
+      <div className="post-action-bar" >
+        <button className="like-button"></button>
+        <button className="comment-button"></button>
+      </div>
     );
   }
 

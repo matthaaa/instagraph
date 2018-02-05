@@ -26,16 +26,14 @@ class HomeFeedView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderPostListItem(key, post) {
-    console.log("P{OST", post);
+  renderPostListItem(post) {
     // TODO: List of posts goes here. Currently testing single post
     return (
-      <PostListItem post={post} />
+      <PostListItem key={post.id} post={post} />
     );
   }
 
   renderPostFeed(posts) {
-    console.log(posts);
     return posts.map(post => (
       this.renderPostListItem(post)
     ))

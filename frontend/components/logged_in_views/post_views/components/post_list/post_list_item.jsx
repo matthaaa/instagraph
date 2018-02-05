@@ -75,13 +75,7 @@ class PostListItem extends Component {
   }
 
   render() {
-    // TODO: Test Post.
-    const post = {
-      id: 1,
-      description: "Miss this place.",
-      author_id: 2,
-      img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
-    }
+    const {post} = this.props;
 
     return (
       <div className="post-list-item">

@@ -11,7 +11,6 @@ $black: #262626;
 $blue: #3897f0;
 
 // Classes
-
 .post-list-item {
   display: flex;
   flex-direction: column;
@@ -31,8 +30,12 @@ $blue: #3897f0;
   -webkit-box-sizing: border-box;
 }
 
+.post-list-item-user-thumb {
+  border-radius: 18px;
+}
+
 .post-header-author-text {
-  margin-left: 16px;
+  margin-left: 10px;
 }
 
 .post-header-author-text {

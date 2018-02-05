@@ -16,16 +16,17 @@ class PostListItemHeader extends Component {
   // Render
   // ==================================================
   render() {
+    // TODO: Make component a link to user profile page
     const {user} = this.props;
-    const src = user.img_url ? user.img_url 
+    const src = user.img_url ? user.img_url
                              : "app/assets/images/empty-profile-picture.jpg";
 
     return(
       <div className="post-author-header" >
         <img
           src={user.img_url}
-          width={40}
-          height={40}
+          width={36}
+          height={36}
           align="middle"
           className="post-list-item-user-thumb"
         />

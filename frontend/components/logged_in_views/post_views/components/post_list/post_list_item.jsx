@@ -3,6 +3,7 @@ import {Component} from 'react';
 
 // Components
 import PostListItemHeader from './components/post_list_item_header';
+import PostListItemActions from './components/post_list_item_actions';
 
 
 class PostListItem extends Component {
@@ -32,16 +33,6 @@ class PostListItem extends Component {
     );
   }
 
-  renderActionBar() {
-    // TODO: Add icons to buttons.
-    return(
-      <div className="post-action-bar" >
-        <button className="post-button post-like-button"></button>
-        <button className="post-comment-button"></button>
-      </div>
-    );
-  }
-
   renderDescription(post) {
     const description = post.description;
 
@@ -62,7 +53,7 @@ class PostListItem extends Component {
   renderPostBody(post) {
     return (
       <div className="post-body">
-        {this.renderActionBar()}
+        <PostListItemActions post={post} />
         {this.renderDescription(post)}
         {this.renderCommentForm()}
       </div>

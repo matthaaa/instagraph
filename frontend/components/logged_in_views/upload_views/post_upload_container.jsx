@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  createPost: (post) => dispatch(createPost)
+  createPost: (post) => dispatch(createPost),
 })
 
 

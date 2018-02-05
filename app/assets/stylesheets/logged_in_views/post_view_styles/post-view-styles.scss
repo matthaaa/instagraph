@@ -1,0 +1,77 @@
+// Colors
+$white: #FFFFFF;
+$off-white: #FAFAFA;
+$light-gray-1: #EFEFEF;
+$light-gray-2: #E6E6E6;
+$light-gray-3: #DBDBDB;
+$light-gray-4: #C7C7C7;
+$gray: #999999;
+$black: #262626;
+
+$blue: #3897f0;
+
+// Classes
+
+.post-list-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  height: auto;
+  background-color: $white;
+  border: 1px solid $light-gray-2;
+  border-radius:A 3px;
+}
+
+.post-author-header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 16px;
+  border-bottom: 1px solid $light-gray-1;
+  -webkit-box-sizing: border-box;
+}
+
+.post-header-author-text {
+  font-weight: 600;
+  font-size: 15px;
+  margin-right: 5px;
+  display: inline;
+}
+
+.post-photo {
+  max-width: 600px;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.post-action-bar {
+  display: flex;
+}
+
+.post-button {
+  background-color: $gray;
+  width: 15px;
+  length: 15px;
+}
+
+.post-like-button {
+}
+
+.post-comment-button {
+  margin-left: 10px;
+}
+
+.post-body {
+  padding: 0 16px;
+  background-color: $white;
+}
+
+.post-description-container {
+  padding: 6px 0;
+}
+
+.post-description-text {
+  font-weight: 400;
+  font-size: 15px;
+  display: inline;
+}

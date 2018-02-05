@@ -41,11 +41,18 @@ class HomeFeedView extends Component {
 
   render() {
     const {currentUser, posts} = this.props;
-    console.log(posts);
+
+    const test_post = {
+      id: 1,
+      description: "Miss this place.",
+      author_id: 2,
+      img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
+    }
+
     return (
       <div className="logged-in-view">
         <MainHeaderComponent user={currentUser} />
-        {this.renderPostFeed(posts)}
+        {this.renderPostListItem(test_post)}
       </div>
     );
   }

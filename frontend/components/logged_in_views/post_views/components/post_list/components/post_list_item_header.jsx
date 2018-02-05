@@ -30,7 +30,7 @@ class PostListItemHeader extends Component {
           align="middle"
           className="post-list-item-user-thumb"
         />
-        <p className="post-header-author-text">{user.username}</p>
+        <p className="post-header-author-text post-item-author-text">{user.username}</p>
       </div>
     );
   }

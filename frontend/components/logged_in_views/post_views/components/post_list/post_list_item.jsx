@@ -35,14 +35,22 @@ class PostListItem extends Component {
 
   renderDescription(post) {
     const description = post.description;
+    const name = post.user.username;
 
     return(
       <div className="post-description-container" >
-        <p className="post-header-author-text">Oski</p>
+        <p className="post-item-author-text">{name}</p>
         <p className="post-description-text">{description}</p>
       </div>
     );
   }
+
+  renderTimestamp(post) {
+    return (
+      <a>{post.time_ago}</a>
+    );
+  }
+
 
   renderCommentForm() {
     return(
@@ -55,6 +63,7 @@ class PostListItem extends Component {
       <div className="post-body">
         <PostListItemActions post={post} />
         {this.renderDescription(post)}
+        {this.renderTimestamp(post)}
         {this.renderCommentForm()}
       </div>
     )

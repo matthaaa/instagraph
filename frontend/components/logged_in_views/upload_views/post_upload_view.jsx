@@ -36,7 +36,7 @@ class PostUploadView extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.uploadPhoto(this.state);
+    this.props.createPost(this.state);
   }
 
   // ==================================================

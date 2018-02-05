@@ -22,7 +22,7 @@ class UploadForm extends Component {
   // Render
   // ==================================================
   render() {
-    const {formPost} = this.props;
+    const {formPost, onUpdate} = this.props;
 
     return(
       <form className="upload-photo-form">

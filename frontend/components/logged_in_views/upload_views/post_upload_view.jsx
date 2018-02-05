@@ -13,7 +13,7 @@ class PostUploadView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      author_id: this.props.currentUser.id;
+      author_id: this.props.currentUser.id,
       img_url: "",
       description: "",
     }

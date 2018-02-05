@@ -4,6 +4,7 @@ import {Component} from 'react';
 // Components
 import MainHeaderContainer from '../../generic/main_header_container';
 import PostListItem from './components/post_list/post_list_item';
+import PostUploadView from '../upload_views/post_upload_view';
 
 
 class HomeFeedView extends Component {
@@ -45,6 +46,7 @@ class HomeFeedView extends Component {
     return (
       <div className="logged-in-view">
         <MainHeaderContainer user={currentUser} />
+        <PostUploadView currentUser={currentUser} />
         {this.renderPostFeed(posts)}
       </div>
     );

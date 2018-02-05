@@ -23,10 +23,14 @@ class UploadForm extends Component {
   // ==================================================
   render() {
     const {formPost, onUpdate} = this.props;
+    console.log(formPost);
 
     return(
       <form className="upload-photo-form">
-        <input className="upload-photo-url-input" type="file" />
+        <input
+          onChange={onUpdate("img_url")}
+          className="upload-photo-url-input" type="file"
+        />
         <label className="upload-photo-description-input">Description
           <FormInput
             type="textarea"

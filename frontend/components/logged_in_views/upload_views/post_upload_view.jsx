@@ -16,7 +16,8 @@ class PostUploadView extends Component {
       author_id: this.props.currentUser.id,
       img_url: "",
       description: "",
-    }
+    };
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   // ==================================================

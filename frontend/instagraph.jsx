@@ -8,6 +8,8 @@ import {login, signup} from './util/session_api_util';
 import {fetchPosts} from './util/post_api_util';
 import {logout} from './actions/session_actions';
 
+import {createPost} from './actions/post_actions';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -26,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.logout = logout;
   window.dispatch = store.dispatch;
+
+  window.createPost = createPost;
 
   ReactDOM.render(<Root store={store}/>, root);
 });

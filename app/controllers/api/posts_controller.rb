@@ -31,8 +31,12 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
+
+    p "=============="
+    p params
+    p "=============="
     params.require(:post).permit(
-      :description, :author_id, :img_url,
+      :description, :author_id, :img_url
     )
   end
 end

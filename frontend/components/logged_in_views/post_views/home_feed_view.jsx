@@ -29,10 +29,7 @@ class HomeFeedView extends Component {
   renderPostListItem(post) {
     // TODO: List of posts goes here. Currently testing single post
     return (
-      <div>
-        <PostListItem post={post} />
-        <br/>
-      </div>
+      <PostListItem post={post} />
     );
   }
 
@@ -44,6 +41,7 @@ class HomeFeedView extends Component {
 
   render() {
     const {currentUser, posts} = this.props;
+    console.log(posts);
     return (
       <div className="logged-in-view">
         <MainHeaderComponent user={currentUser} />

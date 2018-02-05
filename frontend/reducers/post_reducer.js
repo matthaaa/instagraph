@@ -7,6 +7,7 @@ const postReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_POSTS:
+      console.log("action", action);
       return merge({}, action.posts);
     case RECEIVE_POST:
       return merge({}, oldState, {[action.post.id]: action.post});

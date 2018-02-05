@@ -29,6 +29,12 @@ matt.posts.create!(
   author_id: 2,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
 )
+matt.posts.create!(
+  id: 2,
+  description: "Miss this place. Reposting cuz i felt like it lol",
+  author_id: 2,
+  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
+)
 
 User.create(
   id: 3,

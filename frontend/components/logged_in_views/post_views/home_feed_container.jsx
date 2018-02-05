@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
 import {requestUsers} from '../../../actions/user_actions';
-import {receivePosts} from '../../../actions/post_actions';
+import {requestPosts} from '../../../actions/post_actions';
 
 // Components
 import HomeFeedView from './home_feed_view';

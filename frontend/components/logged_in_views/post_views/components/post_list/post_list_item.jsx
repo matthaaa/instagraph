@@ -42,7 +42,7 @@ class PostListItem extends Component {
     return(
       <div className="post-action-bar" >
         <button className="post-button post-like-button"></button>
-        <button className="post-button post-comment-button"></button>
+        <button className="post-comment-button"></button>
       </div>
     );
   }

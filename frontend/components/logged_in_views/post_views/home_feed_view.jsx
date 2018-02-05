@@ -41,6 +41,7 @@ class HomeFeedView extends Component {
 
   render() {
     const {currentUser, posts} = this.props;
+    console.log(this.props);
 
     const test_post = {
       id: 1,

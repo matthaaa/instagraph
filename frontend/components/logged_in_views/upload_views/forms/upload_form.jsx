@@ -3,7 +3,7 @@ import {Component} from 'react';
 
 
 // Components
-// import CustomButton from '../../generic/buttons/custom_button'
+import CustomButton from '../../../generic/buttons/custom_button'
 import FormInput from '../../../generic/forms/form_input'
 // import FormErrors from '../../generic/forms/form_errors';
 
@@ -22,7 +22,7 @@ class UploadForm extends Component {
   // Render
   // ==================================================
   render() {
-    const {formPost, onUpdate} = this.props;
+    const {formPost, onSubmit, onUpdate} = this.props;
     console.log(formPost);
 
     return(
@@ -39,6 +39,9 @@ class UploadForm extends Component {
             onChange={onUpdate("description")}
           />
         </label>
+        <div className="upload-photo-form-button">
+          <CustomButton text={"Upload"} onPress={onSubmit} />
+        </div>
       </form>
     );
   }

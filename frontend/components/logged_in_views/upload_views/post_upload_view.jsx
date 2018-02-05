@@ -17,6 +17,7 @@ class PostUploadView extends Component {
       img_url: "",
       description: "",
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
   }
 
@@ -33,6 +34,11 @@ class PostUploadView extends Component {
     }
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    // TODO
+  }
+
   // ==================================================
   // Render
   // ==================================================
@@ -41,6 +47,7 @@ class PostUploadView extends Component {
       <div>
         <UploadForm
           formPost={this.state}
+          onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
       </div>

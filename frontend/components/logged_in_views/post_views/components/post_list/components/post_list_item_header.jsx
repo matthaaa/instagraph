@@ -16,7 +16,12 @@ class PostListItemHeader extends Component {
   // Render
   // ==================================================
   render() {
-    return (
+    const {user} = this.props;
+
+    return(
+      <div className="post-author-header" >
+        <p className="post-header-author-text">{user.username}</p>
+      </div>
     );
   }
 

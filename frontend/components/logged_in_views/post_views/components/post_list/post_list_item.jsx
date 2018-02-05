@@ -1,6 +1,9 @@
 import React from 'react';
 import {Component} from 'react';
 
+// Components
+import PostListItemHeader from './components/post_list_item_header';
+
 
 class PostListItem extends Component {
 
@@ -15,14 +18,6 @@ class PostListItem extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderHeader(user) {
-    return(
-      <div className="post-author-header" >
-        <p className="post-header-author-text">{user.username}</p>
-      </div>
-    );
-  }
-
   renderPhoto(post) {
     const url = post.img_url;
 
@@ -80,7 +75,7 @@ class PostListItem extends Component {
 
     return (
       <div className="post-list-item">
-        {this.renderHeader(user)}
+        <PostListItemHeader user={user} />
         {this.renderPhoto(post)}
         {this.renderPostBody(post)}
       </div>

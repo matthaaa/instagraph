@@ -3,7 +3,7 @@ import {Component} from 'react';
 
 // Components
 import MainHeaderContainer from '../../generic/main_header_container';
-import PostUploadContainer from '../upload_views/post_upload_view';
+import PostUploadContainer from '../upload_views/post_upload_container';
 import PostListItem from './components/post_list/post_list_item';
 
 

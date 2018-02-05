@@ -10,10 +10,27 @@ class PostUploadView extends Component {
   // ==================================================
   // Initialize
   // ==================================================
+  constructor(props) {
+    super(props);
+    this.state = {
+      author_id: this.props.currentUser.id;
+      img_url: "",
+      description: "",
+    }
+  }
 
   // ==================================================
   // Callbacks
   // ==================================================
+
+  // ==================================================
+  // Event Handlers
+  // ==================================================
+  handleUpdate(field) {
+    return (event) => {
+      this.setState({[field]: event.target.value});
+    }
+  }
 
   // ==================================================
   // Render
@@ -21,7 +38,10 @@ class PostUploadView extends Component {
   render() {
     return(
       <div>
-        <UploadForm />
+        <UploadForm
+          formPost={this.state}
+          onUpdate={this.handleUpdate}
+        />
       </div>
     );
   }

@@ -2,6 +2,12 @@ import React from 'react';
 import {Component} from 'react';
 
 
+// Components
+// import CustomButton from '../../generic/buttons/custom_button'
+import FormInput from '../../../generic/forms/form_input'
+// import FormErrors from '../../generic/forms/form_errors';
+
+
 class UploadForm extends Component {
 
   // ==================================================
@@ -16,12 +22,17 @@ class UploadForm extends Component {
   // Render
   // ==================================================
   render() {
+    const {formPost} = this.props;
+
     return(
-      <form className="upload-photo-form" >
-        <label>
+      <form className="upload-photo-form">
+        <input className="upload-photo-url-input" type="file" />
+        <label className="upload-photo-description-input">Description
           <FormInput
             type="textarea"
             className="upload-photo-input"
+            value={formPost.description}
+            onChange={onUpdate("description")}
           />
         </label>
       </form>

@@ -17,7 +17,14 @@ class UploadForm extends Component {
   // ==================================================
   render() {
     return(
-      <div>FORM</div>
+      <form className="upload-photo-form" >
+        <label>
+          <FormInput
+            type="textarea"
+            className="upload-photo-input"
+          />
+        </label>
+      </form>
     );
   }
 

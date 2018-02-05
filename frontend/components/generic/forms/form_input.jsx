@@ -7,15 +7,8 @@ class FormInput extends Component {
   // ==================================================
   // Render
   // ==================================================
-  render() {
-    const {
-      autoFocus,
-      type,
-      placeholder,
-      contentClassName,
-      value,
-      onChange,
-    } = this.props;
+  renderInput() {
+    const {autoFocus, type, placeholder, value, onChange} = this.props;
 
     const isEmpty = value === "";
     const isPassword = type === "password";
@@ -23,17 +16,40 @@ class FormInput extends Component {
                                              : "form-input";
 
     return (
+      <input
+        autoFocus={autoFocus}
+        spellCheck={false}
+        className={className}
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+    );
+  }
 
+  renderTextarea() {
+    const {autoFocus, placeholder, value, onChange} = this.props;
+
+    return (
+      <textarea
+        autoFocus={autoFocus}
+        spellCheck={false}
+        className={"form-input"}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
+    )
+  }
+
+  render() {
+    const {type, contentClassName} = this.props;
+    const render = type === "textarea" ? this.renderTextarea() : this.renderInput();
+
+    return (
       <div className={contentClassName}>
-        <input
-          autoFocus={autoFocus}
-          spellCheck={false}
-          className={className}
-          type={type}
-          placeholder={placeholder}
-          value={value}
-          onChange={onChange}
-        />
+        {render}
       </div>
     );
   }

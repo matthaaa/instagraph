@@ -15,10 +15,10 @@ class PostListItem extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderHeader() {
+  renderHeader(user) {
     return(
       <div className="post-author-header" >
-        <p className="post-header-author-text">Oski</p>
+        <p className="post-header-author-text">{user.username}</p>
       </div>
     );
   }
@@ -76,10 +76,11 @@ class PostListItem extends Component {
 
   render() {
     const {post} = this.props;
+    const user = post.user;
 
     return (
       <div className="post-list-item">
-        {this.renderHeader()}
+        {this.renderHeader(user)}
         {this.renderPhoto(post)}
         {this.renderPostBody(post)}
       </div>

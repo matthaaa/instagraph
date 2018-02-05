@@ -16,7 +16,6 @@ class HomeFeedView extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    this.props.requestUsers();
     this.props.requestPosts();
   }
 

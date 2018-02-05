@@ -17,6 +17,8 @@ class PostListItemHeader extends Component {
   // ==================================================
   render() {
     const {user} = this.props;
+    const src = user.img_url ? user.img_url 
+                             : "app/assets/images/empty-profile-picture.jpg";
 
     return(
       <div className="post-author-header" >

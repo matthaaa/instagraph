@@ -68,3 +68,11 @@ User.create(
   full_name: "Sadie",
   img_url: "",
 )
+User.create(
+  id: 42,
+  username: "davedoingthings",
+  password: "password",
+  email: "davedoingthings@instagraph.com",
+  full_name: "Dave",
+  img_url: "",
+)

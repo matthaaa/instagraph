@@ -7,11 +7,22 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  # ==================================================
+  # Associations
+  # ==================================================
   has_many :posts,
     primary_key: :id,
     foreign_key: :author_id,
     class_name: :Post
 
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Like
+
+  # ==================================================
+  # Methods
+  # ==================================================
   def password=(password)
     @password = password
     self.password_digest = BCrypt::Password.create(password)

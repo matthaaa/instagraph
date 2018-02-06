@@ -6,11 +6,22 @@ class Post < ApplicationRecord
 
   after_initialize :initialize_description
 
+  # ==================================================
+  # Associations
+  # ==================================================
   belongs_to :user,
     primary_key: :id,
     foreign_key: :author_id,
     class_name: :User
 
+  has_many :likes,
+    primary_key: :id,
+    foreign_key: :post_id,
+    class_name: :Like
+
+  # ==================================================
+  # Methods
+  # ==================================================
   def initialize_description
     self.description ||= ""
   end

@@ -84,6 +84,7 @@ class LoginView extends Component {
   }
 
   handleDemo() {
+    // TODO: Add demo user to secrets or hide credentials in some way.
     this.populateFieldAndLogin("demo_lovati", "password");
   }
 

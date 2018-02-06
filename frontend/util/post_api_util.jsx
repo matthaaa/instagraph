@@ -19,3 +19,11 @@ export const createPost = (post) => (
     data: {post},
   })
 );
+
+export const updatePost = (post) => (
+  $.ajax({
+    method: "PATCH",
+    url: `api/posts/${post.id}`,
+    data: {post},
+  })
+);

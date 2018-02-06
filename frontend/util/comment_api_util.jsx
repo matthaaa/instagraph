@@ -1,15 +1,14 @@
 export const fetchComment = (comment) => (
   $.ajax({
     method: "POST",
-    url: `api/posts/${comment.post_id}/comments`,
-    data: {like},
+    url: `api/comments`,
+    data: {comment},
   })
 );
 
-export const destroyComment = (comment) => (
+export const destroyComment = (id) => (
   $.ajax({
     method: "DELETE",
-    url: `api/posts/${comment.post_id}/comments/${comment.id}`,
-    data: {like},
+    url: `api/comments/${id}`,
   })
 );

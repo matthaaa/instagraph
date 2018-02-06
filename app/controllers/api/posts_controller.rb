@@ -17,6 +17,15 @@ class Api::PostsController < ApplicationController
   end
 
   def update
+    @post = current_user.posts.find_by(id: params[:id])
+    unless @post
+      render json: 'Post Not Found!', status: 404
+    end
+    if @post.update_attributes(post_params)
+      render :show
+    else
+      render json: @post.errors.full_messages
+    end
   end
 
   def index

@@ -17,10 +17,18 @@ class CommentsListView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  render() {
+  renderCommentListItem(comment) {
     return (
-      <CommentListItem />
+      <CommentListItem key={comment.id} comment={comment} />
     );
+  }
+
+  render() {
+    const {comments} = this.props;
+
+    return comments.map(comment => (
+      this.renderCommentListItem(comment)
+    ));
   }
 
 };

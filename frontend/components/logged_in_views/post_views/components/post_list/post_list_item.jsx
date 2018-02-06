@@ -72,7 +72,7 @@ class PostListItem extends Component {
           <p className="post-body-likes-text">{likesText}</p>
         </div>
         {this.renderDescription(post)}
-        <CommentListView />
+        <CommentListView comments={post.comments} />
         {this.renderTimestamp(post)}
         {this.renderCommentForm()}
       </div>

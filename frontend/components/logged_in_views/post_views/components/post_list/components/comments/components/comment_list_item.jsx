@@ -16,8 +16,12 @@ class CommentListItem extends Component {
   // Render
   // ==================================================
   render() {
+    const {comment} = this.props;
+
     return (
-      <p>COMMENT!</p>
+      <div>
+        <p>{comment.body}</p>
+      </div>
     );
   }
 

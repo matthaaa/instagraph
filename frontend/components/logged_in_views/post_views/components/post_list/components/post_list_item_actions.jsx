@@ -42,6 +42,7 @@ class PostListItemActions extends Component {
           className="post-action-button post-like-button">
           <img
             src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart.png"
+            height={30}
           />
         </button>
         <button
@@ -49,6 +50,7 @@ class PostListItemActions extends Component {
           className="post-action-button post-comment-button">
           <img
             src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-comment.png"
+            height={25}
           />
         </button>
       </div>

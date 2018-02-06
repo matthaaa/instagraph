@@ -52,25 +52,24 @@ $blue: #3897f0;
 
 .post-photo {
   max-width: 600px;
-  max-height: 600px;
+  max-height: 700px;
   overflow: hidden;
 }
 
 .post-action-bar {
   display: flex;
+  height: 40px;
 }
 
 .post-action-button {
-  background-color: $gray;
-  width: 15px;
-  length: 15px;
 }
 
 .post-like-button {
+  margin-left: -3px;
 }
 
 .post-comment-button {
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .post-body {

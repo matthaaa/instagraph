@@ -35,19 +35,4 @@ class Post < ApplicationRecord
   def time_ago
     distance_of_time_in_words(self.created_at, Time.now)
   end
-
-  def likes_count
-     @likes_count = self.likes.length
-     @likes_count
-  end
-
-  def likes_count_text
-    if @likes_count == 1
-      @likes_count_text = "like"
-    else
-      @likes_count_text = "likes"
-    end
-
-    return @likes_count.to_s + " " + @likes_count_text
-  end
 end

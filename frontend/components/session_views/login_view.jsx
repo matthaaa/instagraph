@@ -95,6 +95,7 @@ class LoginView extends Component {
   // Render
   // ==================================================
   renderLoginFooter() {
+    console.log(this.state);
     return (
       <div className="toggle-footer fadeIn">
         <p>Don't have an account?</p>

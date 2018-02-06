@@ -53,6 +53,8 @@ class HomeFeedView extends Component {
     const {currentUser, posts} = this.props;
     const {showUploadPostView} = this.state;
 
+    console.log(this.props);
+
     return (
       <div className="logged-in-view">
         <MainHeaderContainer

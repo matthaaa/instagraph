@@ -1,6 +1,5 @@
 import React from 'react';
-import Dropzone from 'react-dropzone';
-import request from 'superagent';
+import Modal from 'react-modal';
 import {Component} from 'react';
 
 // Components
@@ -83,16 +82,17 @@ class PostUploadView extends Component {
   // ==================================================
   render() {
     const {isVisible} = this.props;
-    const mainClassName = isVisible ? "main-post-upload-form" : "hidden";
 
     return(
-      <div className={mainClassName}>
+      <Modal
+        isOpen={isVisible}
+        className="main-post-upload-form">
         <UploadForm
           formPost={this.state}
           onSubmit={this.handleSubmit}
           onUpdate={this.handleUpdate}
         />
-      </div>
+      </Modal>
     );
   }
 

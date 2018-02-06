@@ -27,7 +27,7 @@ class UploadForm extends Component {
     const {formPost, onSubmit, onUpdate} = this.props;
 
     return(
-      <form className="upload-photo-form">
+      <form className="main-post-upload-form-content">
         <Dropzone
           className="upload-photo-dropzone"
           multiple={false}

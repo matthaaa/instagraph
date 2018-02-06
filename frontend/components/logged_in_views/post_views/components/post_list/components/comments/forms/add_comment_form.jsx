@@ -18,6 +18,7 @@ class AddCommentForm extends Component {
         user_id: this.props.currentUser.id,
       }
     };
+    this.handleUpdate = this.handleUpdate.bind(this);
   }
 
   // ==================================================
@@ -27,7 +28,7 @@ class AddCommentForm extends Component {
     return (event) => {
       this.setState({
         comment: Object.assign(this.state.comment, {
-          body: event.target.value,
+          [field]: event.target.value,
         })
       });
     }
@@ -37,6 +38,7 @@ class AddCommentForm extends Component {
   // Render
   // ==================================================
   render() {
+    console.log(this.state);
     return (
       <form className="new-comment-form-content">
         <FormInput
@@ -44,7 +46,7 @@ class AddCommentForm extends Component {
           contentClassName="new-comment-form-input-container"
           placeholder={"Add a comment..."}
           value={this.state.comment.body}
-          onChange={this.handleUpdate}
+          onChange={this.handleUpdate("body")}
         />
       </form>
     );

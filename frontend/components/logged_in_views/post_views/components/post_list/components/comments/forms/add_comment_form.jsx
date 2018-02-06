@@ -15,6 +15,7 @@ class AddCommentForm extends Component {
     this.state = {
       comment: {
         body: "",
+        post_id: this.props.post.id,
         user_id: this.props.currentUser.id,
       }
     };
@@ -38,7 +39,7 @@ class AddCommentForm extends Component {
   // Render
   // ==================================================
   render() {
-    console.log(this.state);
+    console.log(this.state.comment);
     return (
       <form className="new-comment-form-content">
         <FormInput

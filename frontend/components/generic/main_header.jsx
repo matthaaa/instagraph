@@ -20,9 +20,14 @@ class MainHeader extends Component {
   // Callbacks
   // ==================================================
 
-  // TODO: Temporary Handler: remove after implementing menu bar.
+  // TODO: Temporary Handler: remove after implementing menu bar
+  // and add to a dropdown menu.
   handleLogout() {
     this.props.logout();
+  }
+
+  handleShowUploadView() {
+    
   }
 
   // ==================================================
@@ -49,11 +54,18 @@ class MainHeader extends Component {
   renderMenu() {
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
-      <CustomButton
-        className={"temporary-logout-button"}
-        text={"Log out"}
-        onPress={this.handleLogout}
-      />
+      <div>
+        <CustomButton
+          className={"temporary-logout-button"}
+          text={"Log out"}
+          onPress={this.handleLogout}
+        />
+        <CustomButton
+          className={"upload-photo-button"}
+          text={"Upload Photo"}
+          onPress={this.handleShowUploadView}
+        />
+      </div>
     );
   }
 

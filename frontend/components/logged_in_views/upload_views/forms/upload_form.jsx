@@ -29,6 +29,7 @@ class UploadForm extends Component {
     return(
       <form className="upload-photo-form">
         <Dropzone
+          className="upload-photo-dropzone"
           multiple={false}
           accept="image/*"
           onDrop={onUpdate("img_url")}>

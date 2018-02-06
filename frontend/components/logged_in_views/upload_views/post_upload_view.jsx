@@ -15,9 +15,12 @@ class PostUploadView extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      author_id: this.props.currentUser.id,
-      img_url: "",
-      description: "",
+      post: {
+        author_id: this.props.currentUser.id,
+        img_url: "",
+        description: "",
+      },
+      isVisible: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -32,7 +35,11 @@ class PostUploadView extends Component {
   // ==================================================
   handleUpdate(field) {
     return (event) => {
-      this.setState({[field]: event.target.value});
+      this.setState({
+        user: Object.assign(this.state.post, {
+          [field]: event.target.value,
+        })
+      });
     }
   }
 
@@ -76,8 +83,10 @@ class PostUploadView extends Component {
   // Render
   // ==================================================
   render() {
+    const mainClassName = this.state.isVisible ? "main-post-upload-form" : "hidden";
+    console.log(this.state);
     return(
-      <div>
+      <div className={mainClassName}>
         <UploadForm
           formPost={this.state}
           onSubmit={this.handleSubmit}

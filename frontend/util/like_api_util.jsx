@@ -1,13 +1,15 @@
-export const fetchLike = (id) => (
+export const fetchLike = (like) => (
   $.ajax({
     method: "GET",
-    url: `api/likes/${id}`
+    url: `api/posts/${like.post_id}likes/${like.id}`,
+    data: {like},
   })
 );
 
-export const destroyLike = (postId, id) => (
+export const destroyLike = (like) => (
   $.ajax({
     method: "DELETE",
-    url: `api/posts/${postId}/likes/${id}`
+    url: `api/posts/${like.post_id}/likes/${like.id}`,
+    data: {like},
   })
 );

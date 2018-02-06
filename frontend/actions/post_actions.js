@@ -9,15 +9,15 @@ export const requestPosts = () => dispatch => (
 );
 
 export const requestPost = (post) => dispatch => (
-  PostAPIUtil.fetchPost().then(post => dispatch(receivePost(post.id)))
+  PostAPIUtil.fetchPost().then(post => dispatch(receivePost(post)))
 );
 
-export const updatePost = (id) => dispatch => (
-  PostAPIUtil.updatePost(id).then(postId => dispatch(receivePost(postId)))
+export const updatePost = (post) => dispatch => (
+  PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
 );
 
 export const createNewPost = (post) => dispatch => (
-  PostAPIUtil.createPost(post).then(post => dispatch(receivePost(post.id)))
+  PostAPIUtil.createPost(post).then(post => dispatch(receivePost(post)))
 );
 
 const receivePosts = (posts) => ({
@@ -25,7 +25,7 @@ const receivePosts = (posts) => ({
   posts,
 })
 
-const receivePost = (postId) => ({
+const receivePost = (post) => ({
   type: RECEIVE_POST,
-  postId,
+  post,
 })

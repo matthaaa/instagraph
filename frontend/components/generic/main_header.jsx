@@ -54,7 +54,7 @@ class MainHeader extends Component {
         <CustomButton
           className={"temporary-logout-button"}
           text={"Log out"}
-          onPress={onToggleUploadView}
+          onPress={this.handleLogout()}
         />
         <CustomButton
           className={"upload-photo-button"}

@@ -36,10 +36,14 @@ class AddCommentForm extends Component {
     }
   }
 
+  handleSubmit(event) {
+    this.props.addComment(this.state.comment);
+  }
+
   handlePressEnter(event) {
-    if (event.keyCode == 13 && event.shiftKey == false) {
+    if ((event.which == 13 || event.keyCode == 13) && event.shiftKey == false) {
       event.preventDefault();
-      this.commentForm.submit();
+      this.handleSubmit();
     }
   }
 

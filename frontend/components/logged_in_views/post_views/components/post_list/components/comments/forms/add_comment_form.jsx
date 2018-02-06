@@ -20,6 +20,7 @@ class AddCommentForm extends Component {
       }
     };
     this.handleUpdate = this.handleUpdate.bind(this);
+    this.handlePressEnter = this.handlePressEnter.bind(this);
   }
 
   // ==================================================
@@ -35,7 +36,7 @@ class AddCommentForm extends Component {
     }
   }
 
-  handlePressEnter = (event) => {
+  handlePressEnter(event) {
     if (event.keyCode == 13 && event.shiftKey == false) {
       event.preventDefault();
       this.commentForm.submit();

@@ -21,7 +21,7 @@ matt = User.create(
   password: "password",
   email: "matt@instagraph.com",
   full_name: "Matt Ha",
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/IMG_8769.jpg",
+  img_url: "",
 )
 matt.posts.create!(
   description: "Miss this place.",

@@ -59,9 +59,16 @@ class PostListItem extends Component {
   }
 
   renderPostBody(post) {
+    console.log(post.likes);
+    console.log(post.likes_count);
+    console.log(post.likes_count_text);
     return (
       <div className="post-body">
         <PostListItemActions post={post} />
+        <div className="post-body-likes">
+          <p className="post-body-likes-count">{post.likes_count}</p>
+          <p className="post-body-likes-text">{post.likes_count_text}</p>
+        </div>
         {this.renderDescription(post)}
         {this.renderTimestamp(post)}
         {this.renderCommentForm()}

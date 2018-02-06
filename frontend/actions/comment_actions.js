@@ -2,6 +2,9 @@ import * as CommentAPIUtil from '../util/comment_api_util';
 import {updatePost} from './post_actions';
 
 
+export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+
 export const requestComment = (comment) => dispatch => {
   console.log(comment);
   return (

@@ -62,11 +62,11 @@ class PostListItem extends Component {
     );
   }
 
-  renderPostBody(post) {
+  renderPostBody(post, comments) {
     const likes = post.likes;
     const likesCount = likes.length;
     const likesText = likes.length === 1 ? "like" : "likes";
-
+    // debugger
     return (
       <div className="post-body">
         <PostListItemActionContainer post={post} />
@@ -75,7 +75,7 @@ class PostListItem extends Component {
           <p className="post-body-likes-text">{likesText}</p>
         </div>
         {this.renderDescription(post)}
-        <CommentListView comments={post.comments} />
+        <CommentListView comments={comments} />
         {this.renderTimestamp(post)}
         {this.renderCommentForm(post)}
       </div>
@@ -83,14 +83,14 @@ class PostListItem extends Component {
   }
 
   render() {
-    const {post} = this.props;
+    const {post, comments} = this.props;
     const user = post.user;
 
     return (
       <div className="post-list-item">
         <PostListItemHeader user={user} />
         {this.renderPhoto(post)}
-        {this.renderPostBody(post)}
+        {this.renderPostBody(post, comments)}
       </div>
     );
   }

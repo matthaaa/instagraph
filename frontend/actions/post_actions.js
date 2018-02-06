@@ -8,16 +8,16 @@ export const requestPosts = () => dispatch => (
   PostAPIUtil.fetchPosts().then(posts => dispatch(receivePosts(posts)))
 );
 
-export const requestPost = (post) => dispatch => (
-  PostAPIUtil.fetchPost().then(post => dispatch(receivePost(post)))
+export const requestPost = (postId) => dispatch => (
+  PostAPIUtil.fetchPost(postId).then(payload => dispatch(receivePost(payload.post)))
 );
 
-export const updatePost = (post) => dispatch => (
-  PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
-);
+// export const updatePost = (post) => dispatch => (
+//   PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
+// );
 
 export const createNewPost = (post) => dispatch => (
-  PostAPIUtil.createPost(post).then(post => dispatch(receivePost(post)))
+  PostAPIUtil.createPost(post).then(payload => dispatch(receivePost(payload.post)))
 );
 
 const receivePosts = (posts) => ({
@@ -25,7 +25,7 @@ const receivePosts = (posts) => ({
   posts,
 })
 
-const receivePost = (post) => ({
+const receivePost = (payload) => ({
   type: RECEIVE_POST,
-  post,
+  payload,
 })

@@ -24,7 +24,6 @@ class HomeFeedView extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    this.props.requestComments();
     this.props.requestPosts();
   }
 
@@ -42,20 +41,20 @@ class HomeFeedView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderPostListItem(post) {
+  renderPostListItem(post, comments) {
     return (
-      <PostListItem key={post.id} post={post} />
+      <PostListItem key={post.id} post={post} comments={comments}/>
     );
   }
 
-  renderPostFeed(posts) {
+  renderPostFeed(posts, comments) {
     return posts.map(post => (
-      this.renderPostListItem(post)
+      this.renderPostListItem(post,comments)
     ))
   }
 
   render() {
-    const {currentUser, posts} = this.props;
+    const {currentUser, posts, comments} = this.props;
     const {showUploadPostView} = this.state;
 
     return (
@@ -68,7 +67,7 @@ class HomeFeedView extends Component {
           isVisible={showUploadPostView}
           currentUser={currentUser}
         />
-        {this.renderPostFeed(posts)}
+      {this.renderPostFeed(posts, comments)}
       </div>
     );
   }

@@ -6,13 +6,16 @@ import {
   REMOVE_COMMENT,
 } from '../actions/comment_actions';
 
+import {RECEIVE_POST} from '../actions/post_actions';
+
+
 const commentReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState = merge({}, oldState);
 
   switch(action.type) {
-    case RECEIVE_COMMENTS:
-      return merge({}, action.comments);
+    case RECEIVE_POST:
+      return action.payload.comments;
     case RECEIVE_COMMENT:
       return merge({}, oldState, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:

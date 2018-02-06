@@ -13,6 +13,8 @@ const commentReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState = merge({}, oldState);
 
+  console.log("ACTION IN REDUCER", action);
+
   switch(action.type) {
     case RECEIVE_POST:
       return action.payload.comments;

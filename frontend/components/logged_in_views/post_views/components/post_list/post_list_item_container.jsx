@@ -1,25 +1,28 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {requestPosts} from '../../../actions/post_actions';
 
 // Components
-import HomeFeedView from './home_feed_view';
+import PostListItem from './post_list_item';
 
 
 const mapStateToProps = (state, ownProps) => {
-  const posts = Object.values(state.posts);
+  const post = ownProps.post;
+  const comments = Object.values(state.comments);
+  console.log(state);
+  console.log(ownProps);
+  console.log(comments);
+  console.log(post);
   return ({
-    currentUser: state.session.currentUser,
-    posts,
-  });
+    post,
+    comments,
+  })
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  requestPosts: () => dispatch(requestPosts()),
 })
 
 
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps,
-)(HomeFeedView));
+)(PostListItem));

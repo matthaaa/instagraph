@@ -82,11 +82,12 @@ class PostUploadView extends Component {
   // ==================================================
   render() {
     const {isVisible} = this.props;
+    const mainClassName = isVisible ? "main-post-upload-form" : "hidden";
 
     return(
       <Modal
         isOpen={isVisible}
-        className="main-post-upload-form">
+        className={mainClassName}>
         <UploadForm
           formPost={this.state}
           onSubmit={this.handleSubmit}

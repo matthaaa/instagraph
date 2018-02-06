@@ -14,6 +14,7 @@ $blue: #3897f0;
 .main-post-upload-form {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,12 +24,24 @@ $blue: #3897f0;
 }
 
 .upload-photo-form-content {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  display: flex;
+  flex-direction: column;
   width: 500px;
-  height: 200px;
   margin: auto;
+  padding: 20px;
+  background-color: $off-white;
+  border: 1px solid $light-gray-4;
+  border-radius: 5px;
+}
+
+.upload-photo-dropzone {
+  width: 100%;
+  height: 300px;
+  background-color: $light-gray-1;
+  border: 2px dashed $light-gray-4;
+  border-radius: 5px;
+}
+
+.upload-photo-description-input {
+  width: 100%;
 }

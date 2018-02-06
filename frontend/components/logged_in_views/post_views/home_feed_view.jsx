@@ -24,8 +24,12 @@ class HomeFeedView extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    this.props.requestPosts();
     this.props.requestComments();
+    this.props.requestPosts();
+  }
+
+  componentWillReceiveProps(newProps) {
+    this.props = newProps;
   }
 
   // ==================================================

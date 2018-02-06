@@ -12,6 +12,10 @@ export const requestPost = (post) => dispatch => (
   PostAPIUtil.fetchPost().then(post => dispatch(receivePost(post)))
 );
 
+export const updatePost = (post) => dispatch => (
+  PostAPIUtil.updatePost(post).then(post => dispatch(receivePost(post)))
+);
+
 export const createNewPost = (post) => dispatch => (
   PostAPIUtil.createPost(post).then(post => dispatch(receivePost(post)))
 );

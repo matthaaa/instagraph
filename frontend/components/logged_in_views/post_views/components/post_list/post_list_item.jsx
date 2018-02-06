@@ -4,6 +4,8 @@ import {Component} from 'react';
 // Components
 import PostListItemHeader from './components/post_list_item_header';
 import PostListItemActionContainer from './components/post_list_item_action_container';
+import AddCommentFormContainer from './components/comments/forms/add_comment_form_container';
+import CommentListView from './components/comments/components/comments_list_view';
 
 
 class PostListItem extends Component {
@@ -52,9 +54,11 @@ class PostListItem extends Component {
   }
 
 
-  renderCommentForm() {
+  renderCommentForm(post) {
     return(
-      <div className="comment-form" ></div>
+      <div className="comment-form" >
+        <AddCommentFormContainer post={post} />
+      </div>
     );
   }
 
@@ -71,8 +75,9 @@ class PostListItem extends Component {
           <p className="post-body-likes-text">{likesText}</p>
         </div>
         {this.renderDescription(post)}
+        <CommentListView comments={post.comments} />
         {this.renderTimestamp(post)}
-        {this.renderCommentForm()}
+        {this.renderCommentForm(post)}
       </div>
     )
   }

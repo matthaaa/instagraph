@@ -29,7 +29,7 @@ class FormInput extends Component {
   }
 
   renderTextarea() {
-    const {autoFocus, placeholder, value, className, onChange} = this.props;
+    const {autoFocus, placeholder, value, className, onChange, onKeyDown} = this.props;
 
     return (
       <textarea
@@ -39,6 +39,7 @@ class FormInput extends Component {
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
       />
     )
   }

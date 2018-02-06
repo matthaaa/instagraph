@@ -61,7 +61,8 @@ $blue: #3897f0;
   height: 40px;
 }
 
-.post-action-button {
+.post-action-button:focus {
+  outline: none;
 }
 
 .post-like-button {

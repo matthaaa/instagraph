@@ -3,7 +3,7 @@ import {Component} from 'react';
 
 // Components
 import PostListItemHeader from './components/post_list_item_header';
-import PostListItemActions from './components/post_list_item_actions';
+import PostListItemActionContainer from './components/post_list_item_action_container';
 
 
 class PostListItem extends Component {
@@ -65,7 +65,7 @@ class PostListItem extends Component {
 
     return (
       <div className="post-body">
-        <PostListItemActions post={post} />
+        <PostListItemActionContainer post={post} />
         <div className="post-body-likes">
           <p className="post-body-likes-count">{likesCount}</p>
           <p className="post-body-likes-text">{likesText}</p>

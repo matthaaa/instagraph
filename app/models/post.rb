@@ -6,8 +6,6 @@ class Post < ApplicationRecord
 
   after_initialize :initialize_description, :initialize_likes
 
-  attr_reader :likes_count, :likes_count_text
-
   # ==================================================
   # Associations
   # ==================================================
@@ -26,10 +24,6 @@ class Post < ApplicationRecord
   # ==================================================
   def initialize_description
     self.description ||= ""
-  end
-
-  def initialize_likes
-    self.likes ||= []
   end
 
   def time_ago

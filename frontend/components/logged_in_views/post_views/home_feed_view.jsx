@@ -25,6 +25,7 @@ class HomeFeedView extends Component {
   // ==================================================
   componentDidMount() {
     this.props.requestPosts();
+    this.props.requestComments();
   }
 
   // ==================================================

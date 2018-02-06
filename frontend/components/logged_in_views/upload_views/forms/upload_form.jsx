@@ -1,4 +1,6 @@
 import React from 'react';
+import Dropzone from 'react-dropzone';
+import request from 'superagent';
 import {Component} from 'react';
 
 
@@ -26,11 +28,12 @@ class UploadForm extends Component {
 
     return(
       <form className="upload-photo-form">
-        <input
-          type="file"
-          onChange={onUpdate("img_url")}
-          className="upload-photo-url-input"
-        />
+        <Dropzone
+          multiple={false}
+          accept="image/*"
+          onDrop={onUpdate("img_url")}>
+          <p>Drag over an image or click to select a file to upload!</p>
+        </Dropzone>
         <label className="upload-photo-description-input">Description
           <FormInput
             type="textarea"

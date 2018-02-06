@@ -7,6 +7,7 @@ import PostUploadView from './post_upload_view';
 
 
 const mapStateToProps = (state, ownProps) => ({
+  errors: state.errors.posts,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

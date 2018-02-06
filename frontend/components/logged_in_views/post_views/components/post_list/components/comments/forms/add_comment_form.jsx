@@ -35,19 +35,28 @@ class AddCommentForm extends Component {
     }
   }
 
+  handlePressEnter = (event) => {
+    if (event.keyCode == 13 && event.shiftKey == false) {
+      event.preventDefault();
+      this.commentForm.submit();
+    }
+  }
+
   // ==================================================
   // Render
   // ==================================================
   render() {
-    console.log(this.state.comment);
     return (
-      <form className="new-comment-form-content">
+      <form
+        ref={el => this.commentForm = el}
+        className="new-comment-form-content">
         <FormInput
           type="textarea"
           contentClassName="new-comment-form-input-container"
           placeholder={"Add a comment..."}
           value={this.state.comment.body}
           onChange={this.handleUpdate("body")}
+          onKeyDown={this.handlePressEnter}
         />
       </form>
     );

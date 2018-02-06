@@ -15,15 +15,15 @@ export const fetchPost = (id) => (
 export const createPost = (post) => (
   $.ajax({
     method: "POST",
-    url: `api/posts/`,
+    url: `api/posts`,
     data: {post},
   })
 );
 
-export const updatePost = (post) => (
+export const updatePost = (postId) => (
   $.ajax({
     method: "PATCH",
-    url: `api/posts/${post.id}`,
+    url: `api/posts/${postId}`,
     data: {post},
   })
 );

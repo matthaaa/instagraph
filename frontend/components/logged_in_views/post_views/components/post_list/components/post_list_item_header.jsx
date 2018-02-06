@@ -18,7 +18,6 @@ class PostListItemHeader extends Component {
   render() {
     // TODO: Make component a link to user profile page
     const {user} = this.props;
-    console.log(!!user.img_url);
     const src = user.img_url !== "" ? user.img_url
                              : "https://s3-us-west-2.amazonaws.com/instagraph-aa/empty-profile-picture.jpg";
 

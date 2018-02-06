@@ -26,10 +26,6 @@ class MainHeader extends Component {
     this.props.logout();
   }
 
-  handleShowUploadView() {
-    
-  }
-
   // ==================================================
   // Render
   // ==================================================
@@ -51,31 +47,33 @@ class MainHeader extends Component {
     );
   }
 
-  renderMenu() {
+  renderMenu(onToggleUploadView) {
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
       <div>
         <CustomButton
           className={"temporary-logout-button"}
           text={"Log out"}
-          onPress={this.handleLogout}
+          onPress={onToggleUploadView}
         />
         <CustomButton
           className={"upload-photo-button"}
           text={"Upload Photo"}
-          onPress={this.handleShowUploadView}
+          onPress={onToggleUploadView}
         />
       </div>
     );
   }
 
   render() {
+    const {onToggleUploadView} = this.props;
+
     return (
       <header className="main-header-container">
         <div className="main-header-content">
           {this.renderLogo()}
           {this.renderSearch()}
-          {this.renderMenu()}
+          {this.renderMenu(onToggleUploadView)}
         </div>
       </header>
     );

@@ -20,7 +20,6 @@ class PostUploadView extends Component {
         img_url: "",
         description: "",
       },
-      isVisible: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);
@@ -83,8 +82,9 @@ class PostUploadView extends Component {
   // Render
   // ==================================================
   render() {
-    const mainClassName = this.state.isVisible ? "main-post-upload-form" : "hidden";
-    console.log(this.state);
+    const {isVisible} = this.props;
+    const mainClassName = isVisible ? "main-post-upload-form" : "hidden";
+
     return(
       <div className={mainClassName}>
         <UploadForm

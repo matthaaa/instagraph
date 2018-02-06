@@ -4,7 +4,7 @@ include ActionView::Helpers::DateHelper
 class Post < ApplicationRecord
   validates :description, :author_id, :img_url, presence: true
 
-  after_initialize :initialize_description,
+  after_initialize :initialize_description
 
   # ==================================================
   # Associations

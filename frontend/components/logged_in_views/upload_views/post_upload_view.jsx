@@ -34,7 +34,7 @@ class PostUploadView extends Component {
   handleUpdate(field) {
     return (event) => {
       this.setState({
-        user: Object.assign(this.state.post, {
+        post: Object.assign(this.state.post, {
           [field]: event.target.value,
         })
       });

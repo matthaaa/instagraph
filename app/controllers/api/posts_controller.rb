@@ -24,6 +24,12 @@ class Api::PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find_by(id: params[:post_id])
+    if @post
+      render :show
+    else
+      render json: 'Post not found!', status: 404
+    end
   end
 
   def destroy
@@ -31,10 +37,6 @@ class Api::PostsController < ApplicationController
 
   private
   def post_params
-
-    p "=============="
-    p params
-    p "=============="
     params.require(:post).permit(
       :description, :author_id, :img_url
     )

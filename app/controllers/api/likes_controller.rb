@@ -3,7 +3,7 @@ class Api::LikesController < ApplicationController
     @like = Like.new(like_params)
 
     if @like.save!
-      @post = Post.find_by(post_id: params[:post_id])
+      @post = Post.find_by(id: params[:post_id])
       render :show
     else
       render json: @like.errors.full_messages
@@ -17,7 +17,7 @@ class Api::LikesController < ApplicationController
     )
 
     if @like.destroy
-      @post = Post.find_by(post_id: params[:post_id])
+      @post = Post.find_by(id: params[:post_id])
       render :show
     else
       render json: @like.errors.full_messages

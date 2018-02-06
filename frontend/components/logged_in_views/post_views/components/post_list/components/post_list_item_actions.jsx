@@ -9,8 +9,14 @@ class PostListItemActions extends Component {
   // ==================================================
   constructor(props) {
     super(props)
-    this.handleLike = this.handleLike.bind(this);
+    this.handleLikeAction = this.handleLikeAction.bind(this);
     this.handleComment = this.handleComment.bind(this);
+    this.state = {
+      like: {
+        user_id: "",
+        post_id: "",
+      }
+    };
   }
 
   // ==================================================
@@ -20,9 +26,33 @@ class PostListItemActions extends Component {
   // ==================================================
   // Event Handlers
   // ==================================================
-  handleLike() {
+  handleLike(like) {
+    console.log(like);
+    this.props.requestLike(like);
+  }
+
+  handleUnlike(like) {
+    this.props.deleteLike(like);
+  }
+
+  handleLikeAction(e) {
     // TODO: Like action goes here
     console.log("Like!");
+    e.preventDefault();
+
+    const {currentUser, post, liked} = this.props;
+    this.setState({
+      like: Object.assign(this.state.like, {
+        user_id: currentUser.id,
+        post_id: post.id,
+      })
+    });
+
+    if (liked) {
+      this.handleUnlike(this.state.like);
+    } else {
+      this.handleLike(this.state.like);
+    }
   }
 
   handleComment() {
@@ -38,7 +68,7 @@ class PostListItemActions extends Component {
     return(
       <div className="post-action-bar" >
         <button
-          onClick={this.handleLike}
+          onClick={this.handleLikeAction}
           className="post-action-button post-like-button">
           <img
             src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart.png"

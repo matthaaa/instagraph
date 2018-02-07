@@ -20,9 +20,9 @@ export const createNewPost = (post) => dispatch => (
   PostAPIUtil.createPost(post).then(payload => dispatch(receivePost(payload.post)))
 );
 
-const receivePosts = (posts) => ({
+const receivePosts = (payload) => ({
   type: RECEIVE_POSTS,
-  posts,
+  payload,
 })
 
 const receivePost = (payload) => ({

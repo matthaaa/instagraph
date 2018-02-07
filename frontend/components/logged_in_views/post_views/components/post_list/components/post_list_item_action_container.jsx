@@ -9,7 +9,7 @@ import PostListActionItems from './post_list_item_actions';
 const mapStateToProps = (state, ownProps) => {
   const likes = ownProps.post.likes;
   const currentUser = state.session.currentUser;
-  const liked = likes.some((like) => like.id === currentUser.id);
+  const liked = likes.one((like) => like.id === currentUser.id);
 
   return ({
     post: ownProps.post,

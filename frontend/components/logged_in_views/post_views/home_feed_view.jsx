@@ -4,7 +4,7 @@ import {Component} from 'react';
 // Components
 import MainHeaderContainer from '../../generic/main_header_container';
 import PostUploadContainer from '../upload_views/post_upload_container';
-import PostListItem from './components/post_list/post_list_item';
+import PostListItemContainer from './components/post_list/post_list_item_container';
 
 
 class HomeFeedView extends Component {
@@ -25,6 +25,7 @@ class HomeFeedView extends Component {
   // ==================================================
   componentDidMount() {
     this.props.requestPosts();
+    this.props.requestUsers();
   }
 
   componentWillReceiveProps(newProps) {
@@ -41,20 +42,23 @@ class HomeFeedView extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderPostListItem(post, comments) {
+  renderPostListItem(post) {
     return (
-      <PostListItem key={post.id} post={post} comments={comments}/>
+      <PostListItemContainer
+        key={post.id}
+        post={post}
+      />
     );
   }
 
-  renderPostFeed(posts, comments) {
+  renderPostFeed(posts) {
     return posts.map(post => (
-      this.renderPostListItem(post,comments)
+      this.renderPostListItem(post)
     ))
   }
 
   render() {
-    const {currentUser, posts, comments} = this.props;
+    const {currentUser, posts, users} = this.props;
     const {showUploadPostView} = this.state;
 
     return (
@@ -67,7 +71,7 @@ class HomeFeedView extends Component {
           isVisible={showUploadPostView}
           currentUser={currentUser}
         />
-      {this.renderPostFeed(posts, comments)}
+      {this.renderPostFeed(posts)}
       </div>
     );
   }

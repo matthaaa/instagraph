@@ -9,7 +9,7 @@ export const requestPosts = () => dispatch => (
 );
 
 export const requestPost = (postId) => dispatch => (
-  PostAPIUtil.fetchPost(postId).then(payload => dispatch(receivePost(payload.post)))
+  PostAPIUtil.fetchPost(postId).then(payload => dispatch(receivePost(payload)))
 );
 
 // export const updatePost = (post) => dispatch => (

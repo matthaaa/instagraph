@@ -1,7 +1,7 @@
 export const fetchLike = (like) => (
   $.ajax({
     method: "POST",
-    url: `api/posts/${like.post_id}/likes`,
+    url: `api/likes`,
     data: {like},
   })
 );
@@ -9,7 +9,6 @@ export const fetchLike = (like) => (
 export const destroyLike = (like) => (
   $.ajax({
     method: "DELETE",
-    url: `api/posts/${like.post_id}/likes/${like.id}`,
-    data: {like},
+    url: `api/likes/${like.id}`,
   })
 );

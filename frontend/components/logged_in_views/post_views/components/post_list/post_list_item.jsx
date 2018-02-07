@@ -37,7 +37,7 @@ class PostListItem extends Component {
 
   renderDescription(post) {
     const description = post.description;
-    const name = post.user.username;
+    const name = this.props.user.username;
 
     return(
       <div className="post-description-container" >
@@ -63,9 +63,8 @@ class PostListItem extends Component {
   }
 
   renderPostBody(post, comments) {
-    const likes = post.likes;
-    const likesCount = likes.length;
-    const likesText = likes.length === 1 ? "like" : "likes";
+    const likesCount = post.like_ids.length;
+    const likesText = likesCount === 1 ? "like" : "likes";
     // debugger
     return (
       <div className="post-body">
@@ -83,8 +82,7 @@ class PostListItem extends Component {
   }
 
   render() {
-    const {post, comments} = this.props;
-    const user = post.user;
+    const {post, user, comments} = this.props;
 
     return (
       <div className="post-list-item">

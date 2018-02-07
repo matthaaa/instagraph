@@ -9,19 +9,15 @@ import PostListItem from './post_list_item';
 const mapStateToProps = (state, ownProps) => {
   const post = ownProps.post;
   const users = state.users;
-  const comments = post.comment_ids.map((comment_id) =>
-    state.comments[comment_id]
-  );
 
   return ({
     user: users[post.author_id],
-    comments,
     post,
   })
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  requestComments: () => dispatch(requestComments()),
+  requestPost: () => dispatch(requestPost(ownProps.post.id))
 })
 
 

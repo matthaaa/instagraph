@@ -5,7 +5,7 @@ import {Component} from 'react';
 import PostListItemHeader from './components/post_list_item_header';
 import PostListItemActionContainer from './components/post_list_item_action_container';
 import AddCommentFormContainer from './components/comments/forms/add_comment_form_container';
-import CommentListView from './components/comments/components/comments_list_view';
+import CommentListViewContainer from './components/comments/components/comments_list_view_container';
 
 
 class PostListItem extends Component {
@@ -15,8 +15,11 @@ class PostListItem extends Component {
   // ==================================================
 
   // ==================================================
-  // Callbacks
+  // Lifecycle
   // ==================================================
+  componentDidMount() {
+    this.props.requestPost(this.props.post.id)
+  }
 
   // ==================================================
   // Render
@@ -62,7 +65,7 @@ class PostListItem extends Component {
     );
   }
 
-  renderPostBody(post, comments) {
+  renderPostBody(post) {
     const likesCount = post.like_ids.length;
     const likesText = likesCount === 1 ? "like" : "likes";
     // debugger
@@ -74,7 +77,7 @@ class PostListItem extends Component {
           <p className="post-body-likes-text">{likesText}</p>
         </div>
         {this.renderDescription(post)}
-        <CommentListView comments={comments} />
+        <CommentListViewContainer post={post}/>
         {this.renderTimestamp(post)}
         {this.renderCommentForm(post)}
       </div>
@@ -82,13 +85,13 @@ class PostListItem extends Component {
   }
 
   render() {
-    const {post, user, comments} = this.props;
+    const {post, user} = this.props;
 
     return (
       <div className="post-list-item">
         <PostListItemHeader user={user} />
         {this.renderPhoto(post)}
-        {this.renderPostBody(post, comments)}
+        {this.renderPostBody(post)}
       </div>
     );
   }

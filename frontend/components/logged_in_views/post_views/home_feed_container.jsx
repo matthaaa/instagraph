@@ -8,11 +8,9 @@ import HomeFeedView from './home_feed_view';
 
 const mapStateToProps = (state, ownProps) => {
   const posts = Object.values(state.posts);
-  const comments = Object.values(state.comments);
   return ({
     currentUser: state.session.currentUser,
     posts,
-    comments
   });
 }
 

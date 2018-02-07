@@ -4,7 +4,7 @@ import {Component} from 'react';
 // Components
 import MainHeaderContainer from '../../generic/main_header_container';
 import PostUploadContainer from '../upload_views/post_upload_container';
-import PostListItem from './components/post_list/post_list_item';
+import PostListItemContainer from './components/post_list/post_list_item_container';
 
 
 class HomeFeedView extends Component {
@@ -27,10 +27,6 @@ class HomeFeedView extends Component {
     this.props.requestPosts();
   }
 
-  componentWillReceiveProps(newProps) {
-    this.props = newProps;
-  }
-
   // ==================================================
   // Event Handlers
   // ==================================================
@@ -43,7 +39,7 @@ class HomeFeedView extends Component {
   // ==================================================
   renderPostListItem(post, comments) {
     return (
-      <PostListItem key={post.id} post={post} comments={comments}/>
+      <PostListItemContainer key={post.id} post={post} comments={comments}/>
     );
   }
 
@@ -67,7 +63,7 @@ class HomeFeedView extends Component {
           isVisible={showUploadPostView}
           currentUser={currentUser}
         />
-      {this.renderPostFeed(posts, comments)}
+        {this.renderPostFeed(posts, comments)}
       </div>
     );
   }

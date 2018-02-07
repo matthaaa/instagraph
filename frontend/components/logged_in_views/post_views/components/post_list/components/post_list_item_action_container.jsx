@@ -7,14 +7,16 @@ import PostListActionItems from './post_list_item_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  const likes = ownProps.post.likes;
   const currentUser = state.session.currentUser;
-  const liked = likes.one((like) => like.id === currentUser.id);
+  const likedPosts = currentUser.liked_posts;
+  const post = ownProps.post;
+
+  console.log(currentUser);
 
   return ({
-    post: ownProps.post,
+    liked: likedPosts[post.id] ? true : false,
     currentUser,
-    liked,
+    post,
   })
 }
 

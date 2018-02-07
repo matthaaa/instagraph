@@ -29,7 +29,7 @@ const receivePosts = (posts) => ({
   posts,
 })
 
-const receivePost = (payload) => ({
+export const receivePost = (payload) => ({
   type: RECEIVE_POST,
   payload,
 })

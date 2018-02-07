@@ -5,7 +5,7 @@ export const fetchComments = () => (
   })
 );
 
-export const fetchComment = (comment) => (
+export const createComment = (comment) => (
   $.ajax({
     method: "POST",
     url: `api/comments`,

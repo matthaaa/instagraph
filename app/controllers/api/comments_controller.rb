@@ -7,7 +7,8 @@ class Api::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save!
-      render :show
+      @post = @comment.post
+      render 'api/posts/show'
     else
       render json: @comment.errors.full_messages, status: 400
     end

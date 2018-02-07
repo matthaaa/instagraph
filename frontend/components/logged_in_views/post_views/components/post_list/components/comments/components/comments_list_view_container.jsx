@@ -8,12 +8,12 @@ import CommentsListView from './comments_list_view';
 
 const mapStateToProps = (state, ownProps) => {
   const post = ownProps.post;
-  // const comments_array = Object.values(state.comments);
-  // const comments.keep_if {|comment| comment[post_id] === post.id};
+  const commentIds = post.comment_ids;
+  const comments = commentIds.map((commentId) => (state.comments[commentId]))
 
   return ({
     post,
-    hasComments: state.comments.length > 0,
+    comments,
   })
 }
 

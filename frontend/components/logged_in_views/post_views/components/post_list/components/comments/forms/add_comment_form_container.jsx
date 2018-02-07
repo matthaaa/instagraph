@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {requestComment} from '../../../../../../../../actions/comment_actions';
+import {addComment} from '../../../../../../../../actions/comment_actions';
 
 // Components
 import AddCommentForm from './add_comment_form';
@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  addComment: (comment) => dispatch(requestComment(comment))
+  addComment: (comment) => dispatch(addComment(comment))
 })
 
 

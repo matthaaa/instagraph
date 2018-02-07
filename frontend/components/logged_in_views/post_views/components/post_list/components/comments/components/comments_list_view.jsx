@@ -7,33 +7,24 @@ import CommentListItem from './comment_list_item';
 class CommentsListView extends Component {
 
   // ==================================================
-  // Initialize
-  // ==================================================
-
-  // ==================================================
-  // Callbacks
-  // ==================================================
-
-  // ==================================================
   // Render
   // ==================================================
   renderCommentListItem(comment) {
-    return (
-      <CommentListItem key={comment.id} comment={comment} />
-    );
+    if (comment) {
+      return (
+        <CommentListItem key={comment.id} comment={comment} />
+      );
+    } else {
+      return <div />;
+    }
   }
 
   render() {
-    const {hasComments, comments} = this.props;
-    console.log(comments);
+    const {comments} = this.props;
 
-    if (hasComments) {
-      return comments.map(comment => (
-        this.renderCommentListItem(comment)
-      ));
-    } else {
-      return <div/>;
-    }
+    return comments.map(comment => (
+      this.renderCommentListItem(comment)
+    ));
   }
 
 };

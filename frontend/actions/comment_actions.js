@@ -1,5 +1,5 @@
 import * as CommentAPIUtil from '../util/comment_api_util';
-import {updatePost} from './post_actions';
+import {receivePost} from './post_actions';
 
 
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
@@ -10,8 +10,8 @@ export const requestComments = () => dispatch => (
   CommentAPIUtil.fetchComments().then(comments => dispatch(receiveComments(comments)))
 );
 
-export const requestComment = (comment) => dispatch => (
-  CommentAPIUtil.fetchComment(comment).then(comment => dispatch(receiveComment(comment)))
+export const addComment = (comment) => dispatch => (
+  CommentAPIUtil.createComment(comment).then(post => dispatch(receivePost(post)))
 );
 
 export const deleteComment = (comment) => dispatch  => (

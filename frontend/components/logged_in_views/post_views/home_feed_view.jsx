@@ -28,10 +28,6 @@ class HomeFeedView extends Component {
     this.props.requestUsers();
   }
 
-  componentWillReceiveProps(newProps) {
-    this.props = newProps;
-  }
-
   // ==================================================
   // Event Handlers
   // ==================================================
@@ -47,7 +43,9 @@ class HomeFeedView extends Component {
       <PostListItemContainer
         key={post.id}
         post={post}
+        comments={comments}
       />
+
     );
   }
 
@@ -71,7 +69,7 @@ class HomeFeedView extends Component {
           isVisible={showUploadPostView}
           currentUser={currentUser}
         />
-      {this.renderPostFeed(posts)}
+        {this.renderPostFeed(posts)}
       </div>
     );
   }

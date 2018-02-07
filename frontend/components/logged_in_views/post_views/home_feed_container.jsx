@@ -12,6 +12,7 @@ const mapStateToProps = (state, ownProps) => {
   console.log("home state", state);
   const posts = Object.values(state.posts);
   const users = Object.values(state.users);
+
   return ({
     currentUser: state.session.currentUser,
     users,

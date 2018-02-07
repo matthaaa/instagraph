@@ -13,16 +13,16 @@ const commentReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   let newState = merge({}, oldState);
 
-  console.log(action);
 
   switch(action.type) {
     case RECEIVE_POSTS:
-      return merge({}, action.comments);
+      return action.payload.comments;
     case RECEIVE_POST:
       return action.comments;
     case RECEIVE_COMMENTS:
       return merge({}, action.comments);
     case RECEIVE_COMMENT:
+      debugger;
       return merge({}, oldState, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:
       delete newState[action.commentId];

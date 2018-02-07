@@ -29,8 +29,13 @@ class Api::PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
-    @comments = Comment.all
+    if params[:user_id]
+      @posts = Post.where(author_id: params[:user_id])
+      render :index
+    else
+      @posts = Post.all
+      render :index
+    end
   end
 
   def show

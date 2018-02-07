@@ -8,6 +8,10 @@ export const requestPosts = () => dispatch => (
   PostAPIUtil.fetchPosts().then(posts => dispatch(receivePosts(posts)))
 );
 
+export const requestUserPosts = (userId) => dispatch => (
+  PostAPIUtil.fetchUserPosts(userId).then(posts => dispatch(receivePosts(posts)))
+);
+
 export const requestPost = (postId) => dispatch => (
   PostAPIUtil.fetchPost(postId).then(payload => dispatch(receivePost(payload)))
 );

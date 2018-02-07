@@ -24,12 +24,16 @@ class CommentsListView extends Component {
   }
 
   render() {
-    return <div />;
-    // const {comments} = this.props;
-    //
-    // return comments.map(comment => (
-    //   this.renderCommentListItem(comment)
-    // ));
+    const {hasComments, comments} = this.props;
+    console.log(comments);
+
+    if (hasComments) {
+      return comments.map(comment => (
+        this.renderCommentListItem(comment)
+      ));
+    } else {
+      return <div/>;
+    }
   }
 
 };

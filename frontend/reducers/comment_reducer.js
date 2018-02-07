@@ -15,11 +15,10 @@ const commentReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_POST:
-      return merge({}, action.payload.comments);
+      return merge({}, oldState, action.payload.comments);
     case RECEIVE_COMMENTS:
-      return merge({}, action.comments);
+      return merge({}, oldState, action.comments);
     case RECEIVE_COMMENT:
-      debugger;
       return merge({}, oldState, {[action.comment.id]: action.comment});
     case REMOVE_COMMENT:
       delete newState[action.commentId];

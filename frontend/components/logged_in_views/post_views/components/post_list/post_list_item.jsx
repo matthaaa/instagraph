@@ -27,7 +27,7 @@ class PostListItem extends Component {
   renderPhoto(post) {
     const url = post.img_url;
 
-    return(
+    return (
       <div className="post-photo" >
         <img
           src={url}
@@ -42,11 +42,19 @@ class PostListItem extends Component {
     const description = post.description;
     const name = user.username;
 
-    return(
+    return (
       <div className="post-description-container" >
         <p className="post-item-author-text">{name}</p>
         <p className="post-description-text">{description}</p>
       </div>
+    );
+  }
+
+  renderComments(post) {
+    return (
+      <CommentListViewContainer
+        post={post}
+      />
     );
   }
 
@@ -58,7 +66,7 @@ class PostListItem extends Component {
 
 
   renderCommentForm(post) {
-    return(
+    return (
       <div className="comment-form" >
         <AddCommentFormContainer post={post} />
       </div>
@@ -77,7 +85,7 @@ class PostListItem extends Component {
           <p className="post-body-likes-text">{likesText}</p>
         </div>
         {this.renderDescription(post, user)}
-        <CommentListViewContainer post={post}/>
+        {this.renderComments(post)}
         {this.renderTimestamp(post)}
         {this.renderCommentForm(post)}
       </div>

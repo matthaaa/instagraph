@@ -7,8 +7,6 @@ import CommentsListView from './comments_list_view';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("commentlist state", state);
-  console.log("commentlist iwnprops", ownProps);
   return ({
     post: ownProps.post,
   })

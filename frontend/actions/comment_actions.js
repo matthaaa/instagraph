@@ -10,11 +10,9 @@ export const requestComments = () => dispatch => (
   CommentAPIUtil.fetchComments().then(comments => dispatch(receiveComments(comments)))
 );
 
-export const requestComment = (comment) => dispatch => {
-  console.log(comment);
-  return (
+export const requestComment = (comment) => dispatch => (
   CommentAPIUtil.fetchComment(comment).then(comment => dispatch(receiveComment(comment)))
-)};
+);
 
 export const deleteComment = (comment) => dispatch  => (
   CommentAPIUtil.destroyComment(comment).then(comment => dispatch(removeComment(comment)))

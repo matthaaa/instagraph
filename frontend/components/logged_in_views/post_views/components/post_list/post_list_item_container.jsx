@@ -8,12 +8,12 @@ import PostListItem from './post_list_item';
 
 const mapStateToProps = (state, ownProps) => {
   const post = ownProps.post;
-  const users = state.users;
-  const comments = Object.values(state.comments);
+  const user = state.users[post.author_id];
+  const comments = state.comments;
 
   return ({
-    user: users[post.author_id],
     comments,
+    user,
     post,
   })
 }

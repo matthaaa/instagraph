@@ -38,9 +38,9 @@ class PostListItem extends Component {
     );
   }
 
-  renderDescription(post) {
+  renderDescription(post, user) {
     const description = post.description;
-    const name = this.props.user.username;
+    const name = user.username;
 
     return(
       <div className="post-description-container" >
@@ -65,7 +65,7 @@ class PostListItem extends Component {
     );
   }
 
-  renderPostBody(post) {
+  renderPostBody(post, user) {
     const likesCount = post.like_ids.length;
     const likesText = likesCount === 1 ? "like" : "likes";
     // debugger
@@ -76,7 +76,7 @@ class PostListItem extends Component {
           <p className="post-body-likes-count">{likesCount}</p>
           <p className="post-body-likes-text">{likesText}</p>
         </div>
-        {this.renderDescription(post)}
+        {this.renderDescription(post, user)}
         <CommentListViewContainer post={post}/>
         {this.renderTimestamp(post)}
         {this.renderCommentForm(post)}
@@ -91,7 +91,7 @@ class PostListItem extends Component {
       <div className="post-list-item">
         <PostListItemHeader user={user} />
         {this.renderPhoto(post)}
-        {this.renderPostBody(post)}
+        {this.renderPostBody(post, user)}
       </div>
     );
   }

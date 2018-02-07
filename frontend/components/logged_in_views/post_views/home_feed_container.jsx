@@ -9,7 +9,6 @@ import HomeFeedView from './home_feed_view';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("home state", state);
   const posts = Object.values(state.posts);
   const users = Object.values(state.users);
 

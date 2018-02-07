@@ -11,8 +11,6 @@ const mapStateToProps = (state, ownProps) => {
   const likedPosts = currentUser.liked_posts;
   const post = ownProps.post;
 
-  console.log(currentUser);
-
   return ({
     liked: likedPosts[post.id] ? true : false,
     currentUser,

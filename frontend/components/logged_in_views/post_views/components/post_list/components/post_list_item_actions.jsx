@@ -27,7 +27,6 @@ class PostListItemActions extends Component {
   // Event Handlers
   // ==================================================
   handleLike(like) {
-    console.log(like);
     this.props.requestLike(like);
   }
 

@@ -43,7 +43,6 @@ class HomeFeedView extends Component {
       <PostListItemContainer
         key={post.id}
         post={post}
-        comments={comments}
       />
 
     );

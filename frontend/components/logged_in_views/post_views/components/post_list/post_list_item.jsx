@@ -70,6 +70,7 @@ class PostListItem extends Component {
   }
 
   handleHideCommentForm() {
+    // TODO: Invoke this conditionally on screen size later.
     this.setState({commentFormIsVisible: false})
   }
 
@@ -125,11 +126,15 @@ class PostListItem extends Component {
 
 
   renderCommentForm(post) {
-    return (
-      <div className="comment-form" >
-        <AddCommentFormContainer post={post} />
-      </div>
-    );
+    if (this.state.commentFormIsVisible) {
+      return (
+        <div className="comment-form" >
+          <AddCommentFormContainer post={post} />
+        </div>
+      );
+    } else {
+      return <div/>;
+    }
   }
 
   renderPostListActions() {

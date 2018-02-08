@@ -62,7 +62,7 @@ class PostListItem extends Component {
 
   handleFocusOnComment() {
     this.handleShowCommentForm()
-    document.getElementById("comment-form").focus();
+    document.getElementById(`comment-form-${this.props.post}`).focus();
   }
 
   handleShowCommentForm() {
@@ -120,7 +120,9 @@ class PostListItem extends Component {
   renderTimestamp(post) {
     // TODO(matt): Make link to post show screen.
     return (
-      <Link className="post-timestamp" to={"/"}>{post.time_ago.toUpperCase()}</Link>
+      <div className="timestamp-content">
+        <Link className="post-timestamp" to={"/"}>{post.time_ago.toUpperCase()}</Link>
+      </div>
     );
   }
 

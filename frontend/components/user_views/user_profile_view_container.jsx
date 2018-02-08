@@ -3,9 +3,8 @@ import {withRouter} from 'react-router';
 
 // Components
 import UserProfileView from './user_profile_view';
-import {
-  requestUsers
-} from '../../actions/user_actions';
+import {requestUsers} from '../../actions/user_actions';
+import {addFollow, deleteFollow} from '../../actions/follow_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -20,6 +19,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+  addFollow: () => dispatch(addFollow()),
+  deleteFollow: () => dispatch(deleteFollow()),
   requestUsers: () => dispatch(requestUsers()),
 })
 

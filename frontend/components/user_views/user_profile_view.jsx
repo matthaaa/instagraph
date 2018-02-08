@@ -47,16 +47,25 @@ class UserProfileView extends Component {
   // Render
   // ==================================================
   render() {
-    const {currentUserFollows, user} = this.props;
+    const {
+      currentUserFollows,
+      followerCount,
+      followingCount,
+      user,
+    } = this.props;
     const username = user ? user.username : "";
     const followText = "Follow";
 
     return (
       <div className="logged-in-view">
         <MainHeaderContainer />
-        <div>
-          {username}
-        </div>
+        <div>{username}</div>
+
+        <div>Followers:</div>
+        <div>{followerCount}</div>
+
+        <div>Following:</div>
+        <div>{followingCount}</div>
         <CustomButtom
           className="profile-follow-button"
           onPress={this.handlePressFollowButton}

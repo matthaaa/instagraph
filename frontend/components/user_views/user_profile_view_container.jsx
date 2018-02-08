@@ -12,9 +12,9 @@ const mapStateToProps = (state, ownProps) => {
   const user = state.users[ownProps.match.params.userId];
 
   return ({
-    currentUserFollows: user.current_user_follows,
-    followerCount: user.follower_ids.length,
-    followingCount: user.followee_ids.length,
+    currentUserFollows: user ? user.current_user_follows : false,
+    followerCount: user ? user.follower_ids.length : 0,
+    followingCount: user ? user.followee_ids.length : 0,
     user,
   })
 }

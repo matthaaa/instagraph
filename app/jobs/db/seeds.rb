@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Demo --------------------------------------------------
-User.create(
+debugger;
+User.create!(
   username: "demo_lovati",
   password: "password",
   email: "demo@instagraph.com",
@@ -16,7 +17,7 @@ User.create(
 )
 
 # Matt --------------------------------------------------
-matt = User.create(
+matt = User.create!(
   username: "matt",
   password: "password",
   email: "matt@instagraph.com",
@@ -35,7 +36,7 @@ matt.posts.create!(
 )
 
 # Oski --------------------------------------------------
-User.create(
+User.create!(
   username: "oski",
   password: "password",
   email: "oski@instagraph.com",
@@ -44,7 +45,7 @@ User.create(
 )
 
 # Wanderer --------------------------------------------------
-wanderer = User.create(
+wanderer = User.create!(
   username: "wanderer",
   password: "password",
   email: "cameraman@instagraph.com",
@@ -117,28 +118,28 @@ wanderer.posts.create!(
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9775.jpg",
 )
 
-User.create(
+User.create!(
   username: "dobryninstagram",
   password: "password",
   email: "dave@instagraph.com",
   full_name: "David",
   img_url: "",
 )
-User.create(
+User.create!(
   username: "taylor",
   password: "password",
   email: "taylor@instagraph.com",
   full_name: "Taylor",
   img_url: "",
 )
-User.create(
+User.create!(
   username: "sadielady",
   password: "password",
   email: "sadie@instagraph.com",
   full_name: "Sadie",
   img_url: "",
 )
-User.create(
+User.create!(
   username: "davedoingthings",
   password: "password",
   email: "davedoingthings@instagraph.com",

@@ -19,8 +19,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  addFollow: () => dispatch(addFollow()),
-  deleteFollow: () => dispatch(deleteFollow()),
+  addFollow: (follow) => dispatch(addFollow(follow)),
+  deleteFollow: (follow) => dispatch(deleteFollow(follow)),
   requestUsers: () => dispatch(requestUsers()),
 })
 

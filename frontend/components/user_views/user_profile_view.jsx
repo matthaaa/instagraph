@@ -4,6 +4,7 @@ import {Component} from 'react';
 // Components
 import MainHeaderContainer from '../generic/main_header_container';
 import CustomButtom from '../generic/buttons/custom_button';
+import UserProfileHeaderContainer from './components/user_profile_header_container';
 
 
 class UserProfileView extends Component {
@@ -11,18 +12,7 @@ class UserProfileView extends Component {
   // ==================================================
   // Initialize
   // ==================================================
-  constructor(props) {
-    super(props);
-    this.handleFollowAction = this.handleFollowAction.bind(this);
-    this.handleFollow = this.handleFollow.bind(this);
-    this.handleUnfollow = this.handleUnfollow.bind(this);
-    this.state = {
-      follow: {
-        follower_id: "",
-        followed_id: "",
-      },
-    }
-  }
+
   // ==================================================
   // Lifecycle
   // ==================================================
@@ -34,83 +24,10 @@ class UserProfileView extends Component {
   // ==================================================
   // Event Handlers
   // ==================================================
-  handleFollow(follow) {
-    this.props.addFollow(follow)
-  }
-
-  handleUnfollow(follow) {
-    this.props.deleteFollow(follow)
-  }
-
-  handleFollowAction(e) {
-    const {currentUserFollows, currentUser, user} = this.props;
-    console.log(this.props);
-
-    e.preventDefault();
-
-    this.setState({
-      follow: Object.assign(this.state.follow, {
-        follower_id: currentUser.id,
-        followed_id: user.id,
-      })
-    });
-
-    console.log(this.state.follow);
-    console.log(currentUserFollows);
-
-    if (currentUserFollows) {
-      this.handleUnfollow(this.state.follow)
-    } else {
-      this.handleFollow(this.state.follow)
-    }
-  }
 
   // ==================================================
   // Render
   // ==================================================
-  renderUserHeader() {
-    const {
-      currentUser,
-      currentUserFollows,
-      followerCount,
-      followingCount,
-      user,
-    } = this.props;
-
-    const username = user ? user.username : "";
-    const src = user ? user.img_url : "";
-    const followText = currentUserFollows ? "Unfollow" : "Follow";
-
-    return (
-      <div className="main-profile-user-header">
-        <img
-          src={src}
-          width={120}
-          height={120}
-          align="middle"
-          className="main-profile-header-user-picture"
-        />
-        <div className="main-profile-user-header-contents">
-          <div>{username}</div>
-
-          <div>You follow:</div>
-          <div>{currentUserFollows ? "Yeah" : "Naw"}</div>
-
-          <div>Followers:</div>
-          <div>{followerCount}</div>
-
-          <div>Following:</div>
-          <div>{followingCount}</div>
-          <CustomButtom
-            className="profile-follow-button"
-            onPress={this.handleFollowAction}
-            text={followText}
-            />
-        </div>
-      </div>
-    );
-  }
-
   renderPostGridItem(post) {
     const src = post ? post.img_url : "";
     return (
@@ -142,7 +59,10 @@ class UserProfileView extends Component {
     return (
       <div className="logged-in-view">
         <MainHeaderContainer />
-        {this.renderUserHeader()}
+        <UserProfileHeaderContainer
+          user={this.props.user}
+          currentUser={this.props.currentUser}
+        />
         <div className="posts-grid-view">
           {this.renderPostsGrid()}
         </div>

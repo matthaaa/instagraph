@@ -16,8 +16,8 @@ class Api::FollowsController < ApplicationController
       followed_id: follow_params[:followed_id],
     )
 
-    @user = User.find_by(id: @follow.follower_id)
     if @follow.destroy
+      @user = User.find_by(id: @follow.follower_id)
       render 'api/users/show'
     else
       render json: @follow.errors.full_messages

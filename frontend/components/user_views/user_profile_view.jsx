@@ -31,6 +31,14 @@ class UserProfileView extends Component {
   // ==================================================
   // Event Handlers
   // ==================================================
+  handleFollow() {
+
+  }
+
+  handleUnfollow() {
+
+  }
+
   handlePressFollowButton() {
 
   }
@@ -39,7 +47,7 @@ class UserProfileView extends Component {
   // Render
   // ==================================================
   render() {
-    const {user} = this.props;
+    const {currentUserFollows, user} = this.props;
     const username = user ? user.username : "";
     const followText = "Follow";
 

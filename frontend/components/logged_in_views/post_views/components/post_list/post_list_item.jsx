@@ -39,8 +39,8 @@ class PostListItem extends Component {
   }
 
   renderDescription(post, user) {
-    const description = post.description;
-    const name = user.username;
+    const description = post ? post.description : "";
+    const name = user ? user.username : "";
 
     return (
       <div className="post-description-container" >
@@ -74,9 +74,9 @@ class PostListItem extends Component {
   }
 
   renderPostBody(post, user) {
-    const likesCount = post.like_ids.length;
+    const likesCount = post ? post.like_ids.length : 0;
     const likesText = likesCount === 1 ? "like" : "likes";
-    // debugger
+
     return (
       <div className="post-body">
         <PostListItemActionContainer post={post} />

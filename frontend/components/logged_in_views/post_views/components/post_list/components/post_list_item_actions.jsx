@@ -22,20 +22,18 @@ class PostListItemActions extends Component {
   // ==================================================
   // Callbacks
   // ==================================================
+  componentWillUpdate(newProps) {
+    console.log(this.props);
+    if (this.props.post.like_ids.length !== newProps.post.like_ids.length) {
+      this.props.requestPost(newProps.post.id);
+      this.props.requestUser(newProps.currentUser);
+    }
+  }
 
   // ==================================================
   // Event Handlers
   // ==================================================
   handleLike(like) {
-    const {currentUser, post} = this.props;
-
-    this.setState({
-      like: Object.assign(this.state.like, {
-        user_id: currentUser.id,
-        post_id: post.id,
-      })
-    });
-
     this.props.addLike(like);
   }
 
@@ -48,10 +46,16 @@ class PostListItemActions extends Component {
     console.log("Like!");
     e.preventDefault();
 
-    const {liked} = this.props;
+    console.log(this.props.currentUserLike);
+    const {currentUser, post, liked} = this.props;
 
-    console.log(this.props.currentUserLike);
-    console.log(this.props.currentUserLike);
+    this.setState({
+      like: Object.assign(this.state.like, {
+        user_id: currentUser.id,
+        post_id: post.id,
+      })
+    });
+
 
     if (liked) {
       this.handleUnlike(this.props.currentUserLike);

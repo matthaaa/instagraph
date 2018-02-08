@@ -45,7 +45,6 @@ class User < ApplicationRecord
   def liked_posts
     @liked_posts = Hash.new
 
-    p likes
     self.likes.each do |like|
       @liked_posts[like.post_id] = Post.find_by(id: like.post_id)
     end
@@ -54,6 +53,7 @@ class User < ApplicationRecord
   end
 
   def currentLike
+    @like = Hash.new
     @like = Like.find_by(user_id: self.id)
   end
 

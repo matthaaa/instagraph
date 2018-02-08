@@ -16,9 +16,9 @@ class Api::LikesController < ApplicationController
       user_id: like_params[:user_id],
     )
     # @like = Like.find_by(id: params[:id])
+    @post = @like.post
 
     if @like.destroy
-      @post = @like.post
       render 'api/posts/show'
     else
       render json: @like.errors.full_messages

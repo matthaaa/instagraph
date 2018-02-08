@@ -19,7 +19,7 @@ class UserProfileView extends Component {
     this.state = {
       follow: {
         follower_id: "",
-        followee_id: "",
+        followed_id: "",
       },
     }
   }
@@ -28,6 +28,7 @@ class UserProfileView extends Component {
   // ==================================================
   componentWillMount() {
     this.props.requestUsers();
+    this.props.requestPosts();
   }
 
   // ==================================================
@@ -54,44 +55,92 @@ class UserProfileView extends Component {
       })
     });
 
+    console.log(this.state.follow);
+
     if (currentUserFollows) {
-      this.handleFollow(this.state.follow)
-    } else {
       this.handleUnfollow(this.state.follow)
+    } else {
+      this.handleFollow(this.state.follow)
     }
   }
 
   // ==================================================
   // Render
   // ==================================================
-  render() {
+  renderUserHeader() {
     const {
+      currentUser,
       currentUserFollows,
       followerCount,
       followingCount,
       user,
     } = this.props;
+
     const username = user ? user.username : "";
+    const src = user ? user.img_url : "";
     const followText = currentUserFollows ? "Unfollow" : "Follow";
 
     return (
+      <div className="main-profile-user-header">
+        <img
+          src={src}
+          width={120}
+          height={120}
+          align="middle"
+          className="main-profile-header-user-picture"
+        />
+        <div className="main-profile-user-header-contents">
+          <div>{username}</div>
+
+          <div>You follow:</div>
+          <div>{currentUserFollows ? "Yeah" : "Naw"}</div>
+
+          <div>Followers:</div>
+          <div>{followerCount}</div>
+
+          <div>Following:</div>
+          <div>{followingCount}</div>
+          <CustomButtom
+            className="profile-follow-button"
+            onPress={this.handleFollowAction}
+            text={followText}
+            />
+        </div>
+      </div>
+    );
+  }
+
+  renderPostGridItem(post) {
+    const src = post ? post.img_url : "";
+    return (
+      <div className="post-grid-item">
+        <img
+          src={src}
+          width={295}
+          height={295}
+          align="middle"
+          className="post-grid-item"
+        />
+      </div>
+    );
+  }
+
+  renderPostsGrid() {
+    const {posts} = this.props;
+
+    return posts.map(post => (
+      this.renderPostGridItem(post)
+    ))
+  }
+
+  render() {
+    return (
       <div className="logged-in-view">
         <MainHeaderContainer />
-        <div>{username}</div>
-
-        <div>You follow:</div>
-        <div>{currentUserFollows ? "Yeah" : "Naw"}</div>
-
-        <div>Followers:</div>
-        <div>{followerCount}</div>
-
-        <div>Following:</div>
-        <div>{followingCount}</div>
-        <CustomButtom
-          className="profile-follow-button"
-          onPress={this.handleFollowAction}
-          text={followText}
-        />
+        {this.renderUserHeader()}
+        <div className="posts-grid-view">
+          {this.renderPostsGrid()}
+        </div>
       </div>
     );
   }

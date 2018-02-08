@@ -6,7 +6,7 @@ const followReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_USER:
-      return action.payload.follows;
+      return merge({}, action.payload.follows);
     default:
       return oldState;
   }

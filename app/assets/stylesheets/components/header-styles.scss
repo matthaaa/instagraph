@@ -49,10 +49,19 @@ $blue: #3897f0;
 }
 
 .upload-photo-button {
-  width: 150px;
+  width: 100px;
+}
+
+.user-profile-button {
+  width: 100px;
 }
 
 // TODO: Remove once logout button is no longer needed.
 .temporary-logout-button {
-  width: 150px;
+  width: 100px;
+  margin-right: 5px;
+}
+
+.header-logo-section {
+  text-decoration: none;
 }

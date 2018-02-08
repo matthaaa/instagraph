@@ -3,9 +3,9 @@ class Api::FollowsController < ApplicationController
     @follow = Follow.new(follow_params)
 
     if @follow.save!
-      @follower = @follow.follower
-      @followee = @follow.followee
-      @current_user = current_user
+
+      @user = User.find_by(id: @follow.followed_id)
+      @current_user = User.find_by(id: @follow.follower_id)
       render 'api/users/show'
     else
       render json: @follow.errors.full_messages
@@ -14,12 +14,11 @@ class Api::FollowsController < ApplicationController
 
   def destroy
     @follow = Follow.find_by(
-      follower_id: like_params[:follower_id],
-      followed_id: like_params[:followed_id],
+      follower_id: follow_params[:follower_id],
+      followed_id: follow_params[:followed_id],
     )
-    # @like = Like.find_by(id: params[:id])
-    @user = @follow.follower
 
+    @user = User.find_by(id: @follow.follower_id)
     if @follow.destroy
       render 'api/users/show'
     else

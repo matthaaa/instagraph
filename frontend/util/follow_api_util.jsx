@@ -1,10 +1,3 @@
-export const fetchFollows = () => (
-  $.ajax({
-    method: "GET",
-    url: `api/follows`,
-  })
-);
-
 export const createFollow = (follow) => (
   $.ajax({
     method: "POST",

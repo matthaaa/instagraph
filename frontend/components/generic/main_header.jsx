@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 // Components
 import CustomButton from './buttons/custom_button';
@@ -31,9 +32,9 @@ class MainHeader extends Component {
   // ==================================================
   renderLogo() {
     return (
-      <div className="header-logo-section">
+      <Link className="header-logo-section" to={"/"}>
         <MainLogo type="header" />
-      </div>
+      </Link>
     );
   }
 
@@ -58,8 +59,14 @@ class MainHeader extends Component {
         />
         <CustomButton
           className={"upload-photo-button"}
-          text={"Upload Photo"}
+          text={"Upload"}
           onPress={onToggleUploadView}
+        />
+        <CustomButton
+          isLink
+          path={`/profiles/${this.props.currentUser.id}`}
+          className={"user-profile-button"}
+          text={"Profile"}
         />
       </div>
     );

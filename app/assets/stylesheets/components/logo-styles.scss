@@ -13,6 +13,7 @@ $blue: #3897f0;
 .logo-text {
   font-size: 36px;
   font-family: 'Pacifico', cursive;
+  text-decoration: none;
 }
 
 .header-logo-text {
@@ -21,4 +22,6 @@ $blue: #3897f0;
   font-family: 'Pacifico', cursive;
   padding-left: 18px;
   border-left: 1px solid $gray;
+  text-decoration: none;
+  color: $black;
 }

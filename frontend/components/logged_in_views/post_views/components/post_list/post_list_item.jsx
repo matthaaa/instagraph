@@ -45,7 +45,6 @@ class PostListItem extends Component {
     const liked = post.current_user_likes;
     e.preventDefault();
 
-
     this.setState({
       like: Object.assign(this.state.like, {
         user_id: currentUser.id,

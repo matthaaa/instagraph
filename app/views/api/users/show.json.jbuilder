@@ -9,3 +9,11 @@ end
     end
   end
 end
+
+@user.follows.each do |follow|
+  json.follows do
+    json.set! follow.id do
+      json.partial! 'api/follows/follow', follow: follow
+    end
+  end
+end

@@ -17,7 +17,7 @@ const receiveUsers = (users) => ({
   users,
 })
 
-const receiveUser = (payload) => ({
+export const receiveUser = (payload) => ({
   type: RECEIVE_USER,
   payload,
 })

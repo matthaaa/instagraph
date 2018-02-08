@@ -6,7 +6,7 @@ const likeReducer = (oldState = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_POST:
-      return action.payload.likes;
+      return merge({}, action.payload.likes);
     default:
       return oldState;
   }

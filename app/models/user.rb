@@ -19,25 +19,18 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   # FOLLOWEES
-  has_many :active_follows,
+  has_many :follows,
     dependent: :destroy,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :Follow
 
   has_many :followees,
-    through: :active_follows,
+    through: :follows,
     source: :followee
 
-  # FOLLOWERS
-  has_many :passive_follows,
-    dependent: :destroy,
-    primary_key: :id,
-    foreign_key: :followed_id,
-    class_name: :Follow
-
   has_many :followers,
-    through: :passive_follows,
+    through: :follows,
     source: :follower
 
   # ==================================================

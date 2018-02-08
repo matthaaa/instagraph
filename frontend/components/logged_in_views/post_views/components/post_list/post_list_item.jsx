@@ -16,12 +16,14 @@ class PostListItem extends Component {
   constructor(props) {
     super(props)
     this.handleLikeAction = this.handleLikeAction.bind(this);
-    this.handleComment = this.handleComment.bind(this);
+    this.handleFocusOnComment = this.handleFocusOnComment.bind(this);
+    this.handleShowCommentForm = this.handleShowCommentForm.bind(this);
     this.state = {
       like: {
         user_id: "",
         post_id: "",
-      }
+      },
+      commentFormIsVisible: false,
     };
   }
 
@@ -57,8 +59,13 @@ class PostListItem extends Component {
     }
   }
 
-  handleComment() {
+  handleFocusOnComment() {
+    this.handleShowCommentForm()
     document.getElementById("comment-form").focus();
+  }
+
+  handleShowCommentForm() {
+    this.setState({commentFormIsVisible: true})
   }
 
   // ==================================================
@@ -139,7 +146,7 @@ class PostListItem extends Component {
           />
         </button>
         <button
-          onClick={this.handleComment}
+          onClick={this.handleFocusOnComment}
           className="post-action-button post-comment-button">
           <img
             src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-comment.png"

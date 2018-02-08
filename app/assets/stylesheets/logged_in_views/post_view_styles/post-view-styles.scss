@@ -123,16 +123,30 @@ $blue: #3897f0;
 .new-comment-form-input-container {
   margin-top: 8px;
   border-top: 1px solid $light-gray-1;
+  max-height: 80px;
   width: 100%;
 }
 
 .new-comment-form-input {
   width: 100%;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: 300;
   border: none;
   background-color: transparent;
   resize: none;
   max-height: 80px;
+  color: $black;
+  align-items: center;
+  justify-content: center;
+  padding-top: 17px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+}
+
+.new-comment-form-input::placeholder {
+  color: $gray;
+  align-items: center;
+  justify-content: center;
 }
 
 .new-comment-form-input:focus {

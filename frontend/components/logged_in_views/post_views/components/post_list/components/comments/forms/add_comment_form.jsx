@@ -56,6 +56,7 @@ class AddCommentForm extends Component {
         ref={el => this.commentForm = el}
         className="new-comment-form-content">
         <FormInput
+          id={"comment-form"}
           type="textarea"
           contentClassName="new-comment-form-input-container"
           className="new-comment-form-input"

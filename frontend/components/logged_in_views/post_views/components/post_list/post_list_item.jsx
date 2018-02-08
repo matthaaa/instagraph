@@ -58,8 +58,7 @@ class PostListItem extends Component {
   }
 
   handleComment() {
-    // TODO: Comment action goes here
-    console.log("Comment!");
+    document.getElementById("comment-form").focus();
   }
 
   // ==================================================

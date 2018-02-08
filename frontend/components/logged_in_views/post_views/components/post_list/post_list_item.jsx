@@ -18,6 +18,7 @@ class PostListItem extends Component {
     this.handleLikeAction = this.handleLikeAction.bind(this);
     this.handleFocusOnComment = this.handleFocusOnComment.bind(this);
     this.handleShowCommentForm = this.handleShowCommentForm.bind(this);
+    this.handleHideCommentForm = this.handleHideCommentForm.bind(this);
     this.state = {
       like: {
         user_id: "",
@@ -66,6 +67,10 @@ class PostListItem extends Component {
 
   handleShowCommentForm() {
     this.setState({commentFormIsVisible: true})
+  }
+
+  handleHideCommentForm() {
+    this.setState({commentFormIsVisible: false})
   }
 
   // ==================================================

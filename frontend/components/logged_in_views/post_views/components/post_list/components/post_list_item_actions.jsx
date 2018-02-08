@@ -27,7 +27,16 @@ class PostListItemActions extends Component {
   // Event Handlers
   // ==================================================
   handleLike(like) {
-    this.props.requestLike(like);
+    const {currentUser, post} = this.props;
+
+    this.setState({
+      like: Object.assign(this.state.like, {
+        user_id: currentUser.id,
+        post_id: post.id,
+      })
+    });
+
+    this.props.addLike(like);
   }
 
   handleUnlike(like) {
@@ -39,16 +48,13 @@ class PostListItemActions extends Component {
     console.log("Like!");
     e.preventDefault();
 
-    const {currentUser, post, liked} = this.props;
-    this.setState({
-      like: Object.assign(this.state.like, {
-        user_id: currentUser.id,
-        post_id: post.id,
-      })
-    });
+    const {liked} = this.props;
+
+    console.log(this.props.currentUserLike);
+    console.log(this.props.currentUserLike);
 
     if (liked) {
-      this.handleUnlike(this.state.like);
+      this.handleUnlike(this.props.currentUserLike);
     } else {
       this.handleLike(this.state.like);
     }
@@ -69,10 +75,7 @@ class PostListItemActions extends Component {
         <button
           onClick={this.handleLikeAction}
           className="post-action-button post-like-button">
-          <img
-            src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart.png"
-            height={30}
-          />
+          {this.props.liked ? "Liked!" : "Not Liked!"}
         </button>
         <button
           onClick={this.handleComment}
@@ -85,7 +88,11 @@ class PostListItemActions extends Component {
       </div>
     );
   }
-
 };
 
 export default PostListItemActions;
+
+// <img
+//   src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart.png"
+//   height={30}
+// />

@@ -123,14 +123,19 @@ class PostListItem extends Component {
     // TODO: Add icons to buttons.
 
     const {post} = this.props;
+    const emptyHeartSrc = "https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart.png"
+    const filledHeartSrc = "https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-heart-filled.png"
+    const heartSrc = post.current_user_likes ? filledHeartSrc : emptyHeartSrc;
 
     return(
-
       <div className="post-action-bar" >
         <button
           onClick={this.handleLikeAction}
           className="post-action-button post-like-button">
-          {post.current_user_likes ? "Liked!" : "Not Liked!"}
+          <img
+            src={heartSrc}
+            height={30}
+          />
         </button>
         <button
           onClick={this.handleComment}

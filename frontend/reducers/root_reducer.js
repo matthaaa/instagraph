@@ -4,6 +4,8 @@ import ErrorReducer from './errors_reducer';
 import UserReducer from './user_reducer';
 import PostReducer from './post_reducer';
 import CommentReducer from './comment_reducer';
+import LikeReducer from './like_reducer';
+import FollowReducer from './follow_reducer';
 
 
 const RootReducer = combineReducers({
@@ -12,6 +14,8 @@ const RootReducer = combineReducers({
   users: UserReducer,
   posts: PostReducer,
   comments: CommentReducer,
+  likes: LikeReducer,
+  follows: FollowReducer,
 });
 
 

@@ -5,7 +5,6 @@ import {Component} from 'react';
 import CommentListItem from './comment_list_item';
 
 class CommentsListView extends Component {
-
   // ==================================================
   // Render
   // ==================================================

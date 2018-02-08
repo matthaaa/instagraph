@@ -52,11 +52,6 @@ class User < ApplicationRecord
     @liked_posts
   end
 
-  def currentLike
-    @like = Hash.new
-    @like = Like.find_by(user_id: self.id)
-  end
-
   private
   def ensure_token
     self.session_token ||= SecureRandom.urlsafe_base64

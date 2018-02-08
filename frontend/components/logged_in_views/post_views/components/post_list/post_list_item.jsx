@@ -25,13 +25,10 @@ class PostListItem extends Component {
   }
 
   // ==================================================
-  // Callbacks
-  // ==================================================
-
-  // ==================================================
   // Event Handlers
   // ==================================================
   handleLike(like) {
+    console.log("Like!");
     this.props.addLike(like);
   }
 
@@ -40,12 +37,10 @@ class PostListItem extends Component {
   }
 
   handleLikeAction(e) {
-    // TODO: Like action goes here
-    console.log("Like!");
+    const {currentUser, post} = this.props;
+    const liked = post.current_user_likes;
     e.preventDefault();
 
-    console.log(this.props.currentUserLike);
-    const {currentUser, post, liked} = this.props;
 
     this.setState({
       like: Object.assign(this.state.like, {
@@ -72,15 +67,6 @@ class PostListItem extends Component {
   componentDidMount() {
     this.props.requestPost(this.props.post.id)
   }
-
-  // componentWillUpdate(newProps) {
-  //   console.log(this.props);
-  //   if (this.props.post.like_ids.length !== newProps.post.like_ids.length) {
-  //     this.props.requestPost(newProps.post.id);
-  //     this.props.requestUser(newProps.currentUser);
-  //   }
-  // }
-
   // ==================================================
   // Render
   // ==================================================
@@ -135,12 +121,16 @@ class PostListItem extends Component {
 
   renderPostListActions() {
     // TODO: Add icons to buttons.
+
+    const {post} = this.props;
+
     return(
+
       <div className="post-action-bar" >
         <button
           onClick={this.handleLikeAction}
           className="post-action-button post-like-button">
-          {this.props.liked ? "Liked!" : "Not Liked!"}
+          {post.current_user_likes ? "Liked!" : "Not Liked!"}
         </button>
         <button
           onClick={this.handleComment}
@@ -154,8 +144,7 @@ class PostListItem extends Component {
     );
   }
 
-  renderPostBody(post, user, currentUser) {
-    const likesCount = post ? post.like_ids.length : 0;
+  renderPostBody(likesCount, post, user, currentUser) {
     const likesText = likesCount === 1 ? "like" : "likes";
 
     return (
@@ -174,13 +163,13 @@ class PostListItem extends Component {
   }
 
   render() {
-    const {post, user, currentUser} = this.props;
+    const {likesCount, post, user, currentUser} = this.props;
 
     return (
       <div className="post-list-item">
         <PostListItemHeader user={user} />
         {this.renderPhoto(post)}
-        {this.renderPostBody(post, user, currentUser)}
+        {this.renderPostBody(likesCount, post, user, currentUser)}
       </div>
     );
   }

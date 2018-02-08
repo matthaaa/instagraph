@@ -27,18 +27,18 @@ class User < ApplicationRecord
 
   has_many :followees,
     through: :active_follows,
-    source: :followee,
+    source: :followee
 
   # FOLLOWERS
   has_many :passive_follows,
     dependent: :destroy,
     primary_key: :id,
-    foreign_key: :followee_id,
+    foreign_key: :followed_id,
     class_name: :Follow
 
   has_many :followers,
     through: :passive_follows,
-    source: :follower,
+    source: :follower
 
   # ==================================================
   # Methods

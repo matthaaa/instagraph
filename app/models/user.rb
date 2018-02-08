@@ -15,19 +15,30 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: :Post
 
-  # This user is the main follower of all followees in the follow object
-  has_many :follows,
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  # FOLLOWEES
+  has_many :active_follows,
     dependent: :destroy,
     primary_key: :id,
     foreign_key: :follower_id,
     class_name: :Follow
 
-  has_many :followings,
-    through: :follows,
+  has_many :followees,
+    through: :active_follows,
     source: :followee,
 
-  has_many :comments, dependent: :destroy
-  has_many :likes, dependent: :destroy
+  # FOLLOWERS
+  has_many :passive_follows,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :followee_id,
+    class_name: :Follow
+
+  has_many :followers,
+    through: :passive_follows,
+    source: :follower,
 
   # ==================================================
   # Methods
@@ -63,17 +74,21 @@ class User < ApplicationRecord
     @liked_posts
   end
 
+  # Followee methods
+
   def follow(followee_user)
-    followings << followee_user
+    followees << followee_user
   end
 
   def unfollow(followee_user)
-    followings.delete(followee_user)
+    followees.delete(followee_user)
   end
 
   def follows?(followee_user)
-    followings.include?(followee_user)
+    followees.include?(followee_user)
   end
+
+
 
   private
   def ensure_token

@@ -102,13 +102,17 @@ $blue: #3897f0;
 
 .post-timestamp {
   font-size: 10px;
-  letter-spacing: 0.2px;
+  font-weight: 600;
   line-height: 17px;
   color: $gray;
   text-decoration: none;
 }
 
 // Comments ==================================================
+
+.comment-list-item-container {
+  margin-bottom: 8px;
+}
 
 .post-comment-text {
   font-weight: 400;

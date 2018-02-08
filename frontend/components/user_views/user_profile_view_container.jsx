@@ -9,9 +9,8 @@ import {
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps);
-  console.log(state);
-  const user = state.users[ownProps.match.params.userId],
+  const user = state.users[ownProps.match.params.userId];
+
   return ({
     currentUserFollows: user.current_user_follows,
     followerCount: user.follower_ids.length,

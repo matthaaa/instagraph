@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
   const post = ownProps.post;
 
   return ({
-    liked: likedPosts[post.id] ? true : false,
+    liked: likedPosts && likedPosts[post.id] ? true : false,
     currentUser,
     post,
   })

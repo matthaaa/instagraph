@@ -9,6 +9,7 @@ import AddCommentForm from './add_comment_form';
 const mapStateToProps = (state, ownProps) => ({
   currentUser: state.session.currentUser,
   post: ownProps.post,
+  formId: ownProps.formId,
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

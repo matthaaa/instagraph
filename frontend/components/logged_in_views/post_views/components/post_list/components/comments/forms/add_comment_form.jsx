@@ -51,12 +51,14 @@ class AddCommentForm extends Component {
   // Render
   // ==================================================
   render() {
+    const {formId} = this.props;
+
     return (
       <form
         ref={el => this.commentForm = el}
         className="new-comment-form-content">
         <FormInput
-          id={`comment-form-${this.state.comment.post_id}`}
+          id={formId}
           type="textarea"
           contentClassName="new-comment-form-input-container"
           className="new-comment-form-input"

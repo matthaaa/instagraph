@@ -16,7 +16,7 @@ class PostListItem extends Component {
   constructor(props) {
     super(props)
     this.handleLikeAction = this.handleLikeAction.bind(this);
-    this.handleFocusOnComment = this.handleFocusOnComment.bind(this);
+    this.handlePressCommentIcon = this.handlePressCommentIcon.bind(this);
     this.handleShowCommentForm = this.handleShowCommentForm.bind(this);
     this.handleHideCommentForm = this.handleHideCommentForm.bind(this);
     this.state = {
@@ -61,17 +61,29 @@ class PostListItem extends Component {
   }
 
   handleFocusOnComment() {
-    this.handleShowCommentForm()
-    document.getElementById(`comment-form-${this.props.post}`).focus();
+    // const commentFormId = `comment-form-${this.props.post.id}`;
+    // console.log(commentFormId);
+    // document.getElementById(commentFormId).focus();
   }
 
   handleShowCommentForm() {
     this.setState({commentFormIsVisible: true})
+    // Promise.resolve(this.setState({commentFormIsVisible: true})).then(
+    //   this.handleFocusOnComment()
+    // )
   }
 
   handleHideCommentForm() {
     // TODO: Invoke this conditionally on screen size later.
-    this.setState({commentFormIsVisible: false})
+    this.setState({commentFormIsVisible: false});
+  }
+
+  handlePressCommentIcon() {
+    if (this.state.commentFormIsVisible) {
+      this.handleHideCommentForm();
+    } else {
+      this.handleShowCommentForm();
+    }
   }
 
   // ==================================================
@@ -131,7 +143,10 @@ class PostListItem extends Component {
     if (this.state.commentFormIsVisible) {
       return (
         <div className="comment-form" >
-          <AddCommentFormContainer post={post} />
+          <AddCommentFormContainer
+            formId={`comment-form-${this.props.post.id}`}
+            post={post}
+          />
         </div>
       );
     } else {
@@ -158,7 +173,7 @@ class PostListItem extends Component {
           />
         </button>
         <button
-          onClick={this.handleFocusOnComment}
+          onClick={this.handlePressCommentIcon}
           className="post-action-button post-comment-button">
           <img
             src="https://s3-us-west-2.amazonaws.com/instagraph-aa/icon-comment.png"

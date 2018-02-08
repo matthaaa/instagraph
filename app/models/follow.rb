@@ -7,8 +7,8 @@ class Follow < ApplicationRecord
     foreign_key: :follower_id,
     class_name: :User
 
-  # Users who are being followed by follower_id user
-  has_many :followees,
+  # User who is being followed
+  belongs_to :followee,
     primary_key: :id,
     foreign_key: :followed_id,
     class_name: :User

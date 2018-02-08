@@ -22,12 +22,6 @@ class User < ApplicationRecord
     foreign_key: :follower_id,
     class_name: :Follow
 
-  # This user is one of many followees references in the follow object
-  belongs_to :follow,
-    primary_key: :id,
-    foreign_key: :followed_id,
-    class_name: :Follow
-
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 

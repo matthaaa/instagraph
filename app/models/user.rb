@@ -22,6 +22,10 @@ class User < ApplicationRecord
     foreign_key: :follower_id,
     class_name: :Follow
 
+  has_many :followings,
+    through: :follows,
+    source: :followee,
+
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
@@ -57,6 +61,18 @@ class User < ApplicationRecord
     end
 
     @liked_posts
+  end
+
+  def follow(followee_user)
+    followings << followee_user
+  end
+
+  def unfollow(followee_user)
+    followings.delete(followee_user)
+  end
+
+  def follows?(followee_user)
+    followings.include?(followee_user)
   end
 
   private

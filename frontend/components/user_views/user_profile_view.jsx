@@ -43,6 +43,7 @@ class UserProfileView extends Component {
 
   handleFollowAction(e) {
     const {currentUserFollows, currentUser, user} = this.props;
+    console.log(this.props);
 
     e.preventDefault();
 

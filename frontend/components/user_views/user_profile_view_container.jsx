@@ -11,6 +11,7 @@ const mapStateToProps = (state, ownProps) => {
   const user = state.users[ownProps.match.params.userId];
 
   return ({
+    currentUser: state.session.currentUser,
     currentUserFollows: user ? user.current_user_follows : false,
     followerCount: user ? user.follower_ids.length : 0,
     followingCount: user ? user.followee_ids.length : 0,

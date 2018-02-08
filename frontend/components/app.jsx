@@ -6,6 +6,7 @@ import {AuthRoute, ProtectedRoute} from '../util/route_util';
 import HomeFeedContainer from './logged_in_views/post_views/home_feed_container';
 import LoginViewContainer from './session_views/login_view_container';
 import SignupViewContainer from './user_views/signup_view_container';
+import UserProfileViewContainer from './user_views/user_profile_view_container';
 
 
 const App = ({children}) => (
@@ -14,7 +15,7 @@ const App = ({children}) => (
     <section className="main-view">
       <Switch>
         <ProtectedRoute exact path="/" component={HomeFeedContainer} />
-        <ProtectedRoute exact path="/:userId" component={LoginViewContainer} />
+        <ProtectedRoute exact path="/profiles/:userId" component={UserProfileViewContainer} />
         <AuthRoute exact path="/signup" component={SignupViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
         <AuthRoute

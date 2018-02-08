@@ -4,6 +4,7 @@ class Api::LikesController < ApplicationController
 
     if @like.save!
       @post = @like.post
+      @user = current_user
       render 'api/posts/show'
     else
       render json: @like.errors.full_messages

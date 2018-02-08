@@ -19,3 +19,7 @@ end
 end
 
 json.user @post.user
+
+if @user
+  json.user @user
+end

@@ -1,6 +1,6 @@
 class Api::FollowsController < ApplicationController
   def create
-    @follow = Follow.new
+    @follow = Follow.new(follow_params)
   end
 
   def destroy

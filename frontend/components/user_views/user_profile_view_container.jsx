@@ -8,11 +8,11 @@ import {
 } from '../../actions/user_actions';
 
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = (state, ownProps) => {
   return ({
     user: state.users[ownProps.match.params.userId],
   })
-})
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   requestUser: (user) => dispatch(requestUser(user)),

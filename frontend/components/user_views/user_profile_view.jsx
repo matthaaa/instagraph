@@ -16,7 +16,10 @@ class UserProfileView extends Component {
   // Render
   // ==================================================
   render() {
+    const {user} = this.props;
+
     return (
+      <div>{user.username}</div>
     );
   }
 

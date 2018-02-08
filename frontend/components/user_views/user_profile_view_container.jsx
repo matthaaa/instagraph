@@ -10,13 +10,15 @@ import {requestPosts} from '../../actions/post_actions';
 
 const mapStateToProps = (state, ownProps) => {
   const user = state.users[ownProps.match.params.userId];
-  const posts = user ? user.post_ids.map((postId) => (state.posts[postId])) : [];
+  const postIds = user ? user.post_ids : [];
+  const posts = user ? postIds.map((postId) => (state.posts[postId])) : [];
 
   return ({
     currentUser: state.session.currentUser,
-    currentUserFollows: user ? user.current_user_follows : false,
+    currentUserFollows: user && user.current_user_follows,
     followerCount: user ? user.follower_ids.length : 0,
     followingCount: user ? user.followee_ids.length : 0,
+    postIds,
     user,
     posts,
   })

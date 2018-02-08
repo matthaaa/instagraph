@@ -3,9 +3,7 @@ class Api::FollowsController < ApplicationController
     @follow = Follow.new(follow_params)
 
     if @follow.save!
-
       @user = User.find_by(id: @follow.followed_id)
-      @current_user = User.find_by(id: @follow.follower_id)
       render 'api/users/show'
     else
       render json: @follow.errors.full_messages

@@ -18,11 +18,16 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  # FOLLOWEES
   has_many :follows,
     dependent: :destroy,
     primary_key: :id,
     foreign_key: :follower_id,
+    class_name: :Follow
+
+  has_many :followings,
+    dependent: :destroy,
+    primary_key: :id,
+    foreign_key: :followed_id,
     class_name: :Follow
 
   has_many :followees,
@@ -30,7 +35,7 @@ class User < ApplicationRecord
     source: :followee
 
   has_many :followers,
-    through: :follows,
+    through: :followings,
     source: :follower
 
   # ==================================================

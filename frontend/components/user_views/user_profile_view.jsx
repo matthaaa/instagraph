@@ -26,7 +26,7 @@ class UserProfileView extends Component {
   // ==================================================
   // Lifecycle
   // ==================================================
-  componentWillMount() {
+  componentDidMount() {
     this.props.requestUsers();
     this.props.requestPosts();
   }
@@ -56,6 +56,7 @@ class UserProfileView extends Component {
     });
 
     console.log(this.state.follow);
+    console.log(currentUserFollows);
 
     if (currentUserFollows) {
       this.handleUnfollow(this.state.follow)
@@ -125,11 +126,15 @@ class UserProfileView extends Component {
     );
   }
 
-  renderPostsGrid() {
-    const {posts} = this.props;
+  renderPostGridRow(posts) {
 
-    return posts.map(post => (
-      this.renderPostGridItem(post)
+  }
+
+  renderPostsGrid() {
+    const {postIds} = this.props;
+
+    return postIds.map(postId => (
+      this.renderPostGridItem(postId)
     ))
   }
 

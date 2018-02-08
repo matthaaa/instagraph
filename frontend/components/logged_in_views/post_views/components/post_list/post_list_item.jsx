@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 // Components
 import PostListItemHeader from './components/post_list_item_header';
@@ -105,8 +106,9 @@ class PostListItem extends Component {
   }
 
   renderTimestamp(post) {
+    // TODO(matt): Make link to post show screen.
     return (
-      <a>{post.time_ago}</a>
+      <Link className="post-timestamp" to={"/"}>{post.time_ago.toUpperCase()}</Link>
     );
   }
 

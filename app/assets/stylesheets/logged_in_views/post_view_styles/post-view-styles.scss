@@ -100,6 +100,14 @@ $blue: #3897f0;
   margin-left: 4px;
 }
 
+.post-timestamp {
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  line-height: 17px;
+  color: $gray;
+  text-decoration: none;
+}
+
 // Comments ==================================================
 
 .post-comment-text {

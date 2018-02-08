@@ -14,6 +14,12 @@ class UserProfileView extends Component {
   constructor(props) {
     super(props);
     this.handlePressFollowButton = this.handlePressFollowButton.bind(this);
+    this.state = {
+      follow: {
+        follower_id: "",
+        followee_id: "",
+      },
+    }
   }
   // ==================================================
   // Lifecycle

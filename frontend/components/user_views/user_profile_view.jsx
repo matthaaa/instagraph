@@ -13,7 +13,9 @@ class UserProfileView extends Component {
   // ==================================================
   constructor(props) {
     super(props);
-    this.handlePressFollowButton = this.handlePressFollowButton.bind(this);
+    this.handleFollowAction = this.handleFollowAction.bind(this);
+    this.handleFollow = this.handleFollow.bind(this);
+    this.handleUnfollow = this.handleUnfollow.bind(this);
     this.state = {
       follow: {
         follower_id: "",
@@ -31,16 +33,31 @@ class UserProfileView extends Component {
   // ==================================================
   // Event Handlers
   // ==================================================
-  handleFollow() {
-
+  handleFollow(follow) {
+    this.props.addFollow(follow)
   }
 
-  handleUnfollow() {
-
+  handleUnfollow(follow) {
+    this.props.deleteFollow(follow)
   }
 
-  handlePressFollowButton() {
+  handleFollowAction(e) {
+    const {currentUserFollows, currentUser, user} = this.props;
 
+    e.preventDefault();
+
+    this.setState({
+      follow: Object.assign(this.state.follow, {
+        follower_id: currentUser.id,
+        followed_id: user.id,
+      })
+    });
+
+    if (currentUserFollows) {
+      this.handleFollow(this.state.follow)
+    } else {
+      this.handleUnfollow(this.state.follow)
+    }
   }
 
   // ==================================================
@@ -54,12 +71,15 @@ class UserProfileView extends Component {
       user,
     } = this.props;
     const username = user ? user.username : "";
-    const followText = "Follow";
+    const followText = currentUserFollows ? "Unfollow" : "Follow";
 
     return (
       <div className="logged-in-view">
         <MainHeaderContainer />
         <div>{username}</div>
+
+        <div>You follow:</div>
+        <div>{currentUserFollows ? "Yeah" : "Naw"}</div>
 
         <div>Followers:</div>
         <div>{followerCount}</div>
@@ -68,7 +88,7 @@ class UserProfileView extends Component {
         <div>{followingCount}</div>
         <CustomButtom
           className="profile-follow-button"
-          onPress={this.handlePressFollowButton}
+          onPress={this.handleFollowAction}
           text={followText}
         />
       </div>

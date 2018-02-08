@@ -58,6 +58,7 @@ class AddCommentForm extends Component {
         <FormInput
           type="textarea"
           contentClassName="new-comment-form-input-container"
+          className="new-comment-form-input"
           placeholder={"Add a comment..."}
           value={this.state.comment.body}
           onChange={this.handleUpdate("body")}

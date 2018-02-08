@@ -102,7 +102,7 @@ $blue: #3897f0;
 
 .post-timestamp {
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 17px;
   color: $gray;
   text-decoration: none;
@@ -118,4 +118,25 @@ $blue: #3897f0;
   font-weight: 400;
   font-size: 15px;
   display: inline;
+}
+
+.new-comment-form-input-container {
+  margin-top: 8px;
+  border-top: 1px solid $light-gray-1;
+  width: 100%;
+}
+
+.new-comment-form-input {
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  resize: none;
+  max-height: 80px;
+}
+
+.new-comment-form-input:focus {
+  border: none;
+  background-color: transparent;
+  max-height: 80px;
 }

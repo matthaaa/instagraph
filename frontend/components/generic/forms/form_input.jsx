@@ -35,7 +35,7 @@ class FormInput extends Component {
       <textarea
         autoFocus={autoFocus}
         spellCheck={false}
-        className={className}
+        className={`form-input ${className}`}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

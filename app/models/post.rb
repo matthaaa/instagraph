@@ -25,6 +25,6 @@ class Post < ApplicationRecord
   end
 
   def time_ago
-    "#{distance_of_time_in_words(self.created_at, Time.now)} ago"
+    "#{distance_of_time_in_words(self.created_at, Time.now).gsub('about ','')} ago"
   end
 end

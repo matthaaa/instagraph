@@ -19,7 +19,8 @@ class CommentListItem extends Component {
     const {comment} = this.props;
 
     return (
-      <div>
+      <div >
+        <p className="post-author-text">{comment.author}</p>
         <p>{comment.body}</p>
       </div>
     );

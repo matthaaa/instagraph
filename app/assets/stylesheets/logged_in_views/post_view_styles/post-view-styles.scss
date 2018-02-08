@@ -43,7 +43,7 @@ $blue: #3897f0;
   margin-left: 10px;
 }
 
-.post-item-author-text {
+.post-author-text {
   font-weight: 600;
   font-size: 15px;
   margin-right: 5px;
@@ -56,7 +56,7 @@ $blue: #3897f0;
   overflow: hidden;
 }
 
-// POST BODY ==================================================
+// Post body ==================================================
 
 .post-action-bar {
   display: flex;
@@ -98,4 +98,9 @@ $blue: #3897f0;
 
 .post-body-likes-text {
   margin-left: 4px;
+}
+
+// Comments ==================================================
+.comment-list-item-content {
+
 }

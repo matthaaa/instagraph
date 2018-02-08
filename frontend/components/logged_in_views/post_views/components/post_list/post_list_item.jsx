@@ -90,7 +90,7 @@ class PostListItem extends Component {
 
     return (
       <div className="post-description-container" >
-        <p className="post-item-author-text">{name}</p>
+        <p className="post-author-text">{name}</p>
         <p className="post-description-text">{description}</p>
       </div>
     );

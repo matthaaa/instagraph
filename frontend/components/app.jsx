@@ -14,6 +14,7 @@ const App = ({children}) => (
     <section className="main-view">
       <Switch>
         <ProtectedRoute exact path="/" component={HomeFeedContainer} />
+        <ProtectedRoute exact path="/:userId" component={LoginViewContainer} />
         <AuthRoute exact path="/signup" component={SignupViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
         <AuthRoute

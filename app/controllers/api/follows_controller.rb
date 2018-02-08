@@ -4,7 +4,7 @@ class Api::FollowsController < ApplicationController
 
     if @follow.save!
       @follower = @follow.follower
-      @followees = @follow.followees
+      @followee = @follow.followee
       @current_user = current_user
       render 'api/users/show'
     else
@@ -18,7 +18,7 @@ class Api::FollowsController < ApplicationController
       followed_id: like_params[:followed_id],
     )
     # @like = Like.find_by(id: params[:id])
-    @user = @like.follower
+    @user = @follow.follower
 
     if @follow.destroy
       render 'api/users/show'

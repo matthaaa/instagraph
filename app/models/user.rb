@@ -88,8 +88,6 @@ class User < ApplicationRecord
     followees.include?(followee_user)
   end
 
-
-
   private
   def ensure_token
     self.session_token ||= SecureRandom.urlsafe_base64

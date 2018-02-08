@@ -56,6 +56,8 @@ $blue: #3897f0;
   overflow: hidden;
 }
 
+// POST BODY ==================================================
+
 .post-action-bar {
   display: flex;
   height: 40px;
@@ -79,11 +81,21 @@ $blue: #3897f0;
 }
 
 .post-description-container {
-  padding: 6px 0;
+  padding: 10px 0;
 }
 
 .post-description-text {
   font-weight: 400;
   font-size: 15px;
   display: inline;
+}
+
+.post-body-likes {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.post-body-likes-text {
+  margin-left: 4px;
 }

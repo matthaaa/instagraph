@@ -21,7 +21,7 @@ class CommentListItem extends Component {
     return (
       <div >
         <p className="post-author-text">{comment.author}</p>
-        <p>{comment.body}</p>
+        <p className="post-comment-text">{comment.body}</p>
       </div>
     );
   }

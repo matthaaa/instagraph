@@ -49,7 +49,7 @@ class HomeFeedView extends Component {
   }
 
   renderPostFeed(posts) {
-    return posts.map(post => (
+    return posts.reverse().map(post => (
       this.renderPostListItem(post)
     ))
   }

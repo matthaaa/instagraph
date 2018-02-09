@@ -3,7 +3,6 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // Components
-import PostListItemHeader from './post_list_item_header';
 import AddCommentFormContainer from './forms/add_comment_form_container';
 import CommentListViewContainer from './comments_list_view_container';
 
@@ -206,6 +205,8 @@ class PostListItem extends Component {
     const src = user && user.img_url !== "" ? user.img_url
                                             : "https://s3-us-west-2.amazonaws.com/instagraph-aa/empty-profile-picture.jpg";
     const userId = user !== undefined ? user.id : ""
+
+    if (user === undefined) return null;
 
     return(
       <Link className="post-author-header" to={`/profiles/${user.id}`}>

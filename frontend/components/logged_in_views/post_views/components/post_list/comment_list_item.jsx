@@ -15,6 +15,8 @@ class CommentListItem extends Component {
   render() {
     const {comment, user} = this.props;
 
+    if (user === undefined) return null;
+
     return (
       <div className="comment-list-item-container">
         <Link

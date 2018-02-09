@@ -17,8 +17,12 @@ class UploadForm extends Component {
   // ==================================================
   constructor(props) {
     super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleDrop = this.handleDrop.bind(this);
+    this.handleUploadImage = this.handleUploadImage.bind(this);
     this.state = {
-      author_id: "",
+      author_id: this.props.currentUser.id,
       img_url: "",
       description: "",
     };
@@ -28,18 +32,14 @@ class UploadForm extends Component {
   // Event Handlers
   // ==================================================
   handleDrop(files) {
-    this.setState({
-      uploadedFile: files[0]
-    });
-
-    this.handleUploadImage(filed[0]);
+    this.handleUploadImage(files[0]);
   }
 
   handleUploadImage(file) {
     const uploadPreset = window.cloudinary_options.upload_preset;
-    const uploadUrl = `https://api.cloudinary.com/v1_1/${window.cloudinary_options.cloud_name}/upload`;
+    const uploadUrl = `https://api.cloudinary.com/v1_1/${window.cloudinary_options.cloud_name}/image/upload`;
 
-    const upload = request.post(uploadUrl)
+    let upload = request.post(uploadUrl)
                         .field('upload_preset', uploadPreset)
                         .field('file', file);
 
@@ -48,31 +48,42 @@ class UploadForm extends Component {
       if (err) {
         console.error(err);
       }
+      console.log(response.body.secure_url);
 
       if (response.body.secure_url !== '') {
         this.setState({
-          uploadedFileCloudinaryUrl: response.body.secure_url
+          img_url: response.body.secure_url,
         });
       }
     });
+
+    console.log(this.state);
   }
 
-  handleSubmit() {
-    this.props.createNewPost(
-      this.state.author_id,
-      this.state.description,
-      this.state.img_url,
-    );
+  handleSubmit(e) {
+    e.preventDefault()
+    this.props.createNewPost(this.state);
   }
+
+  handleUpdate(field) {
+    return (event) => {
+      this.setState({[field]: event.target.value});
+    }
+  }
+
 
   // ==================================================
   // Render
   // ==================================================
   render() {
-    const {formPost, onSubmit, onUpdate, onCloseModal} = this.props;
+    const {onCloseModal} = this.props;
 
     return(
       <form className="upload-photo-form-content">
+        {this.state.img_url === '' ? null :
+        <div>
+          <img src={this.state.uploadedFileCloudinaryUrl} />
+        </div>}
         <Dropzone
           className="upload-photo-dropzone"
           multiple={false}
@@ -84,12 +95,12 @@ class UploadForm extends Component {
           <FormInput
             type="textarea"
             className="upload-photo-description-input"
-            value={formPost.description}
-            onChange={onUpdate("description")}
+            value={this.state.description}
+            onChange={this.handleUpdate("description")}
           />
         </label>
         <div className="upload-photo-form-buttons">
-          <CustomButton className="upload-photo-form-button" text={"Upload"} onPress={onSubmit} />
+          <CustomButton className="upload-photo-form-button" text={"Upload"} onPress={this.handleSubmit} />
           <CustomButton className="upload-photo-form-button" text={"Cancel"} onPress={onCloseModal} />
         </div>
       </form>

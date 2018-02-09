@@ -21,7 +21,7 @@ export const requestPost = (postId) => dispatch => (
 // );
 
 export const createNewPost = (post) => dispatch => (
-  PostAPIUtil.createPost(post).then(payload => dispatch(receivePost(payload.post)))
+  PostAPIUtil.createPost(post).then(payload => dispatch(receivePost(payload)))
 );
 
 const receivePosts = (posts) => ({

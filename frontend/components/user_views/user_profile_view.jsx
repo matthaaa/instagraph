@@ -58,11 +58,13 @@ class UserProfileView extends Component {
     return (
       <div className="logged-in-view profile-view">
         <MainHeaderContainer />
-        <UserProfileHeaderContainer
-          currentUser={this.props.currentUser}
-        />
-        <div className="posts-grid-view">
-          {this.renderPostsGrid()}
+        <div className="post-grid-body">
+          <UserProfileHeaderContainer
+            currentUser={this.props.currentUser}
+            />
+          <div className="posts-grid-view">
+            {this.renderPostsGrid()}
+          </div>
         </div>
       </div>
     );

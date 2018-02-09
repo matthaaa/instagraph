@@ -59,7 +59,7 @@ $blue: #3897f0;
 .profile-unfollow-follow-button {
   background-color: $off-white;
   border-color: $light-gray-3;
-  color: $black1;  
+  color: $black1;
 }
 
 .current-user-profile-badge {
@@ -87,8 +87,12 @@ $blue: #3897f0;
 }
 
 // Body ==================================================
+.posts-grid-body {
+
+}
+
 .posts-grid-view {
-  max-width: 933;
+  width: 933px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-template-rows: 33% 33% 33%;
@@ -101,13 +105,14 @@ $blue: #3897f0;
 }
 
 .post-grid-item-content {
-  max-width: 295px;
-  max-height: 295px;
   overflow: hidden;
 }
 
 .post-grid-item {
+  width: 295px;
   height: 295px;
+  object-fit: cover;
+  object-position: 50% 50%;
   // width: auto;
   align-items: center;
 }

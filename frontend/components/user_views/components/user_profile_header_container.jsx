@@ -11,10 +11,12 @@ import {requestPosts} from '../../../actions/post_actions';
 const mapStateToProps = (state, ownProps) => {
   const user = state.users[ownProps.match.params.userId];
   const currentUser = ownProps.currentUser;
+  const postCount = user.post_ids.length;
 
   return ({
     user,
     currentUser,
+    postCount,
     currentUserFollows: user && user.current_user_follows,
     followerCount: user.follower_ids.length,
     followingCount: user.followee_ids.length,

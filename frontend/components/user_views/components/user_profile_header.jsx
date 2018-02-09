@@ -63,6 +63,47 @@ class UserProfileHeader extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderNameRow(currentUserFollows, user) {
+    const username = user.username;
+    const followText = currentUserFollows ? "Unfollow" : "Follow";
+
+    return (
+      <div className="main-profile-user-header-name-row">
+        <div>{username}</div>
+        <CustomButtom
+          className="profile-follow-button"
+          onPress={this.handleFollowAction}
+          text={followText}
+          />
+      </div>
+    );
+  }
+
+  renderStatsRow(user) {
+    const {
+      followerCount,
+      followingCount,
+      postCount,
+    } = this.props;
+
+    return (
+      <div className="main-profile-user-header-stats-row">
+        <div>{postCount}</div>
+        <div>Posts</div>
+        <div>{followerCount}</div>
+        <div>Followers:</div>
+        <div>{followingCount}</div>
+        <div>Following:</div>
+      </div>
+    );
+  }
+
+  renderBio(user) {
+    return (
+      <div className="main-profile-user-bio"/>
+    );
+  }
+
   render() {
     const {
       currentUser,
@@ -70,42 +111,26 @@ class UserProfileHeader extends Component {
       followerCount,
       followingCount,
       user,
+      postCount,
     } = this.props;
-
-    console.log(this.props);
-    console.log(user);
 
     if (user === undefined) return null;
 
-    const username = user.username;
-    const followText = currentUserFollows ? "Unfollow" : "Follow";
     const src = user.img_url;
 
     return (
       <div className="main-profile-user-header">
         <img
           src={src}
-          width={120}
-          height={120}
+          width={150}
+          height={150}
           align="middle"
           className="main-profile-header-user-picture"
         />
         <div className="main-profile-user-header-contents">
-          <div>{username}</div>
-
-          <div>You follow:</div>
-          <div>{currentUserFollows ? "Yeah" : "Naw"}</div>
-
-          <div>Followers:</div>
-          <div>{followerCount}</div>
-
-          <div>Following:</div>
-          <div>{followingCount}</div>
-          <CustomButtom
-            className="profile-follow-button"
-            onPress={this.handleFollowAction}
-            text={followText}
-            />
+          {this.renderNameRow(currentUserFollows, user)}
+          {this.renderStatsRow(user, postCount)}
+          {this.renderBio(user)}
         </div>
       </div>
     );

@@ -54,67 +54,67 @@ wanderer = User.create!(
 wanderer.posts.create!(
   description: "Had a great time here.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9957.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171253/IMG_2199-1-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Amazing sights.",
+  description: "Love quiet nights here.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_2150-1.jpg"
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171254/IMG_4518-1-min.jpg"
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Best. Milkshake. Ever.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_2199-1.jpg",
-)
-wanderer.posts.create!(
-  description: "Miss this place.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_2239-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171253/IMG_2150-1-min.jpg",
 )
 wanderer.posts.create!(
   description: "Miss this place.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_2401-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171256/IMG_9663-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "What a great roadtrip.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_4518-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9646-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Trying to be artsy...",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_5875-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171258/IMG_9957-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Things are looking up!",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_5971-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171257/IMG_9775-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Views through trees, Yosemite.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9627.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171256/IMG_5971-1-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Windmills",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9646.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171254/IMG_5875-1-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Gotta get the shot.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9663.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171257/IMG_9760-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "Havent been to this bridge in a while.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9760.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171254/IMG_2401-1-min.jpg",
 )
 wanderer.posts.create!(
-  description: "Miss this place.",
+  description: "On the road again.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9775.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9627-min.jpg",
+)
+wanderer.posts.create!(
+  description: "Beautiful coastlines.",
+  author_id: wanderer.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171254/IMG_2239-1-min.jpg",
 )
 
 david = User.create!(

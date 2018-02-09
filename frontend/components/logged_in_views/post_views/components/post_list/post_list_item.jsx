@@ -208,7 +208,7 @@ class PostListItem extends Component {
     const userId = user !== undefined ? user.id : ""
 
     return(
-      <div className="post-author-header">
+      <Link className="post-author-header" to={`/profiles/${user.id}`}>
         <img
           src={src}
           width={36}
@@ -217,7 +217,7 @@ class PostListItem extends Component {
           className="post-list-item-user-thumb"
         />
         <p className="post-header-author-text post-author-text">{user ? user.username : ""}</p>
-      </div>
+      </Link>
     );
   }
 

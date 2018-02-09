@@ -30,8 +30,12 @@ class UserProfileView extends Component {
   // ==================================================
   renderPostGridItem(post) {
     const src = post ? post.img_url : "";
+    const id = post ? post.id : "";
+
+    if (post === undefined) return null;
+
     return (
-      <div className="post-grid-item-content">
+      <div key={id} className="post-grid-item-content">
         <img
           src={src}
           align="middle"
@@ -39,10 +43,6 @@ class UserProfileView extends Component {
         />
       </div>
     );
-  }
-
-  renderPostGridRow(posts) {
-
   }
 
   renderPostsGrid() {

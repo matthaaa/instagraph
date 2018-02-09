@@ -121,13 +121,25 @@ $blue: #3897f0;
 // Comments ==================================================
 
 .comment-list-item-container {
+  display: flex;
   margin-bottom: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-list-item-content {
+  display: flex;
 }
 
 .post-comment-text {
   font-weight: 400;
   font-size: 15px;
   display: inline;
+}
+
+.close-button-x {
+  font-size: 14px;
+  color: $light-gray-4;
 }
 
 .new-comment-form-input-container {

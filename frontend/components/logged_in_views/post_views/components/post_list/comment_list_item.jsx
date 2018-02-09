@@ -8,23 +8,47 @@ class CommentListItem extends Component {
   // ==================================================
   // Initialize
   // ==================================================
+  constructor(props) {
+    super(props);
+    this.handleDeleteComment = this.handleDeleteComment.bind(this);
+  }
+  // ==================================================
+  // Event Handlers
+  // ==================================================
+  handleDeleteComment(e) {
+    e.preventDefault;
+    this.props.deleteComment(this.props.comment);
+  }
 
   // ==================================================
   // Render
   // ==================================================
+  renderCloseButton(user, currentUser) {
+    // if (currentUser.id === user.id) return null;
+
+    return (
+      <button onClick={this.handleDeleteComment}>
+        <p className="close-button-x">delete</p>
+      </button>
+    )
+  }
+
   render() {
-    const {comment, user} = this.props;
+    const {comment, user, currentUser} = this.props;
 
     if (user === undefined) return null;
 
     return (
       <div className="comment-list-item-container">
-        <Link
-          className="post-author-text"
-          to={`profiles/${user.id}`}>
-          {comment.author}
-        </Link>
-        <p className="post-comment-text">{comment.body}</p>
+        <div className="comment-list-item-content">
+          <Link
+            className="post-author-text"
+            to={`profiles/${user.id}`}>
+            {comment.author}
+          </Link>
+          <p className="post-comment-text">{comment.body}</p>
+        </div>
+        {this.renderCloseButton(user, currentUser)}
       </div>
     );
   }

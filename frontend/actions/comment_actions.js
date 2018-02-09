@@ -10,6 +10,10 @@ export const requestComments = () => dispatch => (
   CommentAPIUtil.fetchComments().then(comments => dispatch(receiveComments(comments)))
 );
 
+export const requestComment = (commentId) => dispatch => (
+  CommentAPIUtil.fetchComment(commentId).then(comment => dispatch(receiveComment(comment)))
+);
+
 export const addComment = (comment) => dispatch => (
   CommentAPIUtil.createComment(comment).then(post => dispatch(receivePost(post)))
 );

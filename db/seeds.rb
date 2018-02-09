@@ -117,13 +117,29 @@ wanderer.posts.create!(
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_9775.jpg",
 )
 
-User.create!(
+david = User.create!(
   username: "dobryninstagram",
   password: "password",
   email: "dave@instagraph.com",
   full_name: "David",
-  img_url: "",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
 )
+davedoingthings.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+davedoingthings.posts.create!(
+  description: "It me! Again!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+davedoingthings.posts.create!(
+  description: "It me! Again! Again!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+
 User.create!(
   username: "taylor",
   password: "password",
@@ -138,10 +154,36 @@ User.create!(
   full_name: "Sadie",
   img_url: "",
 )
-User.create!(
+
+davedoingthings = User.create!(
   username: "davedoingthings",
   password: "password",
   email: "davedoingthings@instagraph.com",
   full_name: "Dave",
   img_url: "",
+)
+davedoingthings.posts.create!(
+  description: "hello?",
+  author_id: davedoingthings.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_fit,h_650,w_2356/v1518169290/IMG_4824-1.jpg",
+)
+davedoingthings.posts.create!(
+  description: "This chair does not have great reception...",
+  author_id: davedoingthings.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170419/IMG_4888-1-min.jpg",
+)
+davedoingthings.posts.create!(
+  description: "hello?",
+  author_id: davedoingthings.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,h_600/v1518169297/IMG_4827-1.jpg",
+)
+davedoingthings.posts.create!(
+  description: "football!",
+  author_id: davedoingthings.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170420/IMG_5007-1-min.jpg",
+)
+davedoingthings.posts.create!(
+  description: "It's like a duck, but a phone",
+  author_id: davedoingthings.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170408/IMG_4829-1-min.jpg",
 )

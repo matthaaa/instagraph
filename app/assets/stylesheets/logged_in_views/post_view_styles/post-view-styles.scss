@@ -144,9 +144,17 @@ $blue: #3897f0;
   display: inline;
 }
 
-.close-button-x {
+.close-comment-button {
   font-size: 14px;
   color: $light-gray-4;
+}
+
+.close-comment-button-content:focus {
+  outline: none;
+}
+
+.close-comment-button-content:active {
+  outline: none;
 }
 
 .new-comment-form-input-container {

@@ -21,14 +21,23 @@ class CommentListItem extends Component {
   }
 
   // ==================================================
+  // Lifecycle
+  // ==================================================
+  componentDidMount() {
+    this.props.requestPost(this.props.postId);
+  }
+
+  // ==================================================
   // Render
   // ==================================================
   renderCloseButton(user, currentUser) {
     // if (currentUser.id === user.id) return null;
 
     return (
-      <button onClick={this.handleDeleteComment}>
-        <p className="close-button-x">delete</p>
+      <button
+        className="close-comment-button-content"
+        onClick={this.handleDeleteComment}>
+        <p className="close-comment-button">delete</p>
       </button>
     )
   }

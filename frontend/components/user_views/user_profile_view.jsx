@@ -89,7 +89,7 @@ class UserProfileView extends Component {
     return (
       <div className="logged-in-view profile-view">
         {this.renderPostDisplay()}
-        <MainHeaderContainer />
+        <MainHeaderContainer uploadHidden />
         <UserProfileHeaderContainer
           currentUser={this.props.currentUser}
           />

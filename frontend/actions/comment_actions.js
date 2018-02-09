@@ -32,7 +32,7 @@ const receiveComment = (comment) => ({
   comment,
 })
 
-const removeComment = (comment) => ({
+const removeComment = (payload) => ({
   type: REMOVE_COMMENT,
-  comment,
+  payload,
 })

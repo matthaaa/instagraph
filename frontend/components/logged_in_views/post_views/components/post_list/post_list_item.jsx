@@ -123,7 +123,7 @@ class PostListItem extends Component {
   renderComments(post) {
     return (
       <CommentListViewContainer
-        post={post}
+        postId={this.props.postId}
       />
     );
   }

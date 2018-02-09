@@ -38,6 +38,11 @@ class AddCommentForm extends Component {
 
   handleSubmit(event) {
     this.props.addComment(this.state.comment);
+    this.setState({
+      comment: Object.assign(this.state.comment, {
+        body: "",
+      })
+    })
   }
 
   handlePressEnter(event) {

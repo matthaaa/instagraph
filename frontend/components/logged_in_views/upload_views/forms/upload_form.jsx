@@ -21,6 +21,7 @@ class UploadForm extends Component {
     this.handleUpdate = this.handleUpdate.bind(this);
     this.handleDrop = this.handleDrop.bind(this);
     this.handleUploadImage = this.handleUploadImage.bind(this);
+    this.handleStopBubble = this.handleStopBubble.bind(this);
     this.state = {
       author_id: this.props.currentUser.id,
       img_url: "",
@@ -71,6 +72,17 @@ class UploadForm extends Component {
     }
   }
 
+  handleStopBubble(event) {
+    if (!event) {
+      const event = window.event;
+    }
+
+    event.cancelBubble = true;
+
+    if (event.stopPropagation) {
+      event.stopPropagation();
+    }
+  }
 
   // ==================================================
   // Render
@@ -79,7 +91,9 @@ class UploadForm extends Component {
     const {onCloseModal} = this.props;
 
     return(
-      <form className="upload-photo-form-content">
+      <form
+        className="upload-photo-form-content"
+        onClick={this. handleStopBubble}>
         {this.state.img_url === '' ? null :
         <div>
           <img src={this.state.uploadedFileCloudinaryUrl} />

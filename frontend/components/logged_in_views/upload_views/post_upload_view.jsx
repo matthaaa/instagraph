@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from 'react-modal';
 import {Component} from 'react';
 
 // Components
@@ -20,13 +19,12 @@ class PostUploadView extends Component {
     const mainClassName = isVisible ? "main-post-upload-form" : "hidden";
 
     return(
-      <Modal
+      <div
         isOpen={isVisible}
+        onClick={onCloseModal}
         className={mainClassName}>
-        <UploadFormContainer
-          onCloseModal={onCloseModal}
-        />
-      </Modal>
+        <UploadFormContainer />
+      </div>
     );
   }
 

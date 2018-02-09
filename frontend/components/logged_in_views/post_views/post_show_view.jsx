@@ -15,18 +15,18 @@ class PostShowView extends Component {
   // ==================================================
   // Callbacks
   // ==================================================
-  handleStopBubble(e) {
-    if (!e) {
-      const e = window.event;
+  handleStopBubble(event) {
+    if (!event) {
+      const event = window.event;
     }
 
-    e.cancelBubble = true;
+    event.cancelBubble = true;
 
-    if (e.stopPropagation) {
-      e.stopPropagation();
+    if (event.stopPropagation) {
+      event.stopPropagation();
     }
   }
-
+  
   // ==================================================
   // Render
   // ==================================================

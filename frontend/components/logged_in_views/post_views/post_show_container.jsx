@@ -7,10 +7,13 @@ import PostShowView from './post_show_view';
 
 
 const mapStateToProps = (state, ownProps) => {
+  const post = state.posts[ownProps.postId]
   const currentUser = state.session.currentUser;
 
   return ({
+    onExit: ownProps.onExit,
     currentUser: state.session.currentUser,
+    post,
   });
 }
 

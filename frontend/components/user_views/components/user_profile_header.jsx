@@ -65,11 +65,11 @@ class UserProfileHeader extends Component {
   // ==================================================
   renderFollowButton(currentUserFollows) {
     const followText = currentUserFollows ? "Unfollow" : "Follow";
-    const className = currentUserFollows ? "profile-unfollow-follow-button" : "profile-follow-button";
+    const unfollowedClassName = currentUserFollows ? "profile-unfollow-button" : "";
 
     return (
       <CustomButtom
-        className="profile-follow-button"
+        className={`profile-follow-button ${unfollowedClassName}`}
         onPress={this.handleFollowAction}
         text={followText}
       />
@@ -150,13 +150,16 @@ class UserProfileHeader extends Component {
 
     return (
       <div className="main-profile-user-header">
-        <img
-          src={src}
-          width={150}
-          height={150}
-          align="middle"
-          className="main-profile-header-user-picture"
-        />
+
+        <div className="main-profile-user-header-picture-container">
+          <img
+            src={src}
+            width={160}
+            height={160}
+            align="middle"
+            className="main-profile-header-user-picture"
+          />
+      </div>
         <div className="main-profile-user-header-contents">
           {this.renderNameRow(currentUserFollows, user)}
           {this.renderStatsRow(user, postCount)}

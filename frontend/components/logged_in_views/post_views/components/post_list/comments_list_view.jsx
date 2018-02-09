@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import CommentListItem from './comment_list_item';
+import CommentsListItemContainer from './comment_list_item_container';
 
 class CommentsListView extends Component {
 
@@ -12,7 +12,7 @@ class CommentsListView extends Component {
   renderCommentListItem(comment) {
     if (comment) {
       return (
-        <CommentListItem key={comment.id} comment={comment} />
+        <CommentsListItemContainer key={comment.id} comment={comment} />
       );
     } else {
       return <div />;

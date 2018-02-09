@@ -15,7 +15,7 @@ const userReducer = (oldState = {}, action) => {
       return merge({}, oldState, action.payload.user);
     case RECEIVE_USERS:
       return merge({}, action.users);
-    case RECEIVE_USERS:
+    case RECEIVE_USER:
       return merge({}, oldState, {[action.payload.user.id]: action.payload.user})
     case RECEIVE_FOLLOW_USER:
       return merge({}, {[action.payload.user.id]: action.payload.user})

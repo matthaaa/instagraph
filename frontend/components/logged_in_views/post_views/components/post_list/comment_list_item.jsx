@@ -13,13 +13,13 @@ class CommentListItem extends Component {
   // Render
   // ==================================================
   render() {
-    const {comment} = this.props;
+    const {comment, user} = this.props;
 
     return (
       <div className="comment-list-item-container">
         <Link
           className="post-author-text"
-          to={`profiles/${comment.author.id}`}>
+          to={`profiles/${user.id}`}>
           {comment.author}
         </Link>
         <p className="post-comment-text">{comment.body}</p>

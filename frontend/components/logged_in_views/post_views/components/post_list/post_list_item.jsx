@@ -91,6 +91,7 @@ class PostListItem extends Component {
   componentDidMount() {
     this.props.requestPost(this.props.post.id)
   }
+
   // ==================================================
   // Render
   // ==================================================

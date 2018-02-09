@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 
 class CommentListItem extends Component {
@@ -20,7 +21,11 @@ class CommentListItem extends Component {
 
     return (
       <div className="comment-list-item-container">
-        <p className="post-author-text">{comment.author}</p>
+        <Link
+          className="post-author-text"
+          to={`profiles/${comment.author.id}`}>
+          {comment.author}
+        </Link>
         <p className="post-comment-text">{comment.body}</p>
       </div>
     );

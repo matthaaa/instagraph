@@ -50,16 +50,23 @@ $blue: #3897f0;
 
 .upload-photo-button {
   width: 100px;
+  margin-right: 5px;
 }
 
 .user-profile-button {
   width: 100px;
+  margin-left: 20px;
 }
 
 // TODO: Remove once logout button is no longer needed.
 .temporary-logout-button {
   width: 100px;
-  margin-right: 5px;
+}
+
+.header-menu-button {
+  background-color: $off-white;
+  border-color: $light-gray-3;
+  color: $black1;
 }
 
 .header-logo-section {

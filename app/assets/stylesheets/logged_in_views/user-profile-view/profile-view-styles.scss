@@ -13,6 +13,14 @@ $blue: #3897f0;
 
 // Classes
 
+// Screen ==================================================
+.profile-view {
+  display: flex;
+  flex-direction: column;
+  max-width: 975px;
+  margin: 0 auto 30px;
+}
+
 // Header ==================================================
 .main-profile-user-header {
   display: flex;
@@ -44,11 +52,29 @@ $blue: #3897f0;
   align-items: center;
 }
 
+.profile-follow-button {
+  width: 105px;
+}
+
+.profile-unfollow-follow-button {
+  background-color: $off-white;
+  border-color: $light-gray-3;
+  color: $black1;  
+}
+
+.current-user-profile-badge {
+  width: 105px;
+  background-color: $off-white;
+  border-color: $light-gray-3;
+  color: $black1;
+  cursor: default;
+}
+
 .stats-row-item {
   display: flex;
   font-size: 18px;
-  color: $black1;
   margin-right: 40px;
+  color: $black1;
 }
 
 .stats-row-number {
@@ -62,13 +88,26 @@ $blue: #3897f0;
 
 // Body ==================================================
 .posts-grid-view {
-  max-width: 935;
-  display: flex;
+  max-width: 933;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  grid-gap: 24px 18px;
+  align-items: center;
 }
 
 .post-grid-row {
   display: flex;
 }
 
+.post-grid-item-content {
+  max-width: 295px;
+  max-height: 295px;
+  overflow: hidden;
+}
+
 .post-grid-item {
+  height: 295px;
+  // width: auto;
+  align-items: center;
 }

@@ -31,11 +31,9 @@ class UserProfileView extends Component {
   renderPostGridItem(post) {
     const src = post ? post.img_url : "";
     return (
-      <div className="post-grid-item">
+      <div className="post-grid-item-content">
         <img
           src={src}
-          width={295}
-          height={295}
           align="middle"
           className="post-grid-item"
         />
@@ -48,17 +46,17 @@ class UserProfileView extends Component {
   }
 
   renderPostsGrid() {
-    const {postIds} = this.props;
+    const {posts} = this.props;
 
-    return postIds.map(postId => (
-      this.renderPostGridItem(postId)
+    return posts.map(post => (
+      this.renderPostGridItem(post)
     ))
   }
 
   render() {
     if (this.props.user === undefined) return null;
     return (
-      <div className="logged-in-view">
+      <div className="logged-in-view profile-view">
         <MainHeaderContainer />
         <UserProfileHeaderContainer
           currentUser={this.props.currentUser}

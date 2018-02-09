@@ -63,18 +63,43 @@ class UserProfileHeader extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderFollowButton(currentUserFollows) {
+    const followText = currentUserFollows ? "Unfollow" : "Follow";
+    const className = currentUserFollows ? "profile-unfollow-follow-button" : "profile-follow-button";
+
+    return (
+      <CustomButtom
+        className="profile-follow-button"
+        onPress={this.handleFollowAction}
+        text={followText}
+      />
+    );
+  }
+
+  renderProfileBadge() {
+    return (
+      <CustomButtom
+        className="current-user-profile-badge"
+        text={"Profile"}
+      />
+    );
+  }
+
+  renderButton(currentUserFollows, user) {
+    if (user.id === this.props.currentUser.id) {
+      return this.renderProfileBadge();
+    } else {
+      return this.renderFollowButton(currentUserFollows);
+    }
+  }
+
   renderNameRow(currentUserFollows, user) {
     const username = user.username;
-    const followText = currentUserFollows ? "Unfollow" : "Follow";
 
     return (
       <div className="header-row main-profile-user-header-name-row">
         <div className="profile-header-username">{username}</div>
-        <CustomButtom
-          className="profile-follow-button"
-          onPress={this.handleFollowAction}
-          text={followText}
-          />
+        {this.renderButton(currentUserFollows, user)}
       </div>
     );
   }
@@ -112,7 +137,6 @@ class UserProfileHeader extends Component {
 
   render() {
     const {
-      currentUser,
       currentUserFollows,
       followerCount,
       followingCount,
@@ -122,7 +146,7 @@ class UserProfileHeader extends Component {
 
     if (user === undefined) return null;
 
-    const src = user.img_url;
+    const src = user.img_url ? user.img_url : "https://s3-us-west-2.amazonaws.com/instagraph-aa/empty-profile-picture.jpg";
 
     return (
       <div className="main-profile-user-header">

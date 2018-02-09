@@ -53,20 +53,20 @@ class MainHeader extends Component {
     return (
       <div>
         <CustomButton
-          className={"temporary-logout-button"}
-          text={"Log out"}
-          onPress={this.handleLogout}
-        />
-        <CustomButton
-          className={"upload-photo-button"}
+          className={"upload-photo-button header-menu-button"}
           text={"Upload"}
           onPress={onToggleUploadView}
         />
         <CustomButton
+          className={"temporary-logout-button header-menu-button"}
+          text={"Log out"}
+          onPress={this.handleLogout}
+          />
+        <CustomButton
           isLink
           path={`/profiles/${this.props.currentUser.id}`}
-          className={"user-profile-button"}
-          text={"Profile"}
+          className={"user-profile-button header-menu-button"}
+          text={"My Profile"}
         />
       </div>
     );

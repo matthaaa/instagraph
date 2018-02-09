@@ -68,8 +68,8 @@ class UserProfileHeader extends Component {
     const followText = currentUserFollows ? "Unfollow" : "Follow";
 
     return (
-      <div className="main-profile-user-header-name-row">
-        <div>{username}</div>
+      <div className="header-row main-profile-user-header-name-row">
+        <div className="profile-header-username">{username}</div>
         <CustomButtom
           className="profile-follow-button"
           onPress={this.handleFollowAction}
@@ -87,13 +87,19 @@ class UserProfileHeader extends Component {
     } = this.props;
 
     return (
-      <div className="main-profile-user-header-stats-row">
-        <div>{postCount}</div>
-        <div>Posts</div>
-        <div>{followerCount}</div>
-        <div>Followers:</div>
-        <div>{followingCount}</div>
-        <div>Following:</div>
+      <div className="header-row">
+        <div className="stats-row-item">
+          <div className="stats-row-number">{postCount}</div>
+          <div className="stats-row-text">posts</div>
+        </div>
+        <div className="stats-row-item">
+          <div className="stats-row-number">{followerCount}</div>
+          <div className="stats-row-text">followers</div>
+        </div>
+        <div className="stats-row-item">
+          <div className="stats-row-number">{followingCount}</div>
+          <div className="stats-row-text">following</div>
+        </div>
       </div>
     );
   }

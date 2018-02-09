@@ -12,18 +12,55 @@ $black2: #003569;
 $blue: #3897f0;
 
 // Classes
+
+// Header ==================================================
 .main-profile-user-header {
   display: flex;
+  padding-bottom: 45px;
 }
 
 .main-profile-header-user-picture {
   border-radius: 75px;
+  margin-right: 30px;
 }
 
 .main-profile-user-header-contents {
 
 }
 
+.header-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.profile-header-username {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+  margin-right: 20px;
+}
+
+.main-profile-user-header-name-row {
+  align-items: center;
+}
+
+.stats-row-item {
+  display: flex;
+  font-size: 18px;
+  color: $black1;
+  margin-right: 40px;
+}
+
+.stats-row-number {
+  font-weight: 600;
+}
+
+.stats-row-text {
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+// Body ==================================================
 .posts-grid-view {
   max-width: 935;
   display: flex;

@@ -18,7 +18,9 @@ const postReducer = (oldState = {}, action) => {
       return merge({}, oldState, {[action.payload.post.id]: action.payload.post});
     case REMOVE_COMMENT:
     console.log(action);
-      return merge({}, oldState, {[action.payload.post.id]: action.payload.post});
+      let newState = merge({}, oldState);
+      newState[action.payload.post.id] = action.payload.post;
+      return newState;
     default:
       return oldState;
   }

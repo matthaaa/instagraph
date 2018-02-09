@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Demo --------------------------------------------------
-debugger;
 User.create!(
   username: "demo_lovati",
   password: "password",

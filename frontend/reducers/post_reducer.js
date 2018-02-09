@@ -7,8 +7,6 @@ import {REMOVE_COMMENT} from '../actions/comment_actions';
 const postReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
 
-  console.log(action);
-
   switch(action.type) {
     case RECEIVE_USER:
       return merge({}, action.payload.post);
@@ -17,7 +15,6 @@ const postReducer = (oldState = {}, action) => {
     case RECEIVE_POST:
       return merge({}, oldState, {[action.payload.post.id]: action.payload.post});
     case REMOVE_COMMENT:
-    console.log(action);
       let newState = merge({}, oldState);
       newState[action.payload.post.id] = action.payload.post;
       return newState;

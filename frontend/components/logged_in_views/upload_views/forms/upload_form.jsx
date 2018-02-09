@@ -49,7 +49,6 @@ class UploadForm extends Component {
       if (err) {
         console.error(err);
       }
-      console.log(response.body.secure_url);
 
       if (response.body.secure_url !== '') {
         this.setState({
@@ -57,8 +56,6 @@ class UploadForm extends Component {
         });
       }
     });
-
-    console.log(this.state);
   }
 
   handleSubmit(e) {
@@ -118,7 +115,6 @@ class UploadForm extends Component {
   }
 
   renderPhotoContent() {
-    console.log("URL", this.state.img_url);
     if (this.state.img_url === "") {
       return this.renderDropzone();
     } else {

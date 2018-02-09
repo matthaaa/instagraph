@@ -31,7 +31,6 @@ class PostListItem extends Component {
   // Event Handlers
   // ==================================================
   handleLike(like) {
-    console.log("Like!");
     this.props.addLike(like);
   }
 

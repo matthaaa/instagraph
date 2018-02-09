@@ -99,6 +99,7 @@ $blue: #3897f0;
 .post-description-text {
   font-weight: 400;
   font-size: 15px;
+  line-height: 20px;
   display: inline;
 }
 
@@ -197,8 +198,49 @@ $blue: #3897f0;
 }
 
 .post-show-content {
-  width: 935px;
-  height: 520px;
+  display: flex;
+  max-width: 935px;
+  min-width: 750px;
+  height: auto;
   background: white;
   z-index: 100;
+  border-radius: 2px;
+}
+
+.post-photo {
+  height: 100%;
+  width: auto;
+}
+
+.post-show-sidebar {
+  width: 350px;
+  padding: 20px;
+}
+
+.post-show-sidebar-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $light-gray-2;
+}
+
+.post-show-sidebar-header-thumb {
+  border-radius: 20px;
+  margin-right: 15px;
+}
+
+.post-view-comment-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-view-comment-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.post-view-comment-form {
+  height: 40px;
+  width: 100%;
 }

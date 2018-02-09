@@ -34,6 +34,17 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find_by(
+      user_id: comment_params[:user_id],
+      post_id: comment_params[:post_id],
+    )
+
+    @post = @comment.post
+    if @comment.destroy
+      render 'api/posts/show'
+    else
+      render json: @comment.errors.full_messages
+    end
   end
 
   private

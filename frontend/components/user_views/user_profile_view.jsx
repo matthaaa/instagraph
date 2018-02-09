@@ -65,7 +65,7 @@ class UserProfileView extends Component {
   renderPostsGrid(user) {
     const {posts} = this.props;
 
-    return posts.map(post => (
+    return posts.reverse().map(post => (
       this.renderPostGridItem(user, post)
     ))
   }

@@ -17,6 +17,7 @@ class HomeFeedView extends Component {
     this.state = {
       showUploadPostView: false,
     };
+    this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleToggleUploadView = this.handleToggleUploadView.bind(this);
   }
 
@@ -33,6 +34,10 @@ class HomeFeedView extends Component {
   // ==================================================
   handleToggleUploadView() {
     this.setState({showUploadPostView: !this.state.showUploadPostView})
+  }
+
+  handleCloseModal() {
+    this.setState({showUploadPostView: false})
   }
 
   // ==================================================
@@ -68,7 +73,7 @@ class HomeFeedView extends Component {
         <PostUploadContainer
           isVisible={showUploadPostView}
           currentUser={currentUser}
-          onCloseModal={this.handleToggleUploadView}
+          onCloseModal={this.handleCloseModal}
         />
         {this.renderPostFeed(posts)}
       </div>

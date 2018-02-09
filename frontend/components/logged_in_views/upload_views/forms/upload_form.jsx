@@ -63,6 +63,7 @@ class UploadForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
+    this.props.onCloseModal();
     this.props.createNewPost(this.state);
   }
 
@@ -87,35 +88,62 @@ class UploadForm extends Component {
   // ==================================================
   // Render
   // ==================================================
+  renderUploadedPhoto() {
+    return (
+      <img
+        src={this.state.img_url}
+        className="uploaded-preview"
+      />
+    );
+  }
+
+  renderDropzone() {
+    return (
+      <Dropzone
+        className="upload-photo-dropzone"
+        multiple={false}
+        accept="image/*"
+        onDrop={this.handleDrop}>
+        <div className="upload-photo-dropzone-content">
+          <img
+            src="http://res.cloudinary.com/instagraph/image/upload/v1518209167/file.png"
+            height={80}
+            className="upload-image-icon"
+          />
+          <p className="upload-photo-text">Drag over an image or click</p>
+          <p className="upload-photo-text">to select a file to upload!</p>
+        </div>
+      </Dropzone>
+    );
+  }
+
+  renderPhotoContent() {
+    console.log("URL", this.state.img_url);
+    if (this.state.img_url === "") {
+      return this.renderDropzone();
+    } else {
+      return this.renderUploadedPhoto();
+    }
+  }
+
   render() {
     const {onCloseModal} = this.props;
 
     return(
       <form
         className="upload-photo-form-content"
-        onClick={this. handleStopBubble}>
-        {this.state.img_url === '' ? null :
-        <div>
-          <img src={this.state.uploadedFileCloudinaryUrl} />
-        </div>}
-        <Dropzone
-          className="upload-photo-dropzone"
-          multiple={false}
-          accept="image/*"
-          onDrop={this.handleDrop}>
-          <p>Drag over an image or click to select a file to upload!</p>
-        </Dropzone>
-        <label className="upload-photo-description-input">Description
-          <FormInput
-            type="textarea"
-            className="upload-photo-description-input"
-            value={this.state.description}
-            onChange={this.handleUpdate("description")}
-          />
-        </label>
+        onClick={this.handleStopBubble}>
+        {this.renderPhotoContent()}
+        <FormInput
+          type="textarea"
+          className="upload-photo-description-input"
+          value={this.state.description}
+          onChange={this.handleUpdate("description")}
+          placeholder={"Add a description..."}
+        />
         <div className="upload-photo-form-buttons">
-          <CustomButton className="upload-photo-form-button" text={"Upload"} onPress={this.handleSubmit} />
-          <CustomButton className="upload-photo-form-button" text={"Cancel"} onPress={onCloseModal} />
+          <CustomButton className="photo-form-button upload" text={"Upload"} onPress={this.handleSubmit} />
+          <CustomButton className="photo-form-button cancel" text={"Cancel"} onPress={onCloseModal} />
         </div>
       </form>
     );

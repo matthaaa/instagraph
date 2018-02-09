@@ -18,12 +18,13 @@ class PostUploadView extends Component {
     const {isVisible, onCloseModal} = this.props;
     const mainClassName = isVisible ? "main-post-upload-form" : "hidden";
 
+    if (!isVisible) return null;
+
     return(
       <div
-        isOpen={isVisible}
         onClick={onCloseModal}
         className={mainClassName}>
-        <UploadFormContainer />
+        <UploadFormContainer onCloseModal={onCloseModal} />
       </div>
     );
   }

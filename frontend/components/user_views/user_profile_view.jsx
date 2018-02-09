@@ -56,6 +56,7 @@ class UserProfileView extends Component {
   }
 
   render() {
+    if (this.props.user === undefined) return null;
     return (
       <div className="logged-in-view">
         <MainHeaderContainer />

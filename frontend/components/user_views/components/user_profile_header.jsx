@@ -38,7 +38,7 @@ class UserProfileHeader extends Component {
 
   handleUnfollow(follow) {
     this.props.deleteFollow(follow)
-    this.props.requestUser(this.props.user);
+    // this.props.requestUser(this.props.user);
   }
 
   handleFollowAction(e) {
@@ -72,9 +72,14 @@ class UserProfileHeader extends Component {
       user,
     } = this.props;
 
-    const username = user ? user.username : "";
-    const src = user ? user.img_url : "";
+    console.log(this.props);
+    console.log(user);
+
+    if (user === undefined) return null;
+
+    const username = user.username;
     const followText = currentUserFollows ? "Unfollow" : "Follow";
+    const src = user.img_url;
 
     return (
       <div className="main-profile-user-header">

@@ -42,7 +42,7 @@ class HomeFeedView extends Component {
     return (
       <PostListItemContainer
         key={post.id}
-        post={post}
+        postId={post.id}
       />
 
     );

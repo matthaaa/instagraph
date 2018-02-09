@@ -8,8 +8,9 @@ import PostListItem from './post_list_item';
 
 
 const mapStateToProps = (state, ownProps) => {
-  const post = ownProps.post;
-  const user = state.users[post.author_id];
+  const postId = ownProps.postId;
+  const post = state.posts[postId];
+  const user = state.users[post.author_id]
   const currentUser = state.session.currentUser;
 
   return ({

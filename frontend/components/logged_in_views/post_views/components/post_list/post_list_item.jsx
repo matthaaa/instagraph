@@ -3,9 +3,9 @@ import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 // Components
-import PostListItemHeader from './components/post_list_item_header';
-import AddCommentFormContainer from './components/comments/forms/add_comment_form_container';
-import CommentListViewContainer from './components/comments/components/comments_list_view_container';
+import PostListItemHeader from './post_list_item_header';
+import AddCommentFormContainer from './forms/add_comment_form_container';
+import CommentListViewContainer from './comments_list_view_container';
 
 
 class PostListItem extends Component {
@@ -201,12 +201,32 @@ class PostListItem extends Component {
     )
   }
 
+  renderHeader(user) {
+    const src = user && user.img_url !== "" ? user.img_url
+                                            : "https://s3-us-west-2.amazonaws.com/instagraph-aa/empty-profile-picture.jpg";
+    const userId = user !== undefined ? user.id : ""
+
+    return(
+      <div className="post-author-header">
+        <img
+          src={src}
+          width={36}
+          height={36}
+          align="middle"
+          className="post-list-item-user-thumb"
+        />
+        <p className="post-header-author-text post-author-text">{user ? user.username : ""}</p>
+      </div>
+    );
+  }
+
   render() {
     const {likesCount, post, user, currentUser} = this.props;
+    console.log(this.props);
 
     return (
       <div className="post-list-item">
-        <PostListItemHeader user={user} />
+        {this.renderHeader(user)}
         {this.renderPhoto(post)}
         {this.renderPostBody(likesCount, post, user, currentUser)}
       </div>

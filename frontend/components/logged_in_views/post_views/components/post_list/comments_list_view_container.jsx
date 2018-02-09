@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router';
-import {requestPost} from '../../../../../../../../actions/post_actions';
+import {requestUser} from '../../../../../actions/user_actions';
 
 // Components
 import CommentsListView from './comments_list_view';
@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
+  requestUser: (user) => dispatch(requestUser(user)),
 })
 
 

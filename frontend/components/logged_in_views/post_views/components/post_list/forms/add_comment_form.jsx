@@ -2,7 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 
 // Components
-import FormInput from '../../../../../../../generic/forms/form_input';
+import FormInput from '../../../../../generic/forms/form_input';
 
 
 class AddCommentForm extends Component {

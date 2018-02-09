@@ -187,6 +187,7 @@ class PostListItem extends Component {
     const likesText = likesCount === 1 ? "like" : "likes";
     if (user === undefined) return null;
 
+
     return (
       <div className="post-body">
         {this.renderPostListActions()}
@@ -226,8 +227,7 @@ class PostListItem extends Component {
   }
 
   render() {
-    const {likesCount, post, user, currentUser} = this.props;
-    console.log(this.props);
+    const {followed, likesCount, post, user, currentUser} = this.props;
 
     return (
       <div className="post-list-item">

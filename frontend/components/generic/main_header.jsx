@@ -32,14 +32,16 @@ class MainHeader extends Component {
   // ==================================================
   renderLogo() {
     return (
-      <Link className="header-logo-section" to={"/"}>
-        <img
-          className="home-icon"
-          src="http://res.cloudinary.com/instagraph/image/upload/v1518200298/home-icon.png"
-          height={40}
-        />
-        <MainLogo type="header" />
-      </Link>
+      <div className="main-header-section">
+        <Link className="header-logo-section" to={"/"}>
+          <img
+            className="home-icon"
+            src="http://res.cloudinary.com/instagraph/image/upload/v1518200298/home-icon.png"
+            height={40}
+            />
+          <MainLogo type="header" />
+        </Link>
+      </div>
     );
   }
 
@@ -47,7 +49,7 @@ class MainHeader extends Component {
     // TODO: Tnis is a placeholder; add input here when
     //       implementing search.
     return (
-      <div className="header-search-bar">
+      <div className="main-header-section header-search-bar">
         <h2 className="search-placeholder">Search</h2>
       </div>
     );
@@ -59,7 +61,7 @@ class MainHeader extends Component {
 
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
-      <div>
+      <div className="main-header-section main-header-right">
         <CustomButton
           className={"upload-photo-button header-menu-button"}
           text={"Upload"}

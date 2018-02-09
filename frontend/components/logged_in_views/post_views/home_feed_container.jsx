@@ -10,10 +10,12 @@ import HomeFeedView from './home_feed_view';
 const mapStateToProps = (state, ownProps) => {
   const users = Object.values(state.users);
   const posts = Object.values(state.posts);
+  const currentUser = state.session.currentUser;
 
   return ({
     currentUser: state.session.currentUser,
     uploadViewIsVisible: ownProps.uploadViewIsVisible,
+    followedPosts:
     users,
     posts,
   });

@@ -30,6 +30,15 @@ $blue: #3897f0;
   max-width: 1010px;
 }
 
+.main-header-section {
+  display: flex;
+  width: 337px;
+}
+
+.main-header-right {
+  justify-content: flex-end;
+}
+
 // TODO: Refactor these once search is implemented.
 .header-search-bar {
   display: flex;
@@ -54,12 +63,12 @@ $blue: #3897f0;
 
 .upload-photo-button {
   width: 100px;
-  margin-right: 5px;
+  margin-right: 12px;
 }
 
 .user-profile-button {
   width: 100px;
-  margin-left: 20px;
+  margin-left: 12px;
 }
 
 // TODO: Remove once logout button is no longer needed.
@@ -68,9 +77,14 @@ $blue: #3897f0;
 }
 
 .header-menu-button {
+  width: 80px;
   background-color: $off-white;
   border-color: $light-gray-3;
   color: $black1;
+}
+
+.header-menu-button:hover {
+  background-color: $light-gray-1;
 }
 
 .home-icon {

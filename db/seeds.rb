@@ -72,6 +72,61 @@ davedoingthings = User.create!(
   full_name: "Dave",
   img_url: "",
 )
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
+david.posts.create!(
+  description: "It me!",
+  author_id: david.id,
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+)
 wanderer.posts.create!(
   description: "Views through trees, Yosemite.",
   author_id: wanderer.id,

@@ -13,6 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 
   return ({
     currentUser: state.session.currentUser,
+    uploadViewIsVisible: ownProps.uploadViewIsVisible,
     users,
     posts,
   });

@@ -49,6 +49,9 @@ class MainHeader extends Component {
   }
 
   renderMenu(onToggleUploadView) {
+    const {uploadViewIsVisible} = this.props;
+    const uploadText = uploadViewIsVisible ? "Cancel Upload" : "Upload";
+
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
       <div>

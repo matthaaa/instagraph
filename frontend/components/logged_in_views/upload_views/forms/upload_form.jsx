@@ -24,7 +24,7 @@ class UploadForm extends Component {
   // Render
   // ==================================================
   render() {
-    const {formPost, onSubmit, onUpdate} = this.props;
+    const {formPost, onSubmit, onUpdate, onCloseModal} = this.props;
 
     return(
       <form className="upload-photo-form-content">
@@ -43,8 +43,9 @@ class UploadForm extends Component {
             onChange={onUpdate("description")}
           />
         </label>
-        <div className="upload-photo-form-button">
-          <CustomButton text={"Upload"} onPress={onSubmit} />
+        <div className="upload-photo-form-buttons">
+          <CustomButton className="upload-photo-form-button" text={"Upload"} onPress={onSubmit} />
+          <CustomButton className="upload-photo-form-button" text={"Cancel"} onPress={onCloseModal} />
         </div>
       </form>
     );

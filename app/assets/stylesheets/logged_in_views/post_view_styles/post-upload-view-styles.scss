@@ -46,3 +46,16 @@ $blue: #3897f0;
 .upload-photo-description-input {
   width: 100%;
 }
+
+.upload-photo-form-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.upload-photo-form-button {
+  width: 120px;
+  background-color: $off-white;
+  border-color: $light-gray-3;
+  color: $black;
+  margin: 0px 20px;
+}

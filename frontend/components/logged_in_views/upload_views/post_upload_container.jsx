@@ -8,6 +8,7 @@ import PostUploadView from './post_upload_view';
 
 const mapStateToProps = (state, ownProps) => ({
   isVisible: ownProps.isVisible,
+  onCloseModal: ownProps.onCloseModal,
   errors: state.errors.posts,
 })
 

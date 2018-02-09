@@ -62,11 +62,13 @@ class HomeFeedView extends Component {
       <div className="logged-in-view">
         <MainHeaderContainer
           user={currentUser}
+          uploadViewIsVisible={showUploadPostView}
           onToggleUploadView={this.handleToggleUploadView}
         />
         <PostUploadContainer
           isVisible={showUploadPostView}
           currentUser={currentUser}
+          onCloseModal={this.handleToggleUploadView}
         />
         {this.renderPostFeed(posts)}
       </div>

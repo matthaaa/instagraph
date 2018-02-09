@@ -73,6 +73,12 @@ $blue: #3897f0;
   color: $black1;
 }
 
+.home-icon {
+  margin-right: 10px;
+}
+
 .header-logo-section {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }

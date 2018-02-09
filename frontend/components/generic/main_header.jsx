@@ -33,6 +33,11 @@ class MainHeader extends Component {
   renderLogo() {
     return (
       <Link className="header-logo-section" to={"/"}>
+        <img
+          className="home-icon"
+          src="http://res.cloudinary.com/instagraph/image/upload/v1518200298/home-icon.png"
+          height={40}
+        />
         <MainLogo type="header" />
       </Link>
     );

@@ -33,6 +33,11 @@ $blue: #3897f0;
   padding: 16px;
   border-bottom: 1px solid $light-gray-1;
   -webkit-box-sizing: border-box;
+}
+
+.post-author-header-items {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 

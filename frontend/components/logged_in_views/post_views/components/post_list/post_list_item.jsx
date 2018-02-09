@@ -114,7 +114,7 @@ class PostListItem extends Component {
 
     return (
       <div className="post-description-container" >
-        <p className="post-author-text">{name}</p>
+        <Link className="post-author-text" to={`/profiles/${user.id}`}>{name}</Link>
         <p className="post-description-text">{description}</p>
       </div>
     );
@@ -185,6 +185,7 @@ class PostListItem extends Component {
 
   renderPostBody(likesCount, post, user, currentUser) {
     const likesText = likesCount === 1 ? "like" : "likes";
+    if (user === undefined) return null;
 
     return (
       <div className="post-body">
@@ -209,16 +210,18 @@ class PostListItem extends Component {
     if (user === undefined) return null;
 
     return(
-      <Link className="post-author-header" to={`/profiles/${user.id}`}>
-        <img
-          src={src}
-          width={36}
-          height={36}
-          align="middle"
-          className="post-list-item-user-thumb"
-        />
-        <p className="post-header-author-text post-author-text">{user ? user.username : ""}</p>
-      </Link>
+      <div className="post-author-header">
+        <Link className="post-author-header-items" to={`/profiles/${user.id}`}>
+          <img
+            src={src}
+            width={36}
+            height={36}
+            align="middle"
+            className="post-list-item-user-thumb"
+          />
+          <p className="post-header-author-text post-author-text">{user ? user.username : ""}</p>
+        </Link>
+      </div>
     );
   }
 

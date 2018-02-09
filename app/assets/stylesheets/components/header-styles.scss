@@ -43,6 +43,10 @@ $blue: #3897f0;
   background-color: $off-white;
 }
 
+.header-search-bar:hover {
+  cursor: not-allowed;
+}
+
 .search-placeholder {
   font-size: 14px;
   color: $gray;

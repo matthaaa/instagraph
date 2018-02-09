@@ -1,6 +1,10 @@
 import {merge} from 'lodash';
 
-import {RECEIVE_USER, RECEIVE_USERS} from '../actions/user_actions';
+import {
+  RECEIVE_USER,
+  RECEIVE_USERS,
+  RECEIVE_FOLLOW_USER,
+} from '../actions/user_actions';
 import {RECEIVE_POST} from '../actions/post_actions';
 
 const userReducer = (oldState = {}, action) => {
@@ -11,9 +15,10 @@ const userReducer = (oldState = {}, action) => {
       return merge({}, oldState, action.payload.user);
     case RECEIVE_USERS:
       return merge({}, action.users);
-    case RECEIVE_USER:
-      const newUser = {[action.payload.user.id]: action.payload.user}
-      return merge({}, newUser);
+    case RECEIVE_USERS:
+      return merge({}, oldState, {[action.payload.user.id]: action.payload.user})
+    case RECEIVE_FOLLOW_USER:
+      return merge({}, {[action.payload.user.id]: action.payload.user})
     default:
       return oldState;
   }

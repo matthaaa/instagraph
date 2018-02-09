@@ -3,7 +3,7 @@ import {withRouter} from 'react-router';
 
 // Components
 import UserProfileHeader from './user_profile_header';
-import {requestUsers, requestUser} from '../../../actions/user_actions';
+import {requestUsers, requestUser, requestFollowUser} from '../../../actions/user_actions';
 import {addFollow, deleteFollow} from '../../../actions/follow_actions';
 import {requestPosts} from '../../../actions/post_actions';
 
@@ -25,6 +25,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   addFollow: (follow) => dispatch(addFollow(follow)),
   deleteFollow: (follow) => dispatch(deleteFollow(follow)),
   requestUser: (user) => dispatch(requestUser(user)),
+  requestFollowUser: (user) => dispatch(requestFollowUser(user)),
 })
 
 

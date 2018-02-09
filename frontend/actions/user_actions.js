@@ -3,6 +3,7 @@ import * as UserAPIUtil from '../util/user_api_util';
 
 export const RECEIVE_USERS = 'RECEIVE_USERS';
 export const RECEIVE_USER = 'RECEIVE_USER';
+export const RECEIVE_FOLLOW_USER = 'RECEIVE_FOLLOW_USER';
 
 export const requestUsers = () => dispatch => (
   UserAPIUtil.fetchUsers().then(users => dispatch(receiveUsers(users)))
@@ -19,5 +20,10 @@ const receiveUsers = (users) => ({
 
 export const receiveUser = (payload) => ({
   type: RECEIVE_USER,
+  payload,
+})
+
+export const receiveFollowUser = (payload) => ({
+  type: RECEIVE_FOLLOW_USER,
   payload,
 })

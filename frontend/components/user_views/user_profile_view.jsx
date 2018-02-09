@@ -61,7 +61,6 @@ class UserProfileView extends Component {
       <div className="logged-in-view">
         <MainHeaderContainer />
         <UserProfileHeaderContainer
-          user={this.props.user}
           currentUser={this.props.currentUser}
         />
         <div className="posts-grid-view">

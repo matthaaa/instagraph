@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Component} from 'react';
 import {Link} from 'react-router-dom';
 
@@ -8,10 +9,13 @@ class CustomButton extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderLink(onPress, className, path, text) {
+  renderLink(onPress, className, path, text, disabled) {
+    const disabledStyle = disabled ? " disabled-button" : null;
+
     return (
       <Link
-        className={"button link" + ` ${className}`}
+        disabled={disabled}
+        className={"button link" + `${disabledStyle}` + ` ${className}`}
         to={path}
         onClick={onPress ? onPress : null}>
         {text}
@@ -19,20 +23,31 @@ class CustomButton extends Component {
     );
   }
 
-  renderButton(onPress, className, text) {
+  renderButton(onPress, className, text, disabled) {
+    const disabledStyle = disabled ? " disabled-button" : null;
+
     return (
-      <button className={"button" + ` ${className}`} onClick={onPress}>{text}</button>
+      <button
+        disabled={disabled}
+        className={"button" + `${disabledStyle}` + ` ${className}`}
+        onClick={onPress}>
+        {text}
+      </button>
     );
   }
 
   render() {
-    const {isLink, className, onPress, path, text} = this.props;
+    const {isLink, disabled, className, onPress, path, text} = this.props;
 
-    return isLink ? this.renderLink(onPress, className, path, text)
-                  : this.renderButton(onPress, className, text);
+    return isLink ? this.renderLink(onPress, className, path, text, disabled)
+                  : this.renderButton(onPress, className, text, disabled);
   }
 
 };
+
+CustomButton.defaultProps = {
+  disabled: false,
+}
 
 
 export default CustomButton;

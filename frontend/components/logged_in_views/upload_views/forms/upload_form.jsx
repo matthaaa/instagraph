@@ -26,6 +26,7 @@ class UploadForm extends Component {
       author_id: this.props.currentUser.id,
       img_url: "",
       description: "",
+      uploadDisabled: true,
     };
   }
 
@@ -53,6 +54,7 @@ class UploadForm extends Component {
       if (response.body.secure_url !== '') {
         this.setState({
           img_url: response.body.secure_url,
+          uploadDisabled: false,
         });
       }
     });
@@ -60,8 +62,9 @@ class UploadForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.onCloseModal();
-    this.props.createNewPost(this.state);
+    this.props.createNewPost(this.state).then(
+      this.props.onCloseModal()
+    );
   }
 
   handleUpdate(field) {
@@ -138,8 +141,15 @@ class UploadForm extends Component {
           placeholder={"Add a description..."}
         />
         <div className="upload-photo-form-buttons">
-          <CustomButton className="photo-form-button upload" text={"Upload"} onPress={this.handleSubmit} />
-          <CustomButton className="photo-form-button cancel" text={"Cancel"} onPress={onCloseModal} />
+          <CustomButton
+            disabled={this.state.uploadDisabled}
+            className="photo-form-button upload"
+            text={"Upload"}
+            onPress={this.handleSubmit} />
+          <CustomButton
+            className="photo-form-button cancel"
+            text={"Cancel"}
+            onPress={onCloseModal} />
         </div>
       </form>
     );

@@ -59,6 +59,8 @@ class MainHeader extends Component {
     const {uploadViewIsVisible} = this.props;
     const uploadText = uploadViewIsVisible ? "Cancel Upload" : "Upload";
 
+    console.log(this.props.currentUser);
+
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
       <div className="main-header-section main-header-right">

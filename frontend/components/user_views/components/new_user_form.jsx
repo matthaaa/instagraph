@@ -75,9 +75,7 @@ class NewUserForm extends Component {
           {this.renderNameInput(formUser, onUpdate)}
           {this.renderUsernameInput(formUser, onUpdate)}
           {this.renderPasswordInput(formUser, onUpdate)}
-          <div className="signup-form-button">
-            <CustomButton text={"Sign Up"} onPress={onSubmit} />
-          </div>
+          <CustomButton text={"Sign Up"} onPress={onSubmit} className="signup-form-button"/>
           <FormErrors errors={errors} />
         </form>
       </div>

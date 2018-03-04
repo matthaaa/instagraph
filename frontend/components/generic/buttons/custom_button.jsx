@@ -9,13 +9,15 @@ class CustomButton extends Component {
   // ==================================================
   // Render
   // ==================================================
-  renderLink(onPress, className, path, text, disabled) {
-    const disabledStyle = disabled ? " disabled-button" : null;
+  renderLink(onPress, className, path, text) {
+    const {disabled, disabledStyle} = this.props;
+    const customStyle = disabled ? `${disabledStyle}` + ` ${className}` :
+                                   ` ${className}`
 
     return (
       <Link
         disabled={disabled}
-        className={"button link" + `${disabledStyle}` + ` ${className}`}
+        className={`button link ${disabledStyle} ${className}`}
         to={path}
         onClick={onPress ? onPress : null}>
         {text}
@@ -23,13 +25,15 @@ class CustomButton extends Component {
     );
   }
 
-  renderButton(onPress, className, text, disabled) {
-    const disabledStyle = disabled ? " disabled-button" : null;
+  renderButton(onPress, className, text) {
+    const {disabled, disabledStyle} = this.props;
+    const customStyle = disabled ? `${disabledStyle}` + ` ${className}` :
+                                   ` ${className}`
 
     return (
       <button
         disabled={disabled}
-        className={"button" + `${disabledStyle}` + ` ${className}`}
+        className={`button ${disabledStyle} ${className}`}
         onClick={onPress}>
         {text}
       </button>
@@ -37,16 +41,18 @@ class CustomButton extends Component {
   }
 
   render() {
-    const {isLink, disabled, className, onPress, path, text} = this.props;
+    const {isLink, className, onPress, path, text} = this.props;
 
-    return isLink ? this.renderLink(onPress, className, path, text, disabled)
-                  : this.renderButton(onPress, className, text, disabled);
+    return isLink ? this.renderLink(onPress, className, path, text)
+                  : this.renderButton(onPress, className, text);
   }
 
 };
 
 CustomButton.defaultProps = {
+  className: "",
   disabled: false,
+  disabledStyle: null,
 }
 
 

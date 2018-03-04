@@ -29,10 +29,12 @@ $blue: #3897f0;
 
 .button.link {
   // Adjusts for styles on react-router-dom Link compoonent
+  outline: none;
   padding: 0;
   border: 0;
 };
 
 .disabled-button:hover {
+  outline: none;
   cursor: not-allowed;
 }

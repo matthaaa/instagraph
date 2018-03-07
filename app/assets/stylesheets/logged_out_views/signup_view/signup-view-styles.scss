@@ -18,6 +18,17 @@ $blue: #3897f0;
   height: 100vh;
 }
 
+.signup-view-description {
+  line-height: 20px;
+  font-size: 17px;
+  font-weight: 600;
+  color: $gray;
+}
+
+.signup-view-description:last-of-type {
+  margin-bottom: 15px;
+}
+
 .signup-view-main-content {
   display: flex;
   flex-direction: column;

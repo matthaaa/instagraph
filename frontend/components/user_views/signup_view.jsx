@@ -74,6 +74,8 @@ class SignupView extends Component {
         <div className="logo-container">
           <MainLogo />
         </div>
+        <p className="signup-view-description">Sign up to see photos and</p>
+        <p className="signup-view-description">videos from your friends.</p>
         <CustomButton
           isLink
           path={"/login/demo"}

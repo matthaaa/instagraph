@@ -27,6 +27,13 @@ class HomeFeedView extends Component {
   componentDidMount() {
     this.props.requestPosts();
     this.props.requestUsers();
+    document.addEventListener('scroll', (event) => {
+      console.log("hello");
+      console.log(document.body);
+      if (document.body.scrollHeight == document.body.scrollTop + window.innerHeight) {
+        alert("Bottom!");
+      }
+    });
   }
 
   // ==================================================

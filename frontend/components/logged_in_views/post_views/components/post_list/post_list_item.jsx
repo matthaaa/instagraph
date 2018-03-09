@@ -57,17 +57,8 @@ class PostListItem extends Component {
     }
   }
 
-  handleFocusOnComment() {
-    // const commentFormId = `comment-form-${this.props.post.id}`;
-    // console.log(commentFormId);
-    // document.getElementById(commentFormId).focus();
-  }
-
   handleShowCommentForm() {
     this.setState({commentFormIsVisible: true})
-    // Promise.resolve(this.setState({commentFormIsVisible: true})).then(
-    //   this.handleFocusOnComment()
-    // )
   }
 
   handleHideCommentForm() {

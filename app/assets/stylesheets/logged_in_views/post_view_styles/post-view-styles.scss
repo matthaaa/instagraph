@@ -71,6 +71,10 @@ $blue: #3897f0;
   height: 40px;
 }
 
+.post-action-button:hover {
+  cursor: pointer;
+}
+
 .post-action-button:focus {
   outline: none;
 }

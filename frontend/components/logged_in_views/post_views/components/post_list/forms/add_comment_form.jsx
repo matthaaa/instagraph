@@ -57,6 +57,7 @@ class AddCommentForm extends Component {
   // ==================================================
   render() {
     const {className, formId} = this.props;
+    console.log(formId);
 
     return (
       <form
@@ -64,6 +65,7 @@ class AddCommentForm extends Component {
         className={`new-comment-form-content ${className}`}>
         <FormInput
           id={formId}
+          autoFocus
           type="textarea"
           contentClassName="new-comment-form-input-container"
           className="new-comment-form-input"

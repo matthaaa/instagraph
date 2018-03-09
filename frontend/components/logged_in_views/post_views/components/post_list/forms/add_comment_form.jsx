@@ -57,7 +57,6 @@ class AddCommentForm extends Component {
   // ==================================================
   render() {
     const {className, formId} = this.props;
-    console.log(formId);
 
     return (
       <form

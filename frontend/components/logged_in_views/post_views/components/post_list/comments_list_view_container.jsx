@@ -9,7 +9,7 @@ import CommentsListView from './comments_list_view';
 const mapStateToProps = (state, ownProps) => {
   const postId = ownProps.postId;
   const post = state.posts[postId];
-  const commentIds = post.comment_ids;
+  const commentIds = post ? post.comment_ids : [];
   const comments = commentIds.map((commentId) => (state.comments[commentId]))
 
   return ({

@@ -85,8 +85,10 @@ class UserProfileView extends Component {
   renderEmptyPostsSection() {
       return (
         <div className="post-grid-empty-view">
-          <p>No posts yet!</p>
-          <p>Upload a photo to get started!</p>
+          <div className="empty-view-text">
+            <p>No posts yet!</p>
+            <p>Upload a photo to get started</p>
+          </div>
         </div>
       )
   }
@@ -109,7 +111,7 @@ class UserProfileView extends Component {
 
     return (
       <div className="logged-in-view profile-view">
-        <MainHeaderContainer uploadHidden />
+        <MainHeaderContainer />
         {this.renderPostDisplay()}
         <UserProfileHeaderContainer
           currentUser={this.props.currentUser}

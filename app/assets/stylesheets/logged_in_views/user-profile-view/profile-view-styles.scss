@@ -104,7 +104,20 @@ $blue: #3897f0;
   background-color: $black1;
   align-items: center;
   justify-content: center;
-  opacity: 0.8;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+.empty-view-text {
+  font-size: 30px;
+  text-align: center;
+  color: $white;
+}
+
+.empty-view-text p:last-of-type {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 // Body ==================================================

@@ -14,8 +14,8 @@ const App = ({children}) => (
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Pacifico|Quicksand:300,400,500,700" rel="stylesheet"/>
     <section className="main-view">
       <Switch>
-        <ProtectedRoute exact path="/" component={HomeFeedContainer} />
         <ProtectedRoute exact path="/profiles/:userId" component={UserProfileViewContainer} />
+        <ProtectedRoute path="/" component={HomeFeedContainer} />
         <AuthRoute exact path="/signup" component={SignupViewContainer} />
         <AuthRoute exact path="/login" component={LoginViewContainer} />
         <AuthRoute

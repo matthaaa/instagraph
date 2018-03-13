@@ -16,7 +16,6 @@ class CustomButton extends Component {
 
     return (
       <Link
-        disabled={disabled}
         className={`button link ${disabledStyle} ${className}`}
         to={path}
         onClick={onPress ? onPress : null}>

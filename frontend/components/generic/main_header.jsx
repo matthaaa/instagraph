@@ -58,7 +58,7 @@ class MainHeader extends Component {
   renderMenu(onToggleUploadView) {
     const {uploadViewIsVisible} = this.props;
     const uploadText = uploadViewIsVisible ? "Cancel Upload" : "Upload";
-    const currentUserIsLoaded = this.props.currentUser.id;
+    const currentUserIsLoaded = this.props.currentUser.id === undefined ? false : true;
 
     // TODO: Tnis is a temporary logout button; add menu buttons here.
     return (
@@ -74,8 +74,8 @@ class MainHeader extends Component {
           onPress={this.handleLogout}
           />
         <CustomButton
-          disabled={currentUserIsLoaded}
           isLink
+          disabled={currentUserIsLoaded}
           path={`/profiles/${this.props.currentUser.id}`}
           className={"user-profile-button header-menu-button"}
           text={"My Profile"}

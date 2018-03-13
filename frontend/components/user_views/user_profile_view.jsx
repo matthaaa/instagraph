@@ -62,12 +62,33 @@ class UserProfileView extends Component {
     );
   }
 
+  renderPostsSection(user) {
+    if (user.post_ids.length > 0) {
+      return (
+        <div className="posts-grid-view">
+          {this.renderPostsGrid(user)};
+        </div>
+      )
+    } else {
+      return this.renderEmptyPostsSection()
+    }
+  }
+
   renderPostsGrid(user) {
     const {posts} = this.props;
 
     return posts.reverse().map(post => (
       this.renderPostGridItem(user, post)
     ))
+  }
+
+  renderEmptyPostsSection() {
+      return (
+        <div className="post-grid-empty-view">
+          <p>No posts yet!</p>
+          <p>Upload a photo to get started!</p>
+        </div>
+      )
   }
 
   renderPostDisplay() {
@@ -88,14 +109,12 @@ class UserProfileView extends Component {
 
     return (
       <div className="logged-in-view profile-view">
-        {this.renderPostDisplay()}
         <MainHeaderContainer uploadHidden />
+        {this.renderPostDisplay()}
         <UserProfileHeaderContainer
           currentUser={this.props.currentUser}
-          />
-        <div className="posts-grid-view">
-          {this.renderPostsGrid(user)}
-        </div>
+        />
+        {this.renderPostsSection(user)}
       </div>
     );
   }

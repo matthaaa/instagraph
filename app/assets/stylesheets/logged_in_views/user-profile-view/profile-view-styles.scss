@@ -96,6 +96,17 @@ $blue: #3897f0;
   margin-left: 4px;
 }
 
+// Body (empty) =========================================
+.post-grid-empty-view {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  background-color: $black1;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+}
+
 // Body ==================================================
 .posts-grid-view {
   width: 933px;

@@ -237,6 +237,7 @@ david.posts.create!(
   author_id: david.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
 )
+
 wanderer.posts.create!(
   description: "Miss this place.",
   author_id: wanderer.id,

@@ -190,7 +190,7 @@ wanderer.posts.create!(
 wanderer.posts.create!(
   description: "Things are looking up!",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9975.jpg",
+  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9775.jpg",
 )
 matt.posts.create!(
   description: "Miss this place.",
@@ -215,7 +215,7 @@ wanderer.posts.create!(
 wanderer.posts.create!(
   description: "Windmills",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5975-1.jpg",
+  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5875-1.jpg",
 )
 david.posts.create!(
   description: "It me! Again!",

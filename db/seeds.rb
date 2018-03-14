@@ -227,11 +227,13 @@ davedoingthings.posts.create!(
   author_id: davedoingthings.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170408/IMG_4829-1-min.jpg",
 )
+
 wanderer.posts.create!(
   description: "Gotta get the shot.",
   author_id: wanderer.id,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9760.jpg",
 )
+
 david.posts.create!(
   description: "It me!",
   author_id: david.id,

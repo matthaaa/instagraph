@@ -135,9 +135,11 @@ class LoginView extends Component {
     );
   }
 
-  // TODO: Image goes here.
   renderLeft() {
-    return <div/>;
+    return (
+      <div className="signup-view-preview">
+      </div>
+    );
   }
 
   render() {

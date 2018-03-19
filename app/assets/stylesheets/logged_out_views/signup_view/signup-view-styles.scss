@@ -12,6 +12,11 @@ $blue: #3897f0;
 
 
 // Classes
+.signup-view-preview {
+  border: 1px solid $light-gray-2;
+  background-color: $white;
+}
+
 .signup-view-container {
   display: flex;
   align-items: center;
@@ -38,7 +43,7 @@ $blue: #3897f0;
   margin: auto 0;
   padding: 10px 0 42px;
   border: 1px solid $light-gray-2;
-  background-color: #FFFFFF;
+  background-color: $white;
 
   -webkit-animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;

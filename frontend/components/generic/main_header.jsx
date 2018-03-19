@@ -56,7 +56,7 @@ class MainHeader extends Component {
   }
 
   renderMenu(onToggleUploadView) {
-    const {uploadViewIsVisible} = this.props;
+    const {uploadViewIsVisible, currentUser} = this.props;
     const uploadText = uploadViewIsVisible ? "Cancel Upload" : "Upload";
     const currentUserIsLoaded = this.props.currentUser.id === undefined ? false : true;
 
@@ -76,7 +76,7 @@ class MainHeader extends Component {
         <CustomButton
           isLink
           disabled={currentUserIsLoaded}
-          path={`/profiles/${this.props.currentUser.id}`}
+          path={currentUser.id ? `/profiles/${currentUser.id}` : "/"}
           className={"user-profile-button header-menu-button"}
           text={"My Profile"}
         />

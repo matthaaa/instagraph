@@ -78,7 +78,7 @@ class PostListItem extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    this.props.requestPost(this.props.post.id)
+    // this.props.requestPost(this.props.post.id)
   }
 
   // ==================================================

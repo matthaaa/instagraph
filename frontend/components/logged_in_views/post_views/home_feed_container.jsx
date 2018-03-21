@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
   const currentUser = state.session.currentUser;
 
   return ({
-    currentUser: state.session.currentUser,
+    currentUser: currentUser,
     uploadViewIsVisible: ownProps.uploadViewIsVisible,
     followedPosts:
     users,

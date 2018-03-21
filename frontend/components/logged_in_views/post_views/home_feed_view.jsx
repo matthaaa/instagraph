@@ -25,16 +25,19 @@ class HomeFeedView extends Component {
   // Lifecycle
   // ==================================================
   componentDidMount() {
-    this.props.requestPosts();
     this.props.requestUsers();
-    document.addEventListener('scroll', (event) => {
+    this.props.requestPosts();
+    // document.addEventListener('scroll', (event) => {
       // console.log("hello");
       // console.log(document.body);
       // if (document.body.scrollHeight == document.body.scrollTop + window.innerHeight) {
       //   alert("Bottom!");
       // }
-    });
+    // });
+
+    // window.addEventListener('scroll', this.onScroll, false);
   }
+
 
   // ==================================================
   // Event Handlers
@@ -56,7 +59,6 @@ class HomeFeedView extends Component {
         key={post.id}
         postId={post.id}
       />
-
     );
   }
 
@@ -73,7 +75,6 @@ class HomeFeedView extends Component {
     return (
       <div className="logged-in-view">
         <MainHeaderContainer
-          user={currentUser}
           uploadViewIsVisible={showUploadPostView}
           onToggleUploadView={this.handleToggleUploadView}
         />

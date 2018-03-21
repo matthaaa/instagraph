@@ -24,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => ({
   addLike: (like) => dispatch(addLike(like)),
   deleteLike: (like) => dispatch(deleteLike(like)),
-  requestPost: (postId) => dispatch(requestPost(postId)),
+  // requestPost: (postId) => dispatch(requestPost(postId)),
 })
 
 

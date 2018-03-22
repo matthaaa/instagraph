@@ -6,6 +6,7 @@ import UserProfileHeader from './user_profile_header';
 import {requestUsers, requestUser, requestFollowUser} from '../../../actions/user_actions';
 import {addFollow, deleteFollow} from '../../../actions/follow_actions';
 import {requestPosts} from '../../../actions/post_actions';
+import {receiveCurrentUser} from '../../../actions/session_actions';
 
 
 const mapStateToProps = (state, ownProps) => {

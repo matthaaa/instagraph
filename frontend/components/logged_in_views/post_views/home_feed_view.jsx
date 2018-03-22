@@ -27,7 +27,6 @@ class HomeFeedView extends Component {
   componentDidMount() {
     this.props.requestUsers();
     this.props.requestPosts();
-    this.props.receiveCurrentUser();
     // document.addEventListener('scroll', (event) => {
       // console.log("hello");
       // console.log(document.body);

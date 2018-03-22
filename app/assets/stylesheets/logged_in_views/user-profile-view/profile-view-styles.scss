@@ -27,7 +27,9 @@ $blue: #3897f0;
   display: flex;
   max-width: 750px;
   justify-content: space-between;
-  padding-bottom: 45px;
+  margin-bottom: 45px;
+  padding: 45px 20px;
+  background-color: $off-white;
 }
 
 .main-profile-header-user-picture {

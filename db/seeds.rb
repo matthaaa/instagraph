@@ -12,6 +12,7 @@ User.create!(
   password: "password",
   email: "demo@instagraph.com",
   full_name: "Demo Lovati",
+  bio: "This is my demo profile! Feel free to click around and post something!",
   img_url: "",
 )
 

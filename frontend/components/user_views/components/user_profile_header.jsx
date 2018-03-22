@@ -131,7 +131,9 @@ class UserProfileHeader extends Component {
 
   renderBio(user) {
     return (
-      <div className="main-profile-user-bio"/>
+      <div className="main-profile-user-bio">
+        {user.bio}
+      </div>
     );
   }
 

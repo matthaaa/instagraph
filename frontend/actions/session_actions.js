@@ -29,9 +29,9 @@ export const clearErrors = () => dispatch => (
   dispatch(receiveErrors([]))
 );
 
-export const receiveCurrentUser = currentUser => ({
+export const receiveCurrentUser = payload => ({
   type: RECEIVE_CURRENT_USER,
-  currentUser,
+  payload,
 });
 
 const receiveErrors = errors => ({

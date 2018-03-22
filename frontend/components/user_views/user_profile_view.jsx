@@ -108,6 +108,7 @@ class UserProfileView extends Component {
     const {user} = this.props;
 
     if (user === undefined) return null;
+    console.log(this.props.currentUser);
 
     return (
       <div className="logged-in-view profile-view">

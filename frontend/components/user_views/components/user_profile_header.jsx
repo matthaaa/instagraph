@@ -153,7 +153,6 @@ class UserProfileHeader extends Component {
 
     return (
       <div className="main-profile-user-header">
-
         <div className="main-profile-user-header-picture-container">
           <img
             src={src}
@@ -162,7 +161,7 @@ class UserProfileHeader extends Component {
             align="middle"
             className="main-profile-header-user-picture"
           />
-      </div>
+        </div>
         <div className="main-profile-user-header-contents">
           {this.renderNameRow(currentUserFollows, user)}
           {this.renderStatsRow(user, postCount)}

@@ -20,6 +20,7 @@ $blue: #3897f0;
   align-items: center;
   max-width: 975px;
   margin: 0 auto 30px;
+  background: none;
 }
 
 // Header ==================================================
@@ -29,7 +30,9 @@ $blue: #3897f0;
   justify-content: space-between;
   margin-bottom: 45px;
   padding: 45px 20px;
-  background-color: $off-white;
+  background: rgba(0, 0, 0, 0.3);
+  color: $light-gray-1;
+  border-radius: 5px;
 }
 
 .main-profile-header-user-picture {
@@ -86,7 +89,7 @@ $blue: #3897f0;
   display: flex;
   font-size: 18px;
   margin-right: 40px;
-  color: $black1;
+  color: $light-gray-1;
 }
 
 .stats-row-number {
@@ -115,17 +118,16 @@ $blue: #3897f0;
   display: flex;
   height: 500px;
   width: 100%;
-  background-color: $black1;
+  background: rgba(0, 0, 0, 0.3);
+  color: $light-gray-1;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
   border-radius: 5px;
 }
 
 .empty-view-text {
   font-size: 30px;
   text-align: center;
-  color: $white;
 }
 
 .empty-view-text p:last-of-type {

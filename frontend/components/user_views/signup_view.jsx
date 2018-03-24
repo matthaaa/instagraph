@@ -108,6 +108,7 @@ class SignupView extends Component {
   renderLeft() {
     return (
       <div className="signup-view-preview">
+        
       </div>
     );
   }

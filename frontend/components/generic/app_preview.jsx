@@ -17,6 +17,7 @@ class AppPreview extends Component {
   // ==================================================
   render() {
     return (
+      <img src={require('./assets/blank_monitor.png')}/>
     );
   }
 

@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 
 // Components
 import NewUserForm from './components/new_user_form';
+import AppPreview from '..//generic/app_preview';
 import CustomButton from '..//generic/buttons/custom_button';
 import MainLogo from '..//generic/logos/main_logo';
 
@@ -108,7 +109,7 @@ class SignupView extends Component {
   renderLeft() {
     return (
       <div className="signup-view-preview">
-        
+        <AppPreview />
       </div>
     );
   }

@@ -17,7 +17,7 @@ class AppPreview extends Component {
   // ==================================================
   render() {
     return (
-      <img src="./assets/blank_monitor.png" alt=""/>
+      <img src="https://s3-us-west-2.amazonaws.com/instagraph-aa/blank+monitor.png" alt=""/>
     );
   }
 

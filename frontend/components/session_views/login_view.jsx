@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom';
 // Components
 import SessionForm from './components/session_form';
 import MainLogo from '..//generic/logos/main_logo';
+import AppPreview from '../generic/app_preview';
 
 
 class LoginView extends Component {
@@ -138,7 +139,7 @@ class LoginView extends Component {
   renderLeft() {
     return (
       <div className="signup-view-preview">
-        <img src=""></img>
+        <AppPreview />
       </div>
     );
   }

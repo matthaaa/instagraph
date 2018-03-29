@@ -25,6 +25,7 @@ class AppPreview extends Component {
           />
           <img
             className="app-preview-screenshot"
+            src="https://s3-us-west-2.amazonaws.com/instagraph-aa/preview.gif"
           />
         </div>
       </div>

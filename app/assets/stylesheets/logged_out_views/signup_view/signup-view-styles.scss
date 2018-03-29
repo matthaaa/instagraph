@@ -13,11 +13,9 @@ $blue: #3897f0;
 
 // Classes
 .signup-view-preview {
-  border: 1px solid $light-gray-2;
-  background-color: $white;
-  height: 350px;
-  width: 500px;
-  margin-right: 20px;
+  // height: 350px;
+  // width: 500px;
+  margin-right: 50px;
 }
 
 .signup-view-container {
@@ -88,9 +86,30 @@ $blue: #3897f0;
   font-weight: 600;
 }
 
+.app-preview-container {
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: 0 0;
+}
+
+.app-preview-image {
+  position: flex;
+}
+
 .app-preview-monitor {
   width: 100%;
-  height: 100%;
+}
+
+.app-preview-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 450px;
+  // height: 100vh;
+  height: 300px;
 }
 
 // Animation

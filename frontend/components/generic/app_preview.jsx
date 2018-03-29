@@ -17,10 +17,17 @@ class AppPreview extends Component {
   // ==================================================
   render() {
     return (
-      <img
-        className="app-preview-monitor"
-        src="https://s3-us-west-2.amazonaws.com/instagraph-aa/blank+monitor.png"
-      />
+      <div className="app-preview-container">
+        <div className="app-preview-image">
+          <img
+            className="app-preview-monitor"
+            src="https://s3-us-west-2.amazonaws.com/instagraph-aa/blank+monitor.png"
+          />
+          <img
+            className="app-preview-screenshot"
+          />
+        </div>
+      </div>
     );
   }
 

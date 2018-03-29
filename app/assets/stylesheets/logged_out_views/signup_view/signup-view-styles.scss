@@ -89,7 +89,6 @@ $blue: #3897f0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-position: 0 0;
 }
 
 .app-preview-image {
@@ -105,6 +104,14 @@ $blue: #3897f0;
   justify-content: center;
   align-items: center;
   width: 450px;
+}
+
+.app-preview-screenshot {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  padding-bottom: 45px;
+  border-radius: 3px;
 }
 
 // Animation

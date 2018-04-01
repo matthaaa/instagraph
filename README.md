@@ -10,7 +10,7 @@ Instagraph is designed to be a clone of [Instagram](https://instagram.com) with 
 
 The Sign Up screen features a demo login button, which executes a hand-rolled autotyping function that logs the user into a specified demo user for easy, one-click access to the app.
 
-![#](https://s3-us-west-2.amazonaws.com/instagraph-aa/screenshots/demo_small.gif)
+![](https://s3-us-west-2.amazonaws.com/instagraph-aa/screenshots/demo_small.gif)
 ![](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
 
 ### Photo Feed and View

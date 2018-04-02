@@ -34,7 +34,9 @@ class FormErrors extends Component {
   render() {
     const {errors} = this.props;
 
-    return errors.session.length !== 0 ? this.renderErrorList(errors) : <div />
+    if (errors.session) {
+      return errors.session.length !== 0 ? this.renderErrorList(errors) : <div />
+    }
   }
 
 };

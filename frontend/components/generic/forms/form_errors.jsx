@@ -22,21 +22,21 @@ class FormErrors extends Component {
   }
 
   renderErrorList(errors) {
-    return errors.session.map((sessionError, idx) => (
-      <div className="error-messages-list">
-        <div key={idx} className="error-message-container">
-          {this.renderError(sessionError)}
+    if (Array.isArray(errors.session)) {
+      return errors.session.map((sessionError, idx) => (
+        <div className="error-messages-list">
+          <div key={idx} className="error-message-container">
+            {this.renderError(sessionError)}
+          </div>
         </div>
-      </div>
-    ));
+      ));
+    }
   }
 
   render() {
     const {errors} = this.props;
 
-    if (Array.isArray(errors.session)) {
-      return errors.session.length !== 0 ? this.renderErrorList(errors) : <div />
-    }
+    return errors.session.length !== 0 ? this.renderErrorList(errors) : <div />
   }
 
 };

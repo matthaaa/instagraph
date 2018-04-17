@@ -31,6 +31,8 @@ class FormErrors extends Component {
         </div>
       ));
     }
+
+    return null;
   }
 
   render() {

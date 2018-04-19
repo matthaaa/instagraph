@@ -32,7 +32,7 @@ class FormErrors extends Component {
       ));
     }
 
-    return null;
+    return <div />;
   }
 
   render() {

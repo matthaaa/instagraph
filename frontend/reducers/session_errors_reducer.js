@@ -1,3 +1,4 @@
+import {merge} from 'lodash';
 import {RECEIVE_ERRORS, RECEIVE_USER} from '../actions/session_actions';
 
 export default (oldState = [], action) => {
@@ -5,7 +6,7 @@ export default (oldState = [], action) => {
 
   switch (action.type) {
     case RECEIVE_ERRORS:
-      return action.errors;
+      return merge([], oldState, action.errors);
     case RECEIVE_USER:
       return null;
     default:

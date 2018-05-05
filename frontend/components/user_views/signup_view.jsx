@@ -80,7 +80,7 @@ class SignupView extends Component {
         <CustomButton
           isLink
           path={"/login/demo"}
-          text={"Log in as Demo"}
+          text={"Log in with Demo"}
         />
         {this.renderOrBar()}
         <NewUserForm

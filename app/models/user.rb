@@ -100,6 +100,6 @@ class User < ApplicationRecord
   end
 
   def initialize_bio
-    @bio ||= ""
+    self.bio ||= ""
   end
 end

@@ -12,7 +12,6 @@ User.create!(
   password: "password",
   email: "demo@instagraph.com",
   full_name: "Demo Lovati",
-  bio: "This is my demo profile! Feel free to click around and post something!",
   img_url: "",
 )
 
@@ -22,7 +21,6 @@ matt = User.create!(
   password: "password",
   email: "matt@instagraph.com",
   full_name: "Matt Ha",
-  bio: "",
   img_url: "",
 )
 
@@ -32,7 +30,6 @@ User.create!(
   password: "password",
   email: "oski@instagraph.com",
   full_name: "Oski",
-  bio: "",
   img_url: "",
 )
 
@@ -42,7 +39,6 @@ wanderer = User.create!(
   password: "password",
   email: "cameraman@instagraph.com",
   full_name: "Cam Rahman",
-  bio: "",
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_5875-1.jpg",
 )
 
@@ -51,7 +47,6 @@ david = User.create!(
   password: "password",
   email: "dave@instagraph.com",
   full_name: "David",
-  bio: "",
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
 )
 
@@ -60,7 +55,6 @@ User.create!(
   password: "password",
   email: "taylor@instagraph.com",
   full_name: "Taylor",
-  bio: "",
   img_url: "",
 )
 User.create!(
@@ -68,7 +62,6 @@ User.create!(
   password: "password",
   email: "sadie@instagraph.com",
   full_name: "Sadie",
-  bio: "",
   img_url: "",
 )
 
@@ -77,7 +70,6 @@ davedoingthings = User.create!(
   password: "password",
   email: "davedoingthings@instagraph.com",
   full_name: "Dave",
-  bio: "",
   img_url: "",
 )
 david.posts.create!(

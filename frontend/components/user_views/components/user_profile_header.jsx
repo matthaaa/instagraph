@@ -128,15 +128,9 @@ class UserProfileHeader extends Component {
       </div>
     );
   }
-
-  renderBio(user) {
-    return (
-      <div className="main-profile-bio-container">
-        <p className="main-profile-user-bio-name">{user.full_name}</p>
-        <p className="main-profile-user-bio">{user.bio}</p>
-      </div>
-    );
-  }
+  // TODO: Create this once bio is implemented on backend.
+  // renderBio(user) {
+  // }
 
   render() {
     const {
@@ -165,7 +159,6 @@ class UserProfileHeader extends Component {
         <div className="main-profile-user-header-contents">
           {this.renderNameRow(currentUserFollows, user)}
           {this.renderStatsRow(user, postCount)}
-          {this.renderBio(user)}
         </div>
       </div>
     );

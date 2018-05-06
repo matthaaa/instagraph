@@ -21,6 +21,7 @@ class SignupView extends Component {
       full_name: "",
       username: "",
       password: "",
+      bio: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleUpdate = this.handleUpdate.bind(this);

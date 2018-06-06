@@ -17,7 +17,7 @@ class PostShowView extends Component {
   }
 
   // ==================================================
-  // Callbacks
+  // Event Handlers
   // ==================================================
   handleStopBubble(event) {
     if (!event) {

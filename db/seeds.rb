@@ -132,16 +132,16 @@ wanderer.posts.create!(
   author_id: wanderer.id,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5971-1.jpg",
 )
-davedoingthings.posts.create!(
-  description: "hello?",
-  author_id: davedoingthings.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_fit,h_650,w_2356/v1518169290/IMG_4824-1.jpg",
-)
-wanderer.posts.create!(
-  description: "On the road again.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9627.jpg",
-)
+# davedoingthings.posts.create!(
+#   description: "hello?",
+#   author_id: davedoingthings.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/c_fit,h_650,w_2356/v1518169290/IMG_4824-1.jpg",
+# )
+# wanderer.posts.create!(
+#   description: "On the road again.",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9627.jpg",
+# )
 davedoingthings.posts.create!(
   description: "This chair does not have great reception...",
   author_id: davedoingthings.id,
@@ -152,11 +152,11 @@ wanderer.posts.create!(
   author_id: wanderer.id,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2199-1.jpg",
 )
-davedoingthings.posts.create!(
-  description: "hello?",
-  author_id: davedoingthings.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,h_600/v1518169297/IMG_4827-1.jpg",
-)
+# davedoingthings.posts.create!(
+#   description: "hello?",
+#   author_id: davedoingthings.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,h_600/v1518169297/IMG_4827-1.jpg",
+# )
 davedoingthings.posts.create!(
   description: "football!",
   author_id: davedoingthings.id,
@@ -167,41 +167,41 @@ davedoingthings.posts.create!(
 #   author_id: wanderer.id,
 #   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9646.jpg",
 # )
-wanderer.posts.create!(
-  description: "Trying to be artsy...",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9957.jpg",
-)
-wanderer.posts.create!(
-  description: "Havent been to this bridge in a while.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2401-1.jpg",
-)
-david.posts.create!(
-  description: "It me! Again! Again!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
+# wanderer.posts.create!(
+#   description: "Trying to be artsy...",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9957.jpg",
+# )
+# wanderer.posts.create!(
+#   description: "Havent been to this bridge in a while.",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2401-1.jpg",
+# )
+# david.posts.create!(
+#   description: "It me! Again! Again!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
 wanderer.posts.create!(
   description: "Beautiful coastlines.",
   author_id: wanderer.id,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2239-1.jpg",
 )
-wanderer.posts.create!(
-  description: "Things are looking up!",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9775.jpg",
-)
+# wanderer.posts.create!(
+#   description: "Things are looking up!",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9775.jpg",
+# )
 matt.posts.create!(
   description: "Miss this place.",
   author_id: matt.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9646-min.jpg",
 )
-matt.posts.create!(
-  description: "Miss this place. Reposting cuz i felt like it lol",
-  author_id: matt.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9646-min.jpg",
-)
+# matt.posts.create!(
+#   description: "Miss this place. Reposting cuz i felt like it lol",
+#   author_id: matt.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9646-min.jpg",
+# )
 # wanderer.posts.create!(
 #   description: "Love quiet nights here.",
 #   author_id: wanderer.id,

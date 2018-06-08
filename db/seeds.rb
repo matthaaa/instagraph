@@ -77,51 +77,51 @@ david.posts.create!(
   author_id: david.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
 )
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
 david.posts.create!(
   description: "It me!",
   author_id: david.id,
@@ -162,11 +162,11 @@ davedoingthings.posts.create!(
   author_id: davedoingthings.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170420/IMG_5007-1-min.jpg",
 )
-wanderer.posts.create!(
-  description: "What a great roadtrip.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9646.jpg",
-)
+# wanderer.posts.create!(
+#   description: "What a great roadtrip.",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9646.jpg",
+# )
 wanderer.posts.create!(
   description: "Trying to be artsy...",
   author_id: wanderer.id,
@@ -202,43 +202,43 @@ matt.posts.create!(
   author_id: matt.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518171255/IMG_9646-min.jpg",
 )
-wanderer.posts.create!(
-  description: "Love quiet nights here.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_4518-1.jpg",
-)
+# wanderer.posts.create!(
+#   description: "Love quiet nights here.",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_4518-1.jpg",
+# )
 wanderer.posts.create!(
   description: "Best. Milkshake. Ever.",
   author_id: wanderer.id,
   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2150-1.jpg",
 )
-wanderer.posts.create!(
-  description: "Windmills",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5875-1.jpg",
-)
+# wanderer.posts.create!(
+#   description: "Windmills",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5875-1.jpg",
+# )
 david.posts.create!(
   description: "It me! Again!",
   author_id: david.id,
   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
 )
-davedoingthings.posts.create!(
-  description: "It's like a duck, but a phone",
-  author_id: davedoingthings.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170408/IMG_4829-1-min.jpg",
-)
-
-wanderer.posts.create!(
-  description: "Gotta get the shot.",
-  author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9760.jpg",
-)
-
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
-)
+# davedoingthings.posts.create!(
+#   description: "It's like a duck, but a phone",
+#   author_id: davedoingthings.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170408/IMG_4829-1-min.jpg",
+# )
+#
+# wanderer.posts.create!(
+#   description: "Gotta get the shot.",
+#   author_id: wanderer.id,
+#   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9760.jpg",
+# )
+#
+# david.posts.create!(
+#   description: "It me!",
+#   author_id: david.id,
+#   img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+# )
 
 wanderer.posts.create!(
   description: "Miss this place.",

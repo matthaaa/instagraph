@@ -46,7 +46,7 @@ class HomeFeedView extends Component {
   // Methods
   // ==================================================
   loadPosts() {
-    // Implement post loading method
+    // TODO: Implement post loading method
   }
 
   // ==================================================

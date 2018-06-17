@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
+import InfiniteScroll from 'react-infinite-scroller';
 
 // Components
 import MainHeaderContainer from '../../generic/main_header_container';
@@ -16,7 +17,9 @@ class HomeFeedView extends Component {
     super(props);
     this.state = {
       showUploadPostView: false,
+      hasMoreItems: true,
     };
+    this.loadPosts = this.loadPosts.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
     this.handleToggleUploadView = this.handleToggleUploadView.bind(this);
   }
@@ -38,6 +41,13 @@ class HomeFeedView extends Component {
     // window.addEventListener('scroll', this.onScroll, false);
   }
 
+
+  // ==================================================
+  // Methods
+  // ==================================================
+  loadPosts() {
+    // Implement post loading method
+  }
 
   // ==================================================
   // Event Handlers
@@ -83,7 +93,13 @@ class HomeFeedView extends Component {
           currentUser={currentUser}
           onCloseModal={this.handleCloseModal}
         />
-        {this.renderPostFeed(posts)}
+        <InfiniteScroll
+          pageStart={0}
+          loadMore={this.loadPosts}
+          hasMore={this.state.hasMore}
+          loader={<div className="loader" key={0}>Loading ...</div>}>
+          {this.renderPostFeed(posts)}
+        </InfiniteScroll>
       </div>
     );
   }

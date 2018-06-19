@@ -3,6 +3,7 @@ import SessionReducer from './session_reducer';
 import ErrorReducer from './errors_reducer';
 import UserReducer from './user_reducer';
 import PostReducer from './post_reducer';
+import PostShowCountReducer from './post_show_count_reducer';
 import CommentReducer from './comment_reducer';
 import LikeReducer from './like_reducer';
 import FollowReducer from './follow_reducer';
@@ -16,6 +17,8 @@ const RootReducer = combineReducers({
   comments: CommentReducer,
   likes: LikeReducer,
   follows: FollowReducer,
+
+  // postShowCount: PostShowCountReducer,
 });
 
 

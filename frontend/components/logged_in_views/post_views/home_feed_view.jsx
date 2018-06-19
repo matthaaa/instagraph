@@ -96,7 +96,7 @@ class HomeFeedView extends Component {
         <InfiniteScroll
           pageStart={0}
           loadMore={this.loadPosts}
-          hasMore={this.state.hasMore}
+          hasMore={this.state.hasMoreItems}
           loader={<div className="loader" key={0}>Loading ...</div>}>
           {this.renderPostFeed(posts)}
         </InfiniteScroll>

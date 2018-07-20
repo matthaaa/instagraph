@@ -36,7 +36,7 @@ class LoginView extends Component {
   // ==================================================
   // Callbacks
   // ==================================================
-  populateStateField(field, value) {
+  populateStateField(field, value, letterInterval) {
     const letters = ("" + value).split("");
     let resultInput = "";
 
@@ -48,20 +48,21 @@ class LoginView extends Component {
       if (letters.length === 0) {
         clearInterval(timer, 0);
       }
-    }, 120);
+    }, letterInterval);
   }
 
   populateFieldAndLogin(username, password) {
-    const usernameDuration = 120 * username.length + 50;
-    const passwordDuration = 120 * password.length + 50;
+    const letterInterval = letterInterval;
+    const usernameDuration = letterInterval * username.length + 50;
+    const passwordDuration = letterInterval * password.length + 50;
     const totalDuration = usernameDuration + passwordDuration;
 
-    this.populateStateField("username", username);
+    this.populateStateField("username", username, letterInterval);
 
     // Ensures password begins typing after username since
     // these methods are asynchronous.
     setTimeout(() => {
-      this.populateStateField("password", password);
+      this.populateStateField("password", password, letterInterval);
     }, (usernameDuration));
 
     // Ensures login happens after demo has updated the state.

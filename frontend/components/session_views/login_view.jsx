@@ -52,7 +52,7 @@ class LoginView extends Component {
   }
 
   populateFieldAndLogin(username, password) {
-    const letterInterval = letterInterval;
+    const letterInterval = 120;
     const usernameDuration = letterInterval * username.length + 50;
     const passwordDuration = letterInterval * password.length + 50;
     const totalDuration = usernameDuration + passwordDuration;

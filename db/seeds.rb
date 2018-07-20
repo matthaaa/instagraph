@@ -75,7 +75,7 @@ davedoingthings = User.create!(
 david.posts.create!(
   description: "It me!",
   author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170753/David.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_591/v1528246577/instagraph_seed/IMG_4827-1.jpg",
 )
 # david.posts.create!(
 #   description: "It me!",

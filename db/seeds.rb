@@ -126,7 +126,7 @@ david.posts.create!(
 wanderer.posts.create!(
   description: "Views through trees, Yosemite.",
   author_id: wanderer.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,h_517,w_1191/v1518171256/IMG_5971-1-min.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_828/v1518171256/IMG_5971-1-min.jpg",
 )
 # davedoingthings.posts.create!(
 #   description: "hello?",

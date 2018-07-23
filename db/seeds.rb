@@ -72,11 +72,7 @@ davedoingthings = User.create!(
   full_name: "Dave",
   img_url: "",
 )
-david.posts.create!(
-  description: "It me!",
-  author_id: david.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_591/v1528246577/instagraph_seed/IMG_4827-1.jpg",
-)
+
 # david.posts.create!(
 #   description: "It me!",
 #   author_id: david.id,
@@ -143,9 +139,9 @@ wanderer.posts.create!(
 #   img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9627.jpg",
 # )
 davedoingthings.posts.create!(
-  description: "This chair does not have great reception...",
+  description: "Just making some business calls",
   author_id: davedoingthings.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170419/IMG_4888-1-min.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_886/v1528246577/instagraph_seed/IMG_4827-1.jpg",
 )
 wanderer.posts.create!(
   description: "Had a great time here.",
@@ -160,7 +156,7 @@ wanderer.posts.create!(
 davedoingthings.posts.create!(
   description: "football!",
   author_id: davedoingthings.id,
-  img_url: "http://res.cloudinary.com/instagraph/image/upload/v1518170420/IMG_5007-1-min.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_1328/v1528245060/instagraph_seed/IMG_5007-1.jpg",
 )
 # wanderer.posts.create!(
 #   description: "What a great roadtrip.",

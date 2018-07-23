@@ -39,7 +39,7 @@ wanderer = User.create!(
   password: "password",
   email: "cameraman@instagraph.com",
   full_name: "Cam Rahman",
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/IMG_5875-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_50/v1518171255/IMG_9646-min.jpg",
 )
 
 david = User.create!(
@@ -126,7 +126,7 @@ david.posts.create!(
 wanderer.posts.create!(
   description: "Views through trees, Yosemite.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_5971-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,h_517,w_1191/v1518171256/IMG_5971-1-min.jpg",
 )
 # davedoingthings.posts.create!(
 #   description: "hello?",
@@ -146,7 +146,7 @@ davedoingthings.posts.create!(
 wanderer.posts.create!(
   description: "Had a great time here.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2199-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_735/v1518171254/IMG_2239-1-min.jpg",
 )
 # davedoingthings.posts.create!(
 #   description: "hello?",
@@ -181,7 +181,7 @@ davedoingthings.posts.create!(
 wanderer.posts.create!(
   description: "Beautiful coastlines.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_2239-1.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_608/v1518171254/IMG_2239-1-min.jpg",
 )
 # wanderer.posts.create!(
 #   description: "Things are looking up!",
@@ -239,5 +239,5 @@ david.posts.create!(
 wanderer.posts.create!(
   description: "Miss this place.",
   author_id: wanderer.id,
-  img_url: "https://s3-us-west-2.amazonaws.com/instagraph-aa/wanderer/small/IMG_9663.jpg",
+  img_url: "http://res.cloudinary.com/instagraph/image/upload/c_scale,w_878/v1518171255/IMG_9646-min.jpg",
 )
